@@ -1,1 +1,15 @@
-
+.build/
+módulos_nó/
+__pycache__/
+*.docx
+*.odt
+*.xlsx
+*.ods
+*.pptx
+*.odp
+*.pdf
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.gif
