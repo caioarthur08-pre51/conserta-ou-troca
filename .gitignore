@@ -1,5 +1,5 @@
 .build/
-módulos_nó/
+node_modules/
 __pycache__/
 *.docx
 *.odt
