@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conserta ou Troca?</title>
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header>
+    <h1>Conserta ou Troca?</h1>
+    <p>Simulação educativa com dados sintéticos. Não é recomendação comercial.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-caso">
+      <h2 id="titulo-caso">1. Escolha um caso</h2>
+      <label for="caso">Dispositivo fictício</label>
+      <select id="caso"></select>
+      <p id="descricao-caso"></p>
+      <p id="premissas-caso"></p>
+    </section>
+
+    <form id="form-comparacao" novalidate>
+      <section aria-labelledby="titulo-premissas">
+        <h2 id="titulo-premissas">2. Revise as premissas</h2>
+        <label for="custo-reparo">Custo do reparo (R$)</label>
+        <input id="custo-reparo" type="number" min="0" step="0.01">
+        <label for="vida-adicional">Vida adicional após reparo (anos)</label>
+        <input id="vida-adicional" type="number" min="0.1" step="0.1">
+        <button id="calcular" type="submit" disabled>Calcular</button>
+        <button id="restaurar" type="button" disabled>Restaurar caso</button>
+        <button id="imprimir" type="button" disabled>Imprimir/salvar PDF</button>
+      </section>
+    </form>
+
+    <output id="mensagem" role="status" aria-live="polite">
+      Cálculo será implementado na Fase 3.
+    </output>
+
+    <section id="resultados" aria-labelledby="titulo-resultados" hidden>
+      <h2 id="titulo-resultados">3. Compare os resultados</h2>
+      <p id="decisao"></p>
+      <p id="sensibilidade"></p>
+      <div id="tabela-resultados"></div>
+      <div id="grafico-resultados"></div>
+      <h3>Critérios não financeiros</h3>
+      <dl>
+        <dt>Garantia do reparo</dt><dd id="garantia-reparo"></dd>
+        <dt>Garantia do substituto</dt><dd id="garantia-substituto"></dd>
+        <dt>Risco do reparo</dt><dd id="risco-reparo"></dd>
+        <dt>Necessidade do usuário</dt><dd id="necessidade-usuario"></dd>
+        <dt>Impacto ambiental</dt><dd id="impacto-ambiental"></dd>
+      </dl>
+    </section>
+  </main>
+
+  <script src="js/dados.js"></script>
+  <script src="js/calculos.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
