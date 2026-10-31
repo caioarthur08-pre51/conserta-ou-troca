@@ -6,7 +6,7 @@
 
 **Natureza dos dados:** sintéticos, para finalidade educativa
 
-**Integração da Fase 1:** Caio Rocha organizou os arquivos e normalizou `casos.csv` a partir do CSV didático local que aprovou para esta integração. Os commits originais de Laís permanecem no histórico; a normalização não é atribuída a ela.
+**Dados da Fase 1:** `casos.csv` contém a base sintética aprovada para a F1, normalizada segundo o contrato 1.0.
 
 ## Objetivo
 
@@ -26,7 +26,7 @@ Definir um único contrato financeiro e qualitativo que possa ser reproduzido po
 
 ## Casos e dados
 
-`casos.csv` contém os oito casos C01–C08, quatro celulares e quatro notebooks. Os valores financeiros, garantias, IDs, tipos, modelos e observações foram preservados do CSV didático aprovado por Caio. As colunas foram reordenadas segundo `dicionario_dados.md` e os três critérios qualitativos foram convertidos para o vocabulário fechado do contrato:
+`casos.csv` contém os oito casos C01–C08, quatro celulares e quatro notebooks. Os valores financeiros, garantias, IDs, tipos, modelos e observações foram preservados da base sintética aprovada para a F1. As colunas foram reordenadas segundo `dicionario_dados.md` e os três critérios qualitativos foram convertidos para o vocabulário fechado do contrato:
 
 | Caso | Risco | Necessidade | Impacto ambiental |
 |---|---|---|---|

@@ -5,7 +5,6 @@
 **Branch:** `guilherme/produto`
 **Fase:** 1 — Fundação (arquitetura, contratos e regras)
 **Referência:** Guia individual de execução, versão 1.3 (19/10/2026)
-**Revisão de integração da Fase 1:** Caio Rocha alinhou a ordem A:R e os domínios ao dicionário publicado por Laís; o commit de correção registra essa autoria.
 
 ---
 

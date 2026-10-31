@@ -3,7 +3,7 @@
 **Responsável:** Laís Eulálio  
 **Versão do contrato:** 1.0  
 **Base de referência:** contrato do Planejamento v1.3  
-**Origem dos valores na Fase 1:** CSV didático local aprovado por Caio para integração e normalizado por ele na pasta `01_modelagem_lais/`. A ODS editável prevista para a Fase 2 deverá reproduzir estes casos. Não incluir neste repositório planilha restrita, credenciais ou dados pessoais.
+**Origem dos valores na Fase 1:** base sintética aprovada para a F1, publicada em `01_modelagem_lais/casos.csv`. A ODS editável prevista para a Fase 2 deverá reproduzir estes casos. Não incluir neste repositório planilha restrita, credenciais ou dados pessoais.
 **Natureza:** casos sintéticos para finalidade educativa.
 
 ## Convenções
