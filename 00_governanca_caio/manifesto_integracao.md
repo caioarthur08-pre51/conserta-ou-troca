@@ -1,5 +1,19 @@
 # Manifesto de integração
 
+## Fechamento da Fase 1
+
+As cinco entregas de fundação estão integradas em `main`. O quadro do Notion e `90_integracao/cronograma_14_dias.csv` registram as cinco tarefas da F1 como `Concluída`; o commit `bbd7c91` conciliou o cronograma com o quadro. A tabela abaixo identifica as fontes da F1. O inventário seguinte acompanha as versões operacionais previstas para as fases posteriores.
+
+| Cargo | Saída da F1 | Rastreio | Estado da F1 |
+|---|---|---|---|
+| Caio | Termo de abertura, riscos, decisões e cronograma | `bffa6c7` | Integrada; cronograma conciliado em `bbd7c91` |
+| Laís | Dicionário, fórmulas e oito casos sintéticos no contrato A:R | Origem `16a85b3`; CSV e organização em `3cf443d` | Integrada |
+| Guilherme | Especificação de arquitetura, importação e validações do MVP | Origem `035aab9`; alinhamento ao contrato em `a281d64` | Integrada |
+| Letícia | Objetivo observável, estrutura de 13 seções, matriz inicial e fonte ODT | Git `7a7db45`; ODT no Drive | Integrada |
+| Larissa | Guia visual, sequência de oito slides e fontes ODP iniciais | Git `f62df45`; ODPs no Drive | Integrada |
+
+## Inventário das versões operacionais
+
 | Artefato | Proprietário | Caminho canônico ou origem | Arquivo congelado/Drive | Versão | Data de corte | Commit | SHA-256 | Contingência | Situação |
 |---|---|---|---|---|---|---|---|---|---|
 | Governança e decisões | Caio | `00_governanca_caio/` | A definir | 0.2 | 2026-10-17 | A definir | n.a. | Cópia local | Em preparação |
