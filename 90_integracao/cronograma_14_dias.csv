@@ -1,9 +1,9 @@
 fase,periodo,data_limite,responsavel,tarefa,arquivo_ou_saida,criterio_conclusao,status
 1,"Dias 1-2",2026-10-21,Caio,"Congelar escopo, cronograma e pendências","termo_de_abertura.md + riscos_e_pendencias.md + quadro","Escopo, exclusões, datas, contingências e decisões externas registrados",Concluída
-1,"Dias 1-2",2026-10-21,Laís,"Especificar fórmulas e campos","dicionario_dados.md","Entradas, saídas e unidades definidas",Pendente
-1,"Dias 1-2",2026-10-21,Guilherme,"Definir arquitetura e importação","especificacao_mvp.md","Estrutura e contratos definidos",Pendente
-1,"Dias 1-2",2026-10-21,Letícia,"Definir objetivo e sumário","README.md","Objetivo observável e estrutura do relatório",Pendente
-1,"Dias 1-2",2026-10-21,Larissa,"Definir direção visual e sequência","guia_visual.md","Paleta provisória e oito slides definidos",Pendente
+1,"Dias 1-2",2026-10-21,Laís,"Especificar fórmulas e campos","dicionario_dados.md","Entradas, saídas e unidades definidas",Concluída
+1,"Dias 1-2",2026-10-21,Guilherme,"Definir arquitetura e importação","especificacao_mvp.md","Estrutura e contratos definidos",Concluída
+1,"Dias 1-2",2026-10-21,Letícia,"Definir objetivo e sumário","README.md","Objetivo observável e estrutura do relatório",Concluída
+1,"Dias 1-2",2026-10-21,Larissa,"Definir direção visual e sequência","guia_visual.md","Paleta provisória e oito slides definidos",Concluída
 2,"Dias 3-4",2026-10-23,Caio,"Publicar manifesto e riscos","manifesto_integracao.md","Arquivos e interfaces listados",Pendente
 2,"Dias 3-4",2026-10-23,Laís,"Montar planilha inicial e oito casos","modelo_tco_template.xlsx","Oito casos e fórmulas iniciais",Pendente
 2,"Dias 3-4",2026-10-23,Guilherme,"Criar esqueleto executável","app/","index.html abre e estrutura está documentada",Pendente
