@@ -3,7 +3,7 @@
 **Responsável:** Laís Eulálio  
 **Versão do contrato:** 1.0  
 **Base de referência:** contrato do Planejamento v1.3  
-**Origem dos valores:** planilha canônica privada, a conferir na integração. Não incluir neste repositório planilha restrita, credenciais ou dados pessoais.  
+**Origem dos valores na Fase 1:** CSV didático local aprovado por Caio para integração e normalizado por ele na pasta `01_modelagem_lais/`. A ODS editável prevista para a Fase 2 deverá reproduzir estes casos. Não incluir neste repositório planilha restrita, credenciais ou dados pessoais.
 **Natureza:** casos sintéticos para finalidade educativa.
 
 ## Convenções
@@ -11,7 +11,7 @@
 - Moeda em reais (R$); cálculos preservam precisão total e a apresentação exibe duas casas decimais.
 - CSV UTF-8, delimitador vírgula, ponto decimal e aspas duplas para campos textuais que contenham vírgula.
 - `n.a.` indica cálculo indisponível/inválido; não é valor numérico e não define vencedor.
-- `ODS` é a fonte canônica; XLSX, CSV, Google Sheets e Looker Studio são derivados e não devem implementar fórmulas divergentes.
+- Na Fase 2, a `ODS` será a fonte editável canônica; XLSX, CSV, Google Sheets e Looker Studio serão derivados e não deverão implementar fórmulas divergentes. O CSV da Fase 1 fixa o esquema e os oito casos didáticos aprovados para a integração.
 - Os campos qualitativos são descritivos, com vocabulário fechado, e não entram nas fórmulas financeiras.
 - Os 18 campos abaixo seguem a ordem contratual A:R: 14 campos de identificação/entradas, três critérios e uma observação. Não inserir saídas calculadas no CSV canônico.
 - Os nomes técnicos e categorias são sensíveis à grafia contratual: preservar acentos, espaços e maiúsculas/minúsculas exatamente como definidos.
