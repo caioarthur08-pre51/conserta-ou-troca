@@ -5,6 +5,7 @@
 **Branch:** `guilherme/produto`
 **Fase:** 1 — Fundação (arquitetura, contratos e regras)
 **Referência:** Guia individual de execução, versão 1.3 (19/10/2026)
+**Revisão de integração da Fase 1:** Caio Rocha alinhou a ordem A:R e os domínios ao dicionário publicado por Laís; o commit de correção registra essa autoria.
 
 ---
 
@@ -101,8 +102,9 @@ casos.csv (18 campos, C01–C08)
 
 ## 5. Contrato de entrada — `casos.csv`
 
-Fonte canônica: `01_modelagem_lais/casos.csv`, copiada sem alteração para
-`app/dados/casos.csv`.
+Contrato da Fase 1: `01_modelagem_lais/dicionario_dados.md`. A cópia de
+`01_modelagem_lais/casos.csv` para `app/dados/casos.csv` deve preservar bytes e
+versão. A ODS editável prevista para a Fase 2 será reconciliada com esse CSV.
 
 - Exatamente **18 colunas (A:R)**, na ordem abaixo, com cabeçalho idêntico.
 - Exatamente **8 registros**, com IDs únicos **C01 a C08**.
@@ -113,22 +115,22 @@ Fonte canônica: `01_modelagem_lais/casos.csv`, copiada sem alteração para
 | Col. | Campo | Tipo | Regra |
 |---|---|---|---|
 | A | `caso_id` | texto | C01–C08, único |
-| B | `tipo_dispositivo` | texto | obrigatório |
+| B | `tipo_dispositivo` | categoria | `Celular` ou `Notebook` |
 | C | `modelo_ficticio` | texto | obrigatório |
 | D | `custo_reparo` | número | ≥ 0 |
 | E | `manutencao_adicional` | número | ≥ 0 |
-| F | `vida_adicional_anos` | número | > 0 |
-| G | `residual_reparado` | número | ≥ 0 |
-| H | `preco_substituto` | número | ≥ 0 |
-| I | `custos_acessorios` | número | ≥ 0 |
-| J | `valor_venda_atual` | número | ≥ 0 |
-| K | `residual_substituto` | número | ≥ 0 |
-| L | `vida_substituto_anos` | número | > 0 |
-| M | `garantia_reparo_meses` | número | ≥ 0 |
-| N | `garantia_substituto_meses` | número | ≥ 0 |
-| O | `risco_reparo` | texto | obrigatório; qualitativo |
-| P | `necessidade_usuario` | texto | obrigatório; qualitativo |
-| Q | `impacto_ambiental` | texto | obrigatório; qualitativo |
+| F | `residual_reparado` | número | ≥ 0 |
+| G | `vida_adicional_anos` | número | > 0 |
+| H | `garantia_reparo_meses` | inteiro | ≥ 0 |
+| I | `preco_substituto` | número | ≥ 0 |
+| J | `custos_acessorios` | número | ≥ 0 |
+| K | `valor_venda_atual` | número | ≥ 0 |
+| L | `residual_substituto` | número | ≥ 0 |
+| M | `vida_substituto_anos` | número | > 0 |
+| N | `garantia_substituto_meses` | inteiro | ≥ 0 |
+| O | `risco_reparo` | categoria | `Baixo`, `Médio` ou `Alto` |
+| P | `necessidade_usuario` | categoria | `Essencial`, `Importante` ou `Adiável` |
+| Q | `impacto_ambiental` | categoria | `Reparo favorece reuso`, `Equilibrado` ou `Troca requer descarte responsável` |
 | R | `observacao` | texto | obrigatório |
 
 ## 6. Contrato intermediário — `dados.js`
@@ -192,6 +194,7 @@ Leitura com `valueAsNumber`; campo vazio é tratado como inválido, nunca como z
 | Número de colunas diferente numa linha | Conversor | Encerra com erro |
 | Quantidade ≠ 8, ID duplicado ou fora de C01–C08 | Conversor | Encerra com erro |
 | Texto obrigatório vazio | Conversor | Encerra com erro |
+| Categoria fora do vocabulário fechado ou garantia fracionária | Conversor | Encerra com erro |
 | Número vazio ou texto em campo numérico | Conversor e app | Erro; nunca vira zero |
 | Valor negativo | Conversor e app | Erro |
 | Vida útil ≤ 0 | Conversor e app | Erro |
