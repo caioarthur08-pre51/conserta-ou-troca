@@ -1,0 +1,37 @@
+# Checklist de entrega
+
+- [ ] Os cinco responsáveis concluíram a fase 5.
+- [ ] Os cinco publicaram `ENTREGA FINAL LIBERADA` com arquivos, versões, commits, hashes, links e contingências.
+- [ ] Todos os marcos entre cargos têm confirmação de recebimento e nenhuma correção solicitada permanece aberta.
+- [ ] Nenhum arquivo liberado foi sobrescrito silenciosamente; toda mudança posterior possui `ALTERAÇÃO COM IMPACTO`.
+- [ ] O relatório DOCX abre e possui PDF correspondente.
+- [ ] As referências foram conferidas conforme a NBR 6023.
+- [ ] O MVP abre por `index.html` sem internet.
+- [ ] Os oito casos produzem os mesmos resultados no MVP e na planilha.
+- [ ] A planilha identifica entradas, fórmulas, versão e data.
+- [ ] O Looker Studio abre em janela anônima sem solicitar login.
+- [ ] A planilha Google Sheets permanece privada.
+- [ ] O PDF do Looker Studio está no pacote offline.
+- [ ] O QR abre em dois celulares e possui URL textual legível.
+- [ ] A cópia impressa do QR foi testada antes da tiragem.
+- [ ] A sequência `F4 DADOS CANDIDATOS` → `F4 EQUIVALÊNCIA CONFIRMADA` → `URL LIBERADA PARA QR` → `QR CANDIDATO` → `F4 DESTINO DO QR VALIDADO` → `VISUAL CONGELADO` → `FIDELIDADE CONFERIDA` está registrada.
+- [ ] `TAG PUBLICADA` foi conferida em modo somente leitura pelos quatro proprietários (`TAG CONFERIDA`).
+- [ ] O conteúdo obrigatório termina até 18 minutos e a execução total não ultrapassa 20 minutos.
+- [ ] O pacote operacional usado em 31/10 corresponde ao congelado em 30/10.
+- [ ] O ZIP está no Drive, com nome, tamanho, SHA-256 e link no manifesto.
+- [ ] DOCX, XLSX, PPTX, PDF, ZIP, fotografias e QR não estão no GitHub público.
+- [ ] As cinco branches finais foram integradas novamente antes da tag `v1.0.0`.
+- [ ] `git status` está limpo e a tag aponta para o commit testado.
+- [ ] O relatório contém planejamento, validação técnica e resultados esperados, sem dados de participantes.
+- [ ] Escola, endereço, horário, séries previstas, quantidade planejada de grupos e infraestrutura, quando confirmados, aparecem apenas como planejamento e têm fonte e data.
+- [ ] Não existem nomes, presença, respostas, desempenho, opiniões, fotografias de estudantes, contagens reais nem resultados da aplicação.
+- [ ] Existe somente um guia final, com conteúdo aprovado por Letícia e composição de Larissa.
+- [ ] Fotografias autorizadas estão somente em `04_evidencias_restritas`.
+- [ ] A apresentação PPTX possui PDF correspondente.
+- [ ] A micro-oficina dura entre 18 e 20 minutos.
+- [ ] O guia de uma página está disponível.
+- [ ] Nenhum arquivo contém dado pessoal, senha ou chave.
+- [ ] O manifesto registra todas as versões finais.
+- [ ] `logistica_acao.md` contém a última situação externa e os quatro cargos consumidores confirmaram o modo ou a contingência correspondente.
+- [ ] Caio publicou `PACOTE FINAL INTEGRADO` com o commit testado de `main` e a tag candidata.
+

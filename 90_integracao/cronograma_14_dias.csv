@@ -1,0 +1,27 @@
+fase,periodo,data_limite,responsavel,tarefa,arquivo_ou_saida,criterio_conclusao,status
+1,"Dias 1-2",2026-10-21,Caio,"Congelar escopo, cronograma e pendências","termo_de_abertura.md + riscos_e_pendencias.md + quadro","Escopo, exclusões, datas, contingências e decisões externas registrados",Concluída
+1,"Dias 1-2",2026-10-21,Laís,"Especificar fórmulas e campos","dicionario_dados.md","Entradas, saídas e unidades definidas",Pendente
+1,"Dias 1-2",2026-10-21,Guilherme,"Definir arquitetura e importação","especificacao_mvp.md","Estrutura e contratos definidos",Pendente
+1,"Dias 1-2",2026-10-21,Letícia,"Definir objetivo e sumário","README.md","Objetivo observável e estrutura do relatório",Pendente
+1,"Dias 1-2",2026-10-21,Larissa,"Definir direção visual e sequência","guia_visual.md","Paleta provisória e oito slides definidos",Pendente
+2,"Dias 3-4",2026-10-23,Caio,"Publicar manifesto e riscos","manifesto_integracao.md","Arquivos e interfaces listados",Pendente
+2,"Dias 3-4",2026-10-23,Laís,"Montar planilha inicial e oito casos","modelo_tco_template.xlsx","Oito casos e fórmulas iniciais",Pendente
+2,"Dias 3-4",2026-10-23,Guilherme,"Criar esqueleto executável","app/","index.html abre e estrutura está documentada",Pendente
+2,"Dias 3-4",2026-10-23,Letícia,"Produzir roteiro e referências iniciais","roteiro_microoficina.md","Sequência cabe em 20 minutos",Pendente
+2,"Dias 3-4",2026-10-23,Larissa,"Criar wireframes e storyboard","apresentacao_20min_template.pptx","Oito slides possuem propósito",Pendente
+3,"Dias 5-8",2026-10-27,Caio,"Manter quadro e índice do pacote","Notion e manifesto","Todas as dependências visíveis",Pendente
+3,"Dias 5-8",2026-10-27,Laís,"Concluir planilha e Data Studio inicial","XLSX e URL","Fórmulas e fonte funcionais",Pendente
+3,"Dias 5-8",2026-10-27,Guilherme,"Concluir MVP","app/","Oito casos e sensibilidade funcionam",Pendente
+3,"Dias 5-8",2026-10-27,Letícia,"Concluir relatório e materiais textuais","DOCX e roteiro","Versão completa para revisão",Pendente
+3,"Dias 5-8",2026-10-27,Larissa,"Concluir apresentação e guia","PPTX e material de uma página","Versão completa para revisão",Pendente
+4,"Dias 9-11",2026-10-30,Caio,"Integrar sem editar autores","pacote integrado","Todos os caminhos e versões conferidos",Pendente
+4,"Dias 9-11",2026-10-30,Laís,"Auto testar e exportar dashboard","XLSX, URL e PDF","Sem divergência entre fontes",Pendente
+4,"Dias 9-11",2026-10-30,Guilherme,"Testar e empacotar offline","app e README","Chrome, Edge e Firefox testados",Pendente
+4,"Dias 9-11",2026-10-30,Letícia,"Revisar conteúdo e referências","DOCX revisado","Coerência, tempo e fontes conferidos",Pendente
+4,"Dias 9-11",2026-10-30,Larissa,"Revisar legibilidade e tempo","PPTX revisado","Contraste, leitura e sequência conferidos",Pendente
+5,"Dias 12-14",2026-11-02,Caio,"Comprovar pacote operacional em 31/10 e arquivar em 01-02/11","manifesto final + tag","Conteúdo até 18 min; total até 20 min; commits finais integrados",Pendente
+5,"Dias 12-14",2026-11-02,Laís,"Congelar em 30/10; publicar arquivos operacionais em 31/10; arquivar em 01-02/11","ODS, XLSX, CSV, URL e PDF","Versão e data registradas; fonte privada; relatório anônimo",Pendente
+5,"Dias 12-14",2026-11-02,Guilherme,"Publicar MVP operacional em 31/10 e arquivar ZIP em 01-02/11","app no GitHub + ZIP no Drive","Execução offline documentada; hash e link registrados",Pendente
+5,"Dias 12-14",2026-11-02,Letícia,"Publicar conteúdo operacional em 31/10 e arquivar fontes em 01-02/11","ODT, DOCX, PDF, roteiro e conteúdo do guia","Texto e referências finalizados sem resultados de participantes",Pendente
+5,"Dias 12-14",2026-11-02,Larissa,"Publicar comunicação operacional em 31/10 e arquivar fontes em 01-02/11","ODP, PPTX, PDF, QR e guia único","Arquivos legíveis; QR anônimo com URL textual",Pendente
+

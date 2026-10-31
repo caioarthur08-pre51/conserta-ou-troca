@@ -1,0 +1,20 @@
+id,data,fase,decisao,motivo,arquivos_afetados,responsavel,status
+D-001,2026-10-16,1,"Micro-oficina única de 20 minutos","Prazo de 14 dias e repetição por grupo","roteiro,slides,mvp",Caio,Confirmada
+D-002,2026-10-16,1,"Data Studio obrigatório com PDF offline","Exigência institucional e contingência","planilha,dashboard,pdf",Caio,Confirmada
+D-003,2026-10-16,1,"Sem avaliação ou dados pessoais","Definição do projeto","relatorio,dashboard,roteiro",Caio,Confirmada
+D-004,2026-10-16,1,"Instituição, data e quantidade de grupos","Aguardando confirmação externa do Prof. Me. Tadeu Duarte","cronograma,roteiro,logistica",Caio,Pendente
+D-005,2026-10-16,1,"Infraestrutura disponível no local","Projetor, computadores, internet e celulares ainda não confirmados","mvp,slides,pacote_offline",Caio,Pendente
+D-006,2026-10-16,1,"Identidade visual final","Logotipo, cores e modelo institucional ainda não definidos","slides,guia,relatorio",Larissa,Pendente
+D-007,2026-10-17,2,"Reter arquivos administrativos, fontes, versões e fotografias autorizadas somente da equipe até 31/12/2026","Não haverá registro de participantes nem da aplicação","drive_restrito,governanca",Caio,Confirmada
+D-008,2026-10-17,1,"Congelar o pacote operacional em 28/10 e disponibilizá-lo em 29/10","30 e 31/10 ficam restritos a documentação, arquivamento e tag; decisão substituída pela D-018","cronograma,pacote",Caio,Superada
+D-009,2026-10-17,1,"Integrar as cinco branches ao final de cada fase e novamente após a Fase 5","Evitar que integrantes consumam versões antigas e que a tag omita commits finais","git,integracao",Caio,Confirmada
+D-010,2026-10-17,1,"Usar precisão completa e Empate técnico para diferença absoluta inferior a R$ 0,01 por ano","Manter planilha e MVP consistentes","planilha,mvp",Laís,Confirmada
+D-011,2026-10-17,1,"Manter GitHub público somente com código, Markdown e dados sintéticos; binários e ZIP ficam no Drive","Evitar dados pessoais e duplicação de binários","github,drive",Caio,Confirmada
+D-012,2026-10-17,1,"Publicar Looker Studio anônimo e somente para visualização; manter Google Sheets privado","Permitir acesso pelo QR sem expor a fonte","dashboard,qr",Laís,Confirmada
+D-013,2026-10-17,1,"Produzir um único guia: conteúdo de Letícia e composição visual de Larissa","Eliminar duplicidade e preservar autoria","guia,conteudo,design",Caio,Confirmada
+D-014,2026-10-17,1,"Usar NBR 6023:2025 por meio de guia universitário gratuito","Evitar compra da norma e registrar a edição aplicada","relatorio,referencias",Letícia,Confirmada
+D-015,2026-10-18,1,"Exigir marcos versionados e confirmação do destinatário em toda passagem entre cargos","Evitar espera silenciosa, consumo de versões provisórias e mudanças sem análise de impacto","notion,git,integracao,todos_os_artefatos",Caio,Confirmada
+D-016,2026-10-18,1,"Registrar logística planejada e proibir dados ou resultados da aplicação","Distinguir informações necessárias à execução de qualquer coleta sobre participantes","logistica,relatorio,slides,mvp,dashboard",Caio,Confirmada
+D-017,2026-10-18,1,"Manter Caio como único membro do Notion e conceder edição manual somente nas cinco tarefas de cada convidado","Preservar o plano gratuito com blocos ilimitados e impedir alterações cruzadas","notion,governanca",Caio,Confirmada
+D-018,2026-10-19,1,"Executar o cronograma de 20/10 a 02/11; congelar o pacote em 30/10 e disponibilizá-lo em 31/10","Adiar em dois dias todas as etapas, preservando a duração de 14 dias e reservando 01 e 02/11 para documentação, arquivamento, integração final e tag","cronograma,pacote,notion,documentacao",Caio,Confirmada
+
