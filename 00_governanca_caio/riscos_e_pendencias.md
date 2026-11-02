@@ -7,8 +7,11 @@ Estas pendências não alteram a produção inicial dos artefatos. Caio registra
 | Escola, endereço, data efetiva, horários, quantidade de grupos e séries por horário | Caio, com Prof. Me. Tadeu Duarte | Confirmar assim que possível; pendente em 02/11 | Manter pacote operacional previsto para 06/11 e micro-oficina repetível de até 20 minutos. A janela de 09h a 12h é provável, não confirmada. |
 | Projetor, computadores, internet e celulares no local | Caio, com a instituição | Confirmar antes de definir o modo de aplicação; pendente em 02/11 | Preparar demonstração guiada e pacote totalmente offline |
 | Quantidade de QR Codes impressos | Caio, após confirmação dos grupos | Antes da impressão | Larissa mantém arquivo mestre com QR e URL; custo rateado entre os cinco integrantes |
+| Fases 3, 4 e 5 comprimidas em 04–06/11, enquanto liberações F2 dos autores ainda não chegaram | Cada autor em seu domínio; Caio acompanha os marcos e integra | Verificar no fechamento da F2 em 03/11 e a cada barreira seguinte | Preservar testes, confirmação de versão e autonomia; trabalhar em paralelo no que não depende de outra fonte; se um marco atrasar, registrar impacto e replanejar explicitamente, sem marcar fase incompleta como concluída |
 
 Escola, endereço, bairro, horário, séries previstas, quantidade planejada de grupos e infraestrutura são dados de planejamento e podem ser registrados. Não haverá coleta de nomes, presença, respostas, desempenho, opiniões, dificuldades, contagens reais nem outros registros dos participantes ou da aplicação. Fotografias, se autorizadas, mostram apenas integrantes e ficam na pasta restrita do Drive. Arquivos administrativos, fontes, versões e fotografias autorizadas somente da equipe serão eliminados após 31/12/2026, salvo nova exigência institucional.
+
+O prazo de 06/11/2026 se refere ao **pacote completo, testes e tag**. A ação presencial ocorrerá após a escola confirmar local, data e condições; não registrar execução ou resultados antes disso.
 
 ## Encaminhamento das respostas
 

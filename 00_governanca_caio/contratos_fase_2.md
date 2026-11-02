@@ -1,6 +1,6 @@
 # Contratos entre cargos — Fase 2
 
-**Proprietário deste índice:** Caio Rocha. **Corte de planejamento:** 02/11/2026. **Prazo da Fase 2:** 03/11/2026. Este índice especifica a passagem entre cargos; cada autor conserva a propriedade e a decisão sobre o próprio artefato. Um caminho previsto não significa que o arquivo tenha sido entregue.
+**Proprietário deste índice:** Caio Rocha. **Versão:** F2 v0.3. **Corte de planejamento:** 02/11/2026. **Prazo da Fase 2:** 03/11/2026. Este índice especifica a passagem entre cargos; cada autor conserva a propriedade e a decisão sobre o próprio artefato. Um caminho previsto não significa que o arquivo tenha sido entregue. O prazo de 06/11 conclui o pacote; a ação presencial ocorrerá quando a escola confirmar local e data.
 
 ## Regra para consumir uma entrega
 

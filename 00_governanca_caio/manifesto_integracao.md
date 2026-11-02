@@ -18,7 +18,7 @@ O contrato de campos, testes, consumidores e ordem de integração da Fase 2 est
 
 | Artefato | Proprietário | Caminho canônico ou origem | Versão congelada | Data de corte | Commit | SHA-256 | Link Drive do arquivo | Contingência | Consumidores | Situação |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Contratos F2 e decisões | Caio | `00_governanca_caio/contratos_fase_2.md` e `registro_decisoes.csv` | F2 v0.2 | 02/11/2026 | Referência da própria branch no Notion após `push` | n.a. para fonte Git | — | Cópia local do repositório | Todos | Fonte testada; liberação identificada no Notion |
+| Contratos F2 e decisões | Caio | `00_governanca_caio/contratos_fase_2.md` e `registro_decisoes.csv` | F2 v0.3 | 02/11/2026 | Referência da própria branch no Notion após `push` | n.a. para fonte Git | — | Cópia local do repositório | Todos | Fonte testada; liberação identificada no Notion |
 | Protocolo de comunicação | Caio | `00_governanca_caio/protocolo_comunicacao.md` | F1 vigente | 21/10/2026 | `d2d2904` em `main` | n.a. para fonte Git | — | Cópia local do repositório | Todos | Disponível |
 | Logística da ação | Caio | `00_governanca_caio/logistica_acao.md` | Planejamento em aberto | 02/11/2026 | Referência da própria branch no Notion após `push` | n.a. para fonte Git | — | Roteiro genérico e modo offline | Todos | Escola, data, grupos e infraestrutura não confirmados |
 | CSV canônico A:R | Laís | `01_modelagem_lais/casos.csv` | F1 disponível; F2 não liberada | 21/10/2026 | `d2d2904` em `main` | A informar na versão final | — | Cópia CSV F1 para preparo, sem declaração de F2 | Guilherme, Letícia, Caio, Looker | Aguardando `DADOS F2 LIBERADOS` |
@@ -43,7 +43,8 @@ Esta tabela complementa o inventário acima. Caio preenche uma linha para cada v
 
 | Artefato e versão | Link Drive ou caminho consumível | Consumidores | Marco | Confirmações recebidas |
 |---|---|---|---|---|
-| Contratos F2 v0.2 | `00_governanca_caio/contratos_fase_2.md` e manifesto na branch de Caio | Todos | `DRIVE E CONTRATOS LIBERADOS`, após `push` | Aguardando confirmação por versão |
+| Contratos F2 v0.2 | `00_governanca_caio/contratos_fase_2.md` e manifesto no commit `8458700` | Todos | `SUBSTITUÍDA` pela v0.3; regra de prazo presencial esclarecida | Não usar como referência vigente |
+| Contratos F2 v0.3 | `00_governanca_caio/contratos_fase_2.md` e manifesto na branch de Caio | Todos | `ALTERAÇÃO COM IMPACTO`, após `push` | Aguardando nova confirmação por versão |
 | Dados F2, pendente | `01_modelagem_lais/casos.csv`, ODS e dicionário | Guilherme, Letícia, Caio | `DADOS F2 LIBERADOS` | Não recebido |
 | Texto F2, pendente | Roteiro, textos e referências na branch de Letícia/Drive | Guilherme, Larissa, Caio | `TEXTO F2 LIBERADO` | Não recebido |
 | Tema F2, pendente | Guia visual, wireframe e ODP na branch de Larissa/Drive | Guilherme, Letícia, Caio | `TEMA F2 LIBERADO` | Não recebido |

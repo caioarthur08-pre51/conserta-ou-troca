@@ -11,7 +11,7 @@
 - Cidade: Teresina-PI
 - Semestre: 2026.2
 - Professor: Prof. Me. Tadeu Duarte
-- Prazo de produção: 20 de outubro a 6 de novembro de 2026. A Fase 1 foi concluída; as Fases 2 a 5 foram reprogramadas para 2 a 6 de novembro. O pacote operacional só será declarado pronto após as cinco entregas e a integração final.
+- Prazo do pacote: 20 de outubro a 6 de novembro de 2026. A Fase 1 foi concluída; as Fases 2 a 5 foram reprogramadas para 2 a 6 de novembro. O pacote operacional só será declarado pronto após as cinco entregas, testes, integração final e tag. A ação presencial ocorrerá quando a escola confirmar local e data.
 - Público: 8º e 9º anos do Ensino Fundamental e Ensino Médio
 
 ## Objetivo
