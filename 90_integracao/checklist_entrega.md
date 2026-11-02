@@ -17,7 +17,7 @@
 - [ ] A sequência `F4 DADOS CANDIDATOS` → `F4 EQUIVALÊNCIA CONFIRMADA` → `URL LIBERADA PARA QR` → `QR CANDIDATO` → `F4 DESTINO DO QR VALIDADO` → `VISUAL CONGELADO` → `FIDELIDADE CONFERIDA` está registrada.
 - [ ] `TAG PUBLICADA` foi conferida em modo somente leitura pelos quatro proprietários (`TAG CONFERIDA`).
 - [ ] O conteúdo obrigatório termina até 18 minutos e a execução total não ultrapassa 20 minutos.
-- [ ] O pacote operacional usado em 31/10 corresponde ao congelado em 30/10.
+- [ ] O pacote operacional pronto até 06/11 corresponde ao commit e aos hashes congelados no manifesto; se a ação ocorrer depois, usa exatamente essa versão ou registra substituição e repete os testes afetados.
 - [ ] O ZIP está no Drive, com nome, tamanho, SHA-256 e link no manifesto.
 - [ ] DOCX, XLSX, PPTX, PDF, ZIP, fotografias e QR não estão no GitHub público.
 - [ ] As cinco branches finais foram integradas novamente antes da tag `v1.0.0`.

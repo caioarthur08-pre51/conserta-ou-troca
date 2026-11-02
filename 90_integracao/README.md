@@ -2,6 +2,8 @@
 
 Esta pasta reúne índices, checklists e cópias finais. Caio não altera os artefatos recebidos. Se uma correção for necessária, o arquivo retorna ao autor e uma nova versão substitui a anterior.
 
+O arquivo `cronograma_14_dias.csv` conserva o nome histórico para não quebrar links. Seu conteúdo vigente foi reprogramado em 02/11/2026 para concluir a Fase 5 em 06/11/2026; a coluna `periodo` e a decisão D-019 prevalecem sobre o número no nome.
+
 As passagens entre autores são verificadas conforme `../00_governanca_caio/protocolo_comunicacao.md`. Caio não integra um artefato consumido por outro cargo enquanto o marco obrigatório estiver sem versão, teste ou confirmação do destinatário.
 
 ## Ordem do pacote

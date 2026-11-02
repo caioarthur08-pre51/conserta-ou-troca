@@ -4,8 +4,8 @@ Estas pendências não alteram a produção inicial dos artefatos. Caio registra
 
 | Pendência | Responsável pela obtenção | Data de decisão | Continuidade enquanto estiver aberta |
 |---|---|---|---|
-| Escola, endereço, data efetiva, horários, quantidade de grupos e séries por horário | Caio, com Prof. Me. Tadeu Duarte | Assim que a instituição confirmar | Manter pacote operacional pronto em 31/10 e micro-oficina repetível de até 20 minutos |
-| Projetor, computadores, internet e celulares no local | Caio, com a instituição | 23/10/2026 | Preparar demonstração guiada e pacote totalmente offline |
+| Escola, endereço, data efetiva, horários, quantidade de grupos e séries por horário | Caio, com Prof. Me. Tadeu Duarte | Confirmar assim que possível; pendente em 02/11 | Manter pacote operacional previsto para 06/11 e micro-oficina repetível de até 20 minutos. A janela de 09h a 12h é provável, não confirmada. |
+| Projetor, computadores, internet e celulares no local | Caio, com a instituição | Confirmar antes de definir o modo de aplicação; pendente em 02/11 | Preparar demonstração guiada e pacote totalmente offline |
 | Quantidade de QR Codes impressos | Caio, após confirmação dos grupos | Antes da impressão | Larissa mantém arquivo mestre com QR e URL; custo rateado entre os cinco integrantes |
 
 Escola, endereço, bairro, horário, séries previstas, quantidade planejada de grupos e infraestrutura são dados de planejamento e podem ser registrados. Não haverá coleta de nomes, presença, respostas, desempenho, opiniões, dificuldades, contagens reais nem outros registros dos participantes ou da aplicação. Fotografias, se autorizadas, mostram apenas integrantes e ficam na pasta restrita do Drive. Arquivos administrativos, fontes, versões e fotografias autorizadas somente da equipe serão eliminados após 31/12/2026, salvo nova exigência institucional.
