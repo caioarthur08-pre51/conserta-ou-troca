@@ -101,14 +101,38 @@ function numeroObrigatorio(valor, campo, id, maiorQueZero = false) {
   return numero;
 }
 
+function categoriaObrigatoria(valor, campo, id, permitidos) {
+  const texto = textoObrigatorio(valor, campo, id);
+  if (!permitidos.includes(texto)) {
+    falhar(id + ": " + campo + " fora do vocabulário (" + permitidos.join(" | ") + ").");
+  }
+  return texto;
+}
+
+function inteiroObrigatorio(valor, campo, id) {
+  const numero = numeroObrigatorio(valor, campo, id);
+  if (!Number.isInteger(numero)) falhar(id + ": " + campo + " precisa ser inteiro.");
+  return numero;
+}
+
+// Ordem A:R definida em 01_modelagem_lais/dicionario_dados.md (contrato 1.0).
 const camposCasos = [
   "caso_id", "tipo_dispositivo", "modelo_ficticio",
-  "custo_reparo", "manutencao_adicional", "vida_adicional_anos",
-  "residual_reparado", "preco_substituto", "custos_acessorios",
-  "valor_venda_atual", "residual_substituto", "vida_substituto_anos",
-  "garantia_reparo_meses", "garantia_substituto_meses",
+  "custo_reparo", "manutencao_adicional", "residual_reparado",
+  "vida_adicional_anos", "garantia_reparo_meses",
+  "preco_substituto", "custos_acessorios", "valor_venda_atual",
+  "residual_substituto", "vida_substituto_anos", "garantia_substituto_meses",
   "risco_reparo", "necessidade_usuario", "impacto_ambiental", "observacao"
 ];
+
+const vocabulario = {
+  tipo_dispositivo: ["Celular", "Notebook"],
+  risco_reparo: ["Baixo", "Médio", "Alto"],
+  necessidade_usuario: ["Essencial", "Importante", "Adiável"],
+  impacto_ambiental: [
+    "Reparo favorece reuso", "Equilibrado", "Troca requer descarte responsável"
+  ]
+};
 
 const csvCasos = lerCsv(origemCasos);
 exigirCabecalho(csvCasos.cabecalho, camposCasos, "casos.csv");
@@ -135,43 +159,28 @@ if (idsEsperados.some((id) => !idsCasos.includes(id))) {
 const camposNaoNegativos = [
   "custo_reparo", "manutencao_adicional", "residual_reparado",
   "preco_substituto", "custos_acessorios", "valor_venda_atual",
-  "residual_substituto", "garantia_reparo_meses",
-  "garantia_substituto_meses"
+  "residual_substituto"
 ];
 
 const casos = csvCasos.registros.map((linha) => {
   const id = linha.caso_id;
+  const caso = {};
 
-  const caso = {
-    caso_id: id,
-    tipo_dispositivo: textoObrigatorio(
-      linha.tipo_dispositivo, "tipo_dispositivo", id
-    ),
-    modelo_ficticio: textoObrigatorio(
-      linha.modelo_ficticio, "modelo_ficticio", id
-    ),
-    risco_reparo: textoObrigatorio(
-      linha.risco_reparo, "risco_reparo", id
-    ),
-    necessidade_usuario: textoObrigatorio(
-      linha.necessidade_usuario, "necessidade_usuario", id
-    ),
-    impacto_ambiental: textoObrigatorio(
-      linha.impacto_ambiental, "impacto_ambiental", id
-    ),
-    observacao: textoObrigatorio(linha.observacao, "observacao", id)
-  };
-
-  for (const campo of camposNaoNegativos) {
-    caso[campo] = numeroObrigatorio(linha[campo], campo, id);
+  for (const campo of camposCasos) {
+    if (campo === "caso_id") {
+      caso.caso_id = id;
+    } else if (vocabulario[campo]) {
+      caso[campo] = categoriaObrigatoria(linha[campo], campo, id, vocabulario[campo]);
+    } else if (campo === "modelo_ficticio" || campo === "observacao") {
+      caso[campo] = textoObrigatorio(linha[campo], campo, id);
+    } else if (camposNaoNegativos.includes(campo)) {
+      caso[campo] = numeroObrigatorio(linha[campo], campo, id);
+    } else if (campo === "vida_adicional_anos" || campo === "vida_substituto_anos") {
+      caso[campo] = numeroObrigatorio(linha[campo], campo, id, true);
+    } else {
+      caso[campo] = inteiroObrigatorio(linha[campo], campo, id);
+    }
   }
-
-  caso.vida_adicional_anos = numeroObrigatorio(
-    linha.vida_adicional_anos, "vida_adicional_anos", id, true
-  );
-  caso.vida_substituto_anos = numeroObrigatorio(
-    linha.vida_substituto_anos, "vida_substituto_anos", id, true
-  );
 
   const liquidoReparar =
     caso.custo_reparo +
