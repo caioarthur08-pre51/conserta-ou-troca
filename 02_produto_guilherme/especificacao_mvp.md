@@ -235,8 +235,9 @@ originais nem o cronograma.
 
 **Cargo responsável pelo artefato:** Engenharia do Comparador Local — Guilherme Almeida.
 **Verificação técnica:** executada em 05/11/2026 por Codex, a pedido de Caio, sobre o
-esqueleto publicado no commit `8cace36`. Este registro documenta os testes;
-o aceite e o marco de liberação do cargo continuam sob responsabilidade de Guilherme.
+esqueleto publicado no commit `8cace36` e repetida após `F2 ENTRADAS INTEGRADAS`
+(`036b584`). O domínio responsável permanece Guilherme; a execução assistida
+não representa assinatura pessoal dele.
 
 - A fonte `01_modelagem_lais/casos.csv` vigente no teste gerou oito objetos com
   18 campos e IDs C01–C08. O conteúdo gerado coincidiu com `app/js/dados.js`
@@ -251,6 +252,7 @@ o aceite e o marco de liberação do cargo continuam sob responsabilidade de Gui
   seção de resultados ficou oculta, conforme o limite desta fase. A inspeção
   de `app/` não encontrou `fetch()`, módulos ou URLs externas.
 
-O teste usou o CSV disponível da Fase 1. Antes de `MVP ESQUELETO LIBERADO`,
-Guilherme deve repetir a geração e conferir a versão recebida no marco
-`DADOS F2 LIBERADOS` de Laís. O cálculo completo permanece para a Fase 3.
+Após o marco `DADOS F2 LIBERADOS`, o conversor gerou novamente oito casos do
+CSV F2 integrado. O CSV copiado em `app/dados/casos.csv` e o `app/js/dados.js`
+coincidem com as saídas da mesma versão. **MVP ESQUELETO LIBERADO** para a
+integração técnica da F2. O cálculo completo permanece para a Fase 3.
