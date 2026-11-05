@@ -2,7 +2,7 @@
 
 Versão do conteúdo: v0.2 (Fase 2) · Autoria: Letícia Costa · Destino único: diagramação e exportação do PDF por Larissa (`guia_decisao.pdf`)
 
-> Notas para Larissa: o guia cabe em uma página e segue os mínimos do guia visual (18 pt no corpo e 16 pt nas tabelas). Diagrame sem reescrever o sentido. Se faltar espaço, peça uma versão curta e não reduza a fonte. O QR e a URL textual do Looker Studio entram na seção 6.
+> Notas para Larissa: o guia deve caber em uma página e seguir os mínimos do guia visual (18 pt no corpo e 16 pt nas tabelas). Confira o encaixe no ODP/PDF; ele ainda não é comprovado por este Markdown. Diagrame sem reescrever o sentido. Se faltar espaço, peça uma versão curta e não reduza a fonte. O QR e a URL textual do Looker Studio entram na seção 6 quando o endereço final for liberado.
 
 ## 1. Pergunta central
 

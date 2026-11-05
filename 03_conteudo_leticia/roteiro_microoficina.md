@@ -1,6 +1,6 @@
 # Roteiro da micro-oficina — Conserta ou Troca? O custo total do dispositivo
 
-Versão: v0.2 (Fase 2) · Responsável: Letícia Costa · Disciplina: BI e Finanças (Prof. Me. Tadeu Duarte) · 2026.2
+Versão: v0.3 (Fase 2) · Responsável editorial: Letícia Costa · Disciplina: BI e Finanças (Prof. Me. Tadeu Duarte) · 2026.2
 
 Pergunta orientadora: em quais condições consertar um celular ou notebook custa menos por ano do que trocar?
 
@@ -107,7 +107,7 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 > Agora, as fórmulas. São duas, uma para cada opção.
 > Reparar: o custo líquido é o custo do reparo, mais a manutenção adicional, menos o valor residual do aparelho reparado. O custo anual é esse custo líquido dividido pela vida adicional.
 > Trocar: o custo líquido é o preço do substituto, mais os acessórios, menos o valor da venda do aparelho atual, menos o valor residual do substituto. O custo anual é esse custo líquido dividido pela vida do substituto.
-> Para decidir, calculamos a diferença anual: custo anual de reparar menos custo anual de trocar. Se for negativa, reparar custa menos por ano. Se for positiva, trocar custa menos. Se a diferença for menor que um centavo, dizemos que é um empate técnico.
+> Para decidir, calculamos a diferença anual: custo anual de reparar menos custo anual de trocar. Primeiro, se o valor absoluto da diferença for menor que um centavo por ano, é empate técnico. Nos outros casos, diferença negativa favorece reparar; positiva favorece trocar.
 > Cuidado com as unidades: dinheiro em reais, tempo em anos.
 
 **Ação do estudante:** acompanha as fórmulas no slide e aponta, em cada uma, o que entra somando e o que entra subtraindo.
@@ -118,12 +118,11 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 
 **Fala principal:**
 
-> Agora é com vocês, à mão, antes de qualquer ferramenta. Passo um: calculem o custo líquido de reparar e o de trocar. Passo dois: dividam cada um pela vida útil da respectiva opção. Passo três: calculem a diferença. Papel e calculadora liberados. Vou dar um minuto e meio.
-> Conferindo. Reparar: 420 mais 80 menos 120 dá 380 reais de custo líquido. Dividido por 1,5, dá R$ 253,33 por ano.
-> Trocar: 1.800 mais 90 menos 180 menos 450 dá 1.260. Dividido por 4, dá R$ 315,00 por ano.
-> A diferença é de menos R$ 61,67 por ano. Negativa, então reparar custa menos por ano neste caso. A maior parte dos erros aqui vem de esquecer um dos descontos ou de trocar uma unidade.
+> À mão, calculem os dois custos anuais e a diferença. Vocês têm um minuto.
+> Conferindo: reparar, 420 mais 80 menos 120 dá 380; dividido por 1,5 dá R$ 253,33 por ano. Trocar, 1.800 mais 90 menos 180 menos 450 dá 1.260; dividido por 4 dá R$ 315,00 por ano.
+> Diferença: menos R$ 61,67; reparar custa menos neste caso.
 
-**Ação do estudante:** calcula à mão as duas opções e a diferença, e compara com o resultado do apresentador (pausa de cerca de 1,5 minuto).
+**Ação do estudante:** calcula à mão as duas opções e a diferença, com papel e calculadora se necessário, e compara com a conferência guiada; há um minuto de pausa independente, além das contas acompanhadas na fala.
 
 **Recurso:** slide 4 (passo a passo com o C01).
 
@@ -167,6 +166,8 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 
 **Recurso:** slide 6 e o MVP.
 
+**Fonte de apoio ao facilitador:** a definição de análise de sensibilidade corresponde à afirmação A08 da `matriz_afirmacoes_fontes.csv`, verificada no documento oficial da EPA. Os números sobre lixo eletrônico correspondem às afirmações A01 e A02, verificadas no *Global E-waste Monitor 2024*.
+
 **Frase de saída:** "Com número, premissa e critério na mesa, dá para justificar uma escolha."
 
 ---
@@ -191,10 +192,8 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 
 **Fala principal:**
 
-> Resumindo: calculamos o custo anual de reparar e de trocar, vimos que o resultado depende de premissas e que critérios não financeiros também contam.
-> Os limites: os dados são sintéticos, as premissas são simplificadas, não usamos marcas reais, e o resultado é educativo: não é recomendação comercial.
-> No slide está o QR do painel, com o endereço escrito ao lado. O material de apoio é o Guia de decisão, de uma página.
-> Para justificar uma escolha, vocês precisam de pelo menos um dado financeiro e uma limitação. Um modelo: "Reparar pode favorecer porque custa R$ 61,67 a menos por ano, mas isso depende da premissa de que o aparelho dure mais 1,5 ano."
+> Resumindo: custo anual depende das premissas. Risco, necessidade e impacto ambiental ajudam a decidir, sem mudar o cálculo. Os dados são sintéticos; não é recomendação comercial.
+> O slide traz QR, endereço do painel e Guia de decisão. Justifiquem com um dado e uma limitação: "Reparar custa R$ 61,67 a menos por ano se durar 1,5 ano; essa duração é incerta." Completem com outro limite.
 
 **Ação do estudante:** completa oralmente o modelo de frase com um dado financeiro e uma limitação.
 
@@ -251,17 +250,23 @@ Se a leitura passar de 18:00, corte nesta ordem:
 
 **Nunca corte:** o cálculo manual antes do MVP e o aviso educativo ([aviso_educativo]). Nunca elimine a margem final de 18:00 a 20:00.
 
-## Registro de cronometragem
+## Verificação reproduzível de duração da Fase 2
 
-A estimativa abaixo usa a contagem de palavras da fala a 130 palavras por minuto, mais o tempo previsto para as ações do estudante (por exemplo, 1,5 minuto de cálculo manual). **A medição real por leitura em voz alta ainda não foi feita.** Preencha com o tempo medido por você.
+Em 05/11/2026, `medir_roteiro_tts.ps1` extraiu somente as falas marcadas neste roteiro e sintetizou cada trecho com a voz Windows **Microsoft Maria Desktop**, pt-BR, velocidade normal (`Rate=0`). A duração foi calculada pelo tamanho do áudio PCM gerado, sem reproduzi-lo em tempo real. O teste inclui a fala opcional de erro. Os valores arredondados abaixo são **tempo de fala sintética**, não tempo da oficina nem leitura humana.
 
-| Intervalo | Orçamento | Estimativa pela contagem de palavras | Medido em voz alta |
+| Intervalo | Orçamento | Fala TTS | Tempo restante para ação, pausa e transição |
 | --- | --- | --- | --- |
-| 0:00–2:00 | 2:00 | 1:44 (171 palavras de fala + ações) | |
-| 2:00–5:00 | 3:00 | 2:30 (239 palavras de fala + ações) | |
-| 5:00–9:00 | 4:00 | 3:47 (253 palavras de fala + ações; folga curta) | |
-| 9:00–12:00 | 3:00 | 1:59 (149 palavras de fala + ações) | |
-| 12:00–15:00 | 3:00 | 2:21 (209 palavras de fala + ações) | |
-| 15:00–18:00 | 3:00 | 2:19 (214 palavras de fala + ações) | |
-| 18:00–20:00 | 2:00 | 0:38 (39 palavras de fala + ações) | |
-| **Total** | **20:00** | 15:18 |  |
+| 0:00–2:00 | 2:00 | 1:31 | 0:29 |
+| 2:00–5:00 | 3:00 | 2:08 | 0:52 |
+| 5:00–7:00 | 2:00 | 1:14 | 0:46 |
+| 7:00–9:00 | 2:00 | 0:48 | 1:12 |
+| 9:00–12:00 | 3:00 | 1:27 | 1:33 |
+| 12:00–15:00 | 3:00 | 1:55 | 1:05 |
+| 15:00–17:00 | 2:00 | 0:50 | 1:10 |
+| 17:00–18:00 | 1:00 | 0:41 | 0:19 |
+| 18:00–20:00 | 2:00 | 0:23 | 1:37 |
+| **Total** | **20:00** | **10:58** | **9:02** |
+
+No slide 4, os 48,13 segundos de fala somados ao minuto de cálculo independente ocupam 1:48,13 do intervalo 7:00–9:00; sobram cerca de 12 segundos para passagem. Até 18:00, a fala TTS ocupa 10:34,89, deixando 7:25,11 distribuídos entre ações e transições. O slide 8 tem apenas 19 segundos para a resposta oral. Em projeção ou com computadores lentos, use os cortes de contingência acima e preserve a margem final.
+
+Houve leitura em voz alta sem cronômetro, que não comprova a duração real. **O ensaio humano cronometrado ainda não foi realizado e não é atribuído a Letícia nem aos demais integrantes.** A síntese de voz indica viabilidade, mas só o ensaio com navegação, cálculo manual e troca de grupo mede a execução completa.

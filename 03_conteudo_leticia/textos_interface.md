@@ -1,8 +1,10 @@
 # Contrato textual do MVP e dos slides
 
-Versão do contrato: **v0.2** (Fase 2) · Responsável pela redação: Letícia Costa
+Versão do contrato: **v0.3** (Fase 2) · Responsável editorial: Letícia Costa
 Consumidores: Guilherme (MVP) e Larissa (slides e guia diagramado)
 Base: `01_modelagem_lais/dicionario_dados.md` (contrato v1.0) e `02_produto_guilherme/especificacao_mvp.md`.
+
+**Nome canônico:** `textos_interface.md`. A menção a `textos_mvp_slides.md` na instrução de comunicação da Fase 2 designa este mesmo contrato; não há segundo arquivo de textos.
 
 ## Regras de uso
 
@@ -24,6 +26,8 @@ Base: `01_modelagem_lais/dicionario_dados.md` (contrato v1.0) e `02_produto_guil
 | `{risco_reparo}` | `Baixo`, `Médio` ou `Alto` |
 | `{necessidade_usuario}` | `Essencial`, `Importante` ou `Adiável` |
 | `{impacto_ambiental}` | `Reparo favorece reuso`, `Equilibrado` ou `Troca requer descarte responsável` |
+| `{garantia_reparo_meses}` | garantia do reparo em meses, inteiro não negativo |
+| `{garantia_substituto_meses}` | garantia do substituto em meses, inteiro não negativo |
 
 ## Chaves
 
@@ -51,9 +55,9 @@ As mensagens aparecem na região `aria-live` do MVP e ocultam os resultados, con
 | `erro_texto` | Digite apenas números neste campo. | — | MVP | v0.2 |
 | `erro_negativo` | Digite um valor maior ou igual a 0. | — | MVP | v0.2 |
 | `erro_vida_zero` | A vida adicional precisa ser maior que 0 anos. | — | MVP | v0.2 |
-| `erro_liquido_negativo` | Com esses valores, o custo líquido fica negativo e o cálculo não é válido. Revise os dados. | Custo líquido negativo: revise os dados. | MVP | v0.2 |
+| `erro_liquido_negativo` | Com esses valores, o custo líquido fica negativo e o cálculo não é válido. Revise os dados. | Custo líquido negativo: revise os dados. | MVP | v0.3 |
 
-A chave `erro_liquido_negativo` é uma **inclusão proposta**: a especificação do MVP prevê erro para custo líquido negativo, e o contrato original não tinha texto para ele. Guilherme confirma se usa.
+A chave `erro_liquido_negativo` integra este contrato porque a especificação do MVP exige rejeitar custo líquido negativo. Guilherme deve consumir a versão v0.3 ao implementar o cálculo na Fase 3.
 
 ### Explicação do resultado
 
@@ -70,6 +74,8 @@ Os critérios nunca alteram o resultado financeiro.
 | `risco_reparo` | Risco do reparo: {risco_reparo} | Risco: {risco_reparo} | MVP, slide 6, guia | v0.2 |
 | `necessidade_usuario` | Necessidade do usuário: {necessidade_usuario} | Necessidade: {necessidade_usuario} | MVP, slide 6, guia | v0.2 |
 | `impacto_ambiental` | Impacto ambiental (reflexão qualitativa, não é medição): {impacto_ambiental} | Ambiental: {impacto_ambiental} | MVP, slide 6, guia | v0.2 |
+| `garantia_reparo` | Garantia do reparo: {garantia_reparo_meses} meses. | Reparo: {garantia_reparo_meses} meses. | MVP, slide 6 | v0.3 |
+| `garantia_substituto` | Garantia do substituto: {garantia_substituto_meses} meses. | Substituto: {garantia_substituto_meses} meses. | MVP, slide 6 | v0.3 |
 
 ### Termos sensíveis
 
@@ -81,7 +87,7 @@ Os critérios nunca alteram o resultado financeiro.
 
 | Ponto | Responsável | Observação |
 | --- | --- | --- |
-| Garantias na tela | Guilherme | A especificação lista garantias entre os critérios não financeiros, mas o contrato não tem chave para elas. Se o MVP precisar de rótulo, informar a chave e o texto desejado. |
+| Garantias na tela | Guilherme e Larissa | Usar as chaves `garantia_reparo` e `garantia_substituto` v0.3; mostrar meses sem incorporá-los ao resultado financeiro. |
 | Momento do MVP na oficina | Guilherme | A especificação diz "entre os minutos 10 e 14". A cronometragem canônica usa 9:00–12:00 (conferência) e 12:00–15:00 (sensibilidade). Ajustar o texto da especificação. |
 | Limite de espaço nos slides | Larissa | Os mínimos do guia visual são 32 pt (títulos), 18 pt (corpo) e 16 pt (tabelas), com no máximo 5 linhas de corpo. Se alguma chave não couber, pedir versão curta. |
 | Link e QR do Looker Studio | Larissa e Laís | Aparecem no slide 8 e no guia assim que existirem. |
