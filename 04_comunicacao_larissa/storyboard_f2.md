@@ -17,6 +17,8 @@ Este documento especifica os oito slides e o guia de uma página. Os ODPs são w
 
 Os números são **sintéticos**. O orçamento abaixo cobre 0:00–20:00 sem lacunas; o conteúdo termina em 18:00. Os 2 minutos finais servem para interação, transição ou contingência, sem conteúdo novo.
 
+**Passagem de versão:** após `F2 ENTRADAS INTEGRADAS` (`036b584`), os textos de Letícia v0.3 e os dados de Laís v0.2 foram conferidos contra este storyboard e as notas dos ODPs v0.3. **TEMA F2 LIBERADO** para integração técnica. A conferência assistida não representa assinatura pessoal da responsável pelo domínio.
+
 ## Slide 1 — Título e pergunta (0:00–2:00)
 
 - **Propósito e mensagem:** introduzir o dilema “Conserta ou Troca?” e perguntar em quais condições reparar custa menos por ano que trocar.
