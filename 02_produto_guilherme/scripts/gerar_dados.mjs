@@ -90,6 +90,11 @@ function textoObrigatorio(valor, campo, id) {
 function numeroObrigatorio(valor, campo, id, maiorQueZero = false) {
   if (valor === "") falhar(id + ": " + campo + " está vazio.");
 
+  // O CSV usa números decimais com ponto, sem notação hexadecimal ou exponencial.
+  if (!/^\d+(?:\.\d+)?$/.test(valor)) {
+    falhar(id + ": " + campo + " não está em formato decimal.");
+  }
+
   const numero = Number(valor);
 
   if (!Number.isFinite(numero)) falhar(id + ": " + campo + " não é número.");
@@ -110,6 +115,9 @@ function categoriaObrigatoria(valor, campo, id, permitidos) {
 }
 
 function inteiroObrigatorio(valor, campo, id) {
+  if (!/^\d+$/.test(valor)) {
+    falhar(id + ": " + campo + " precisa ser inteiro.");
+  }
   const numero = numeroObrigatorio(valor, campo, id);
   if (!Number.isInteger(numero)) falhar(id + ": " + campo + " precisa ser inteiro.");
   return numero;
