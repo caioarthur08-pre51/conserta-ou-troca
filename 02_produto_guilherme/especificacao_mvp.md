@@ -24,9 +24,10 @@ critérios não financeiros.
   menos por ano do que trocar?
 - **Público:** estudantes do 8º ano, 9º ano e Ensino Médio, em micro-oficina
   presencial de no máximo 20 minutos por grupo.
-- **Momento do comparador na oficina:** depois do cálculo manual guiado; entre os
-  minutos 10 e 14, o grupo confere o resultado no MVP e altera uma premissa
-  (sensibilidade). O cálculo manual sempre precede o uso do software.
+- **Momento do comparador na oficina:** depois do cálculo manual guiado;
+  conferência no MVP entre 9:00 e 12:00 e sensibilidade entre 12:00 e 15:00,
+  conforme `03_conteudo_leticia/roteiro_microoficina.md` v0.2. O cálculo
+  manual sempre precede o uso do software.
 - **Demonstração:** seleção, cálculo, sensibilidade e critérios não financeiros em
   até 4 minutos.
 - **Privacidade:** não há coleta de nomes, avaliação individual, questionário nem
@@ -229,3 +230,29 @@ originais nem o cronograma.
 - Resultados coincidem com a planilha da Modelagem.
 - Funciona em computador/projetor; 390 px comprova apenas responsividade.
 - O README permite execução autônoma.
+
+## 14. Verificação do esqueleto da Fase 2
+
+**Cargo responsável pelo artefato:** Engenharia do Comparador Local — Guilherme Almeida.
+**Verificação técnica:** executada em 05/11/2026 por Codex, a pedido de Caio, sobre o
+esqueleto publicado no commit `8cace36` e repetida após `F2 ENTRADAS INTEGRADAS`
+(`036b584`). O domínio responsável permanece Guilherme; a execução assistida
+não representa assinatura pessoal dele.
+
+- A fonte `01_modelagem_lais/casos.csv` vigente no teste gerou oito objetos com
+  18 campos e IDs C01–C08. O conteúdo gerado coincidiu com `app/js/dados.js`
+  publicado, após normalizar a diferença de fim de linha (CRLF/LF).
+- Em cópias temporárias, o conversor encerrou com erro para número `abc`,
+  vida útil vazia, C01 duplicado e uma linha removida. Também rejeitou número
+  hexadecimal, notação exponencial e garantia escrita como decimal.
+- No Chrome, `app/index.html` abriu por `file://`. O seletor mostrou C01–C08;
+  C01 exibiu custo do reparo 420 e vida 1,5; C08 exibiu 1600 e 3. Não houve
+  exceção JavaScript nem mensagem de erro no console.
+- Os botões de cálculo, restauração e impressão permaneceram desativados, e a
+  seção de resultados ficou oculta, conforme o limite desta fase. A inspeção
+  de `app/` não encontrou `fetch()`, módulos ou URLs externas.
+
+Após o marco `DADOS F2 LIBERADOS`, o conversor gerou novamente oito casos do
+CSV F2 integrado. O CSV copiado em `app/dados/casos.csv` e o `app/js/dados.js`
+coincidem com as saídas da mesma versão. **MVP ESQUELETO LIBERADO** para a
+integração técnica da F2. O cálculo completo permanece para a Fase 3.
