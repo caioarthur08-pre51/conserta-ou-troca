@@ -11,7 +11,7 @@
 - Cidade: Teresina-PI
 - Semestre: 2026.2
 - Professor: Prof. Me. Tadeu Duarte
-- Prazo de produção: 20 de outubro a 2 de novembro de 2026; pacote operacional congelado em 30/10 e disponível em 31/10
+- Prazo do pacote: 20 de outubro a 6 de novembro de 2026. A Fase 1 foi concluída; as Fases 2 a 5 foram reprogramadas para 2 a 6 de novembro. O pacote operacional só será declarado pronto após as cinco entregas, testes, integração final e tag. A ação presencial ocorrerá quando a escola confirmar local e data.
 - Público: 8º e 9º anos do Ensino Fundamental e Ensino Médio
 
 ## Objetivo
@@ -43,6 +43,6 @@ Ensinar estudantes a comparar a decisão de consertar ou trocar um celular ou no
 - A planilha e o MVP produzem os mesmos resultados para os oito casos.
 - O Data Studio apresenta a fonte final e possui PDF de contingência.
 - O conteúdo obrigatório cabe em até 18 minutos e a apresentação completa nunca ultrapassa 20 minutos.
-- O pacote operacional de 30/10 pode ser usado em 31/10 sem alterações posteriores.
+- O pacote operacional integrado e testado estará pronto até 06/11/2026; a data da ação presencial depende de confirmação externa.
 - O QR abre o relatório do Looker Studio em modo anônimo e somente para visualização.
 

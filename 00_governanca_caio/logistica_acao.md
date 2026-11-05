@@ -3,7 +3,7 @@
 **Proprietário:** Caio Rocha  
 **Fonte externa principal:** Prof. Me. Tadeu Duarte  
 **Situação geral:** A CONFIRMAR  
-**Última atualização:** 2026-10-19
+**Última atualização:** 2026-11-02
 
 Este arquivo registra somente o planejamento necessário para executar a ação. Ele não registra presença, nomes, respostas, desempenho, opiniões, fotografias de estudantes nem qualquer resultado da aplicação.
 
@@ -14,8 +14,8 @@ Este arquivo registra somente o planejamento necessário para executar a ação.
 | Escola parceira | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Endereço | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Bairro | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
-| Data da ação | Até 31/10/2026; dia exato a confirmar | Parcial | Projeto aprovado | 2026-10-18 |
-| Horário inicial e final | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
+| Data da ação | A confirmar; o pacote do projeto deverá estar pronto até 06/11/2026 | Pendente | Prazo informado pela equipe em 02/11; data da escola ainda desconhecida | — |
+| Horário inicial e final | 09h–12h como hipótese, sem confirmação | Pendente | Informação provável da equipe em 02/11; confirmar com o Prof. Me. Tadeu Duarte | — |
 | Séries previstas | 8º e 9º anos e Ensino Médio; distribuição a confirmar | Parcial | Projeto aprovado | 2026-10-18 |
 | Quantidade de grupos | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Quantidade de sessões de 20 minutos | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |

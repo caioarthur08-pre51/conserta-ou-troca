@@ -33,3 +33,9 @@
 - A decisão D-008 foi superada pela D-018.
 - O cronograma mantém 14 dias e passa a abranger 20/10 a 02/11/2026.
 - O pacote operacional é congelado em 30/10, fica disponível para uso em 31/10 e recebe somente documentação, arquivamento, integração final e tag em 01 e 02/11.
+
+## Atualização aprovada em 02/11/2026
+
+- A decisão D-018 foi superada pela D-019. O prazo final do projeto passa a ser 06/11/2026.
+- A Fase 1 permanece registrada como concluída em 20–21/10. Fase 2: 02–03/11; Fase 3: 04/11; Fase 4: 05/11; Fase 5: 06/11. As barreiras entre fases continuam obrigatórias.
+- A janela de 09h a 12h para a ação é apenas provável, sem escola, data, infraestrutura ou grupos confirmados. O pacote deve ficar pronto até 06/11, mas a execução presencial não pode ser declarada concluída sem confirmação e realização.
