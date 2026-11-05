@@ -1,4 +1,4 @@
-# Dicionário de dados — contrato da Fase 1
+# Dicionário de dados — contrato vigente e implementação da Fase 2
 
 **Responsável:** Laís Eulálio  
 **Versão do contrato:** 1.0  
@@ -11,7 +11,7 @@
 - Moeda em reais (R$); cálculos preservam precisão total e a apresentação exibe duas casas decimais.
 - CSV UTF-8, delimitador vírgula, ponto decimal e aspas duplas para campos textuais que contenham vírgula.
 - `n.a.` indica cálculo indisponível/inválido; não é valor numérico e não define vencedor.
-- Na Fase 2, a `ODS` será a fonte editável canônica; XLSX, CSV, Google Sheets e Looker Studio serão derivados e não deverão implementar fórmulas divergentes. O CSV da Fase 1 fixa o esquema e os oito casos didáticos aprovados para a integração.
+- Na Fase 2, a `ODS` é a fonte editável canônica; XLSX e CSV são derivados da mesma base. Google Sheets e Looker Studio serão preparados nas fases posteriores e não deverão implementar fórmulas divergentes. O CSV da Fase 1 fixa o esquema e os oito casos didáticos aprovados para a integração.
 - Os campos qualitativos são descritivos, com vocabulário fechado, e não entram nas fórmulas financeiras.
 - Os 18 campos abaixo seguem a ordem contratual A:R: 14 campos de identificação/entradas, três critérios e uma observação. Não inserir saídas calculadas no CSV canônico.
 - Os nomes técnicos e categorias são sensíveis à grafia contratual: preservar acentos, espaços e maiúsculas/minúsculas exatamente como definidos.
@@ -74,3 +74,11 @@ Estas saídas não fazem parte dos 18 campos de entrada A:R. São calculadas pel
 ## Regra financeira oficial
 
 O preço originalmente pago pelo aparelho atual é um gasto passado e fica fora das fórmulas. Os critérios qualitativos complementam a leitura e nunca alteram o resultado financeiro. A decisão compara apenas os custos anuais calculados, sem arredondar valores intermediários.
+
+## Implementação da Fase 2 — versão 0.2 verificada tecnicamente
+
+- A fonte editável é `modelo_tco_canonico.ods`; a fotografia é `modelo_tco_v0.2_2026-11-03.ods`, com exportação XLSX de mesmo nome-base. Todas reproduzem o CSV integrado da Fase 1, inclusive as categorias fechadas de O:Q.
+- A aba `ExportCSV` ocupa `A1:R9` e gera o único `casos.csv` de passagem. Não há reordenação do contrato F1.
+- As abas são `Leia-me`, `Resumo`, `Casos`, `Calculos`, `DataStudio`, `ExportCSV` e `Fontes`. `DataStudio` possui 16 linhas, duas por caso, com as 15 colunas descritas acima.
+- `Calculos!J6:J13` valida preenchimento, tipos numéricos, ID único, categorias, garantias inteiras não negativas, valores monetários não negativos, vidas positivas e custos líquidos não negativos. Um caso inválido produz `n.a.` nas saídas financeiras e não recebe vencedor. A validação visual na aba `Casos` reforça essa guarda.
+- A base sintética da Fase 2 mantém C01 em R$ 253,33/ano para reparar e R$ 315,00/ano para trocar; C03 em R$ 370,00/ano e R$ 282,86/ano, respectivamente. ODS e XLSX armazenam precisão completa e exibem duas casas.

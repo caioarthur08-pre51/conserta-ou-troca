@@ -44,7 +44,7 @@ Em C08, a descrição original “Baixo a médio” foi classificada como `Médi
 - **C01 — reprodução manual:** reparar: `420 + 80 − 120 = 380`; `380 ÷ 1,5 = 253,33 R$/ano`. Trocar: `1.800 + 90 − 180 − 450 = 1.260`; `1.260 ÷ 4 = 315,00 R$/ano`. A diferença não arredondada é negativa; reparar apresenta menor custo anual.
 - **C03:** reparar R$ 370,00/ano; trocar R$ 282,86/ano; menor custo anual para trocar.
 
-Esses resultados foram recalculados sobre o CSV publicado. A ODS editável prevista para a Fase 2 deverá manter os mesmos casos e o mesmo contrato.
+Esses resultados foram recalculados sobre o CSV publicado. A ODS da Fase 2 mantém os mesmos casos e o mesmo contrato; consulte [`verificacao_f2.md`](verificacao_f2.md) para links, hashes e testes.
 
 ## Critérios qualitativos
 
@@ -62,4 +62,4 @@ Modelo didático simplificado. Não considera inflação, juros, financiamento, 
 
 ## Testes de referência
 
-Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. Os artefatos da Fase 2 (ODS, Sheets e Looker Studio) exigem validação própria quando forem produzidos.
+Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio serão produzidos e validados nas fases seguintes.
