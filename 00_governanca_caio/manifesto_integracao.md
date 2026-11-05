@@ -54,6 +54,20 @@ O contrato de campos, testes, consumidores e ordem de integração da Fase 2 est
 
 Caio atualiza este manifesto a cada liberação. O responsável pelo domínio informa versão, data, commit, link do **arquivo**, tamanho e SHA-256 quando aplicável e publica `ENTREGA FINAL LIBERADA` na Fase 5. Nesta regularização da F2, a produção técnica assistida ocorreu sob delegação para as lacunas de cada cargo; os commits identificam a assistência sem se passar pelos integrantes. A propriedade de cada artefato e as decisões de conteúdo permanecem nos respectivos cargos. O caminho canônico continua existindo; o arquivo versionado é uma cópia congelada. O hash do commit que contém este próprio manifesto será registrado no Notion depois do `push`, pois não pode constar dentro do mesmo commit sem gerar outro hash.
 
+## Acompanhamento da Fase 3 — 05/11/2026
+
+O inventário acima documenta as versões F2, não a conclusão da F3. O [índice do pacote](../90_integracao/indice_pacote.md), v0.1, registra origem, destino, responsável, versão, consumidor e estado de cada candidato. A [lista de incompatibilidades](incompatibilidades_f3.md) registra a divergência de prazos e a errata da sequência de ensaio. No início desta produção, `origin/main` estava em `0c02bc5360fe2e69b6a5ab58e76f73e260f047c7`; as quatro branches remotas dos demais cargos ainda não traziam commits F3 e as tarefas F3 do Notion permaneciam pendentes. Isso não descreve eventuais arquivos locais ainda não enviados pelos autores.
+
+| Domínio | Versão única comprovada nesta revisão | Candidato F3 necessário | Passagem aguardada |
+| --- | --- | --- | --- |
+| Caio | Manifesto F2 v0.4; índice e incompatibilidades F3 v0.1 publicados na branch de governança | Atualização das cinco entradas, decisão de reprogramação e integração publicada | `F3 ENTRADAS INTEGRADAS` e `F3 INTEGRADA` ainda não emitidos |
+| Laís | CSV/ODS/XLSX F2 v0.2 | Fonte privada de 16 linhas, relatório Looker candidato, URL e captura | `DADOS F3 LIBERADOS`; `CAPTURA LOOKER LIBERADA` |
+| Guilherme | Esqueleto MVP F2 v0.2 | Comparador com cálculo/sensibilidade e captura estável | `CAPTURA MVP LIBERADA` |
+| Letícia | Roteiro/interface/referências F2 v0.3; guia Markdown F2 v0.2; ODT de trabalho F1 v0.1 | Relatório completo, DOCX e texto do guia liberado | `CONTEÚDO DO GUIA LIBERADO`; depois `FIDELIDADE CONFERIDA` |
+| Larissa | Wireframes ODP/PPTX/PDF F2 v0.3 | Apresentação e guia completos, prova do guia, exportações candidatas | `F3 PROVA DO GUIA`; `F3 VISUAL CANDIDATO` |
+
+Não há uma nova versão corrente F3 para os quatro domínios alheios até cada proprietário publicar o candidato com versão, testes e commit ou hash. A integração intermediária depende de Laís, Guilherme e Letícia; a final também depende de Larissa e da conferência textual de Letícia. A falta desses marcos não invalida a F2 e impede apenas declarar a F3 integrada. Nenhuma fonte intermediária foi movida para `02_entrega_final`.
+
 ## Controle obrigatório das passagens
 
 Esta tabela complementa o inventário acima. Caio preenche uma linha para cada versão liberada; não basta registrar apenas o arquivo final.

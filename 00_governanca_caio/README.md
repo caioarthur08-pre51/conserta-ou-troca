@@ -54,7 +54,7 @@ Caio não aceita “pronto” como informação suficiente. Se faltar artefato, 
 ## Auto revisão
 
 - Todas as tarefas têm responsável, fase, prazo, arquivo e critério de conclusão.
-- O cronograma atualizado termina em 06/11/2026; cada fase só avança após as cinco entregas e a integração correspondente.
+- O cronograma original previa terminar em 06/11/2026; após a regularização técnica da F2 em 05/11, as datas F3–F5 exigem nova decisão registrada. Cada fase só avança após as cinco entregas e a integração correspondente.
 - O pacote não contém duas versões concorrentes do mesmo artefato.
 - Nenhum arquivo dos demais cargos foi alterado por Caio.
 - A micro-oficina possui versão offline e cabe em 20 minutos.
