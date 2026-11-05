@@ -4,11 +4,11 @@ fase,periodo,data_limite,responsavel,tarefa,arquivo_ou_saida,criterio_conclusao,
 1,"20-21/10",2026-10-21,Guilherme,"Definir arquitetura e importação","especificacao_mvp.md","Estrutura e contratos definidos",Concluída
 1,"20-21/10",2026-10-21,Letícia,"Definir objetivo e sumário","README.md","Objetivo observável e estrutura do relatório",Concluída
 1,"20-21/10",2026-10-21,Larissa,"Definir direção visual e sequência","guia_visual.md","Paleta provisória e oito slides definidos",Concluída
-2,"02-03/11",2026-11-03,Caio,"Publicar manifesto e riscos","manifesto_integracao.md","Arquivos e interfaces listados",Em andamento
-2,"02-03/11",2026-11-03,Laís,"Montar planilha inicial e oito casos","ODS editável no Drive + casos.csv no Git","Oito casos e fórmulas iniciais reconciliados",Pendente
-2,"02-03/11",2026-11-03,Guilherme,"Criar esqueleto executável","app/","index.html abre e estrutura está documentada",Pendente
-2,"02-03/11",2026-11-03,Letícia,"Produzir roteiro e referências iniciais","roteiro_microoficina.md","Sequência cabe em 20 minutos",Pendente
-2,"02-03/11",2026-11-03,Larissa,"Criar wireframes e storyboard","ODP editável no Drive + guia_visual.md no Git","Oito slides possuem propósito",Pendente
+2,"02-03/11",2026-11-03,Caio,"Publicar manifesto e riscos","manifesto_integracao.md","Arquivos e interfaces listados",Concluída
+2,"02-03/11",2026-11-03,Laís,"Montar planilha inicial e oito casos","ODS editável no Drive + casos.csv no Git","Oito casos e fórmulas iniciais reconciliados",Concluída
+2,"02-03/11",2026-11-03,Guilherme,"Criar esqueleto executável","app/","index.html abre e estrutura está documentada",Concluída
+2,"02-03/11",2026-11-03,Letícia,"Produzir roteiro e referências iniciais","roteiro_microoficina.md","Sequência cabe em 20 minutos",Concluída
+2,"02-03/11",2026-11-03,Larissa,"Criar wireframes e storyboard","ODP editável no Drive + guia_visual.md no Git","Oito slides possuem propósito",Concluída
 3,"04/11",2026-11-04,Caio,"Manter quadro e índice do pacote","Notion e manifesto","Todas as dependências visíveis",Pendente
 3,"04/11",2026-11-04,Laís,"Concluir planilha e Data Studio inicial","ODS, XLSX e URL","Fórmulas e fonte funcionais",Pendente
 3,"04/11",2026-11-04,Guilherme,"Concluir MVP","app/","Oito casos e sensibilidade funcionam",Pendente
