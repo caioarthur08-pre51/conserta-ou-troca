@@ -1,8 +1,8 @@
 # Guia visual: Conserta ou Troca? O Custo Total do Dispositivo
 
-Versão 0.1 · Fase 1 · Responsável: Larissa Costa (Comunicação)
+Versão 0.3 · Fase 2 · Domínio responsável: Larissa Costa (Comunicação Visual)
 
-Este guia vale para a apresentação (`apresentacao_trabalho_v0.1.odp`) e para o guia único (`guia_decisao_v0.1.odp`). Os arquivos ODP são as fontes canônicas. PPTX e PDF são apenas exportações.
+Este guia vale para a apresentação (`apresentacao_trabalho_v0.3.odp`) e para o guia único (`guia_decisao_v0.3.odp`) no Drive do projeto. Os arquivos ODP são as fontes canônicas. PPTX e PDF são apenas exportações. O storyboard da fase está em [`storyboard_f2.md`](storyboard_f2.md).
 
 Princípios: a hierarquia visual define o que se lê primeiro; o contraste é medido, não estimado; a cor nunca é a única indicação; a apresentação apoia a fala e não a transcreve; o PDF precisa ser compreensível sem animação.
 
@@ -131,7 +131,7 @@ Estrutura de leitura por slide: 1) título; 2) elemento principal (número, tabe
 
 ## 8. QR code e URL do Looker Studio
 
-Entregas obrigatórias, no slide 8 e no guia:
+Entregas obrigatórias na versão operacional, no slide 8 e no guia. Na F2, os wireframes mantêm apenas áreas identificadas; o QR e a URL definitivos dependem da liberação e validação posteriores:
 
 - QR do Looker Studio, com tamanho suficiente para leitura à distância e margem branca ao redor.
 - **URL textual** escrita junto ao QR, em ≥ 16 pt.
@@ -166,21 +166,22 @@ Entregas obrigatórias, no slide 8 e no guia:
 
 ## 11. Teste de comprovação (checklist)
 
-- [ ] ODPs existem e são as fontes canônicas.
-- [ ] A sequência dos slides corresponde à tabela da seção 5.
-- [ ] Todo título previsto comporta 32 pt.
-- [ ] Corpo e rótulos respeitam os mínimos (18 pt e 16 pt).
-- [ ] Contrastes estão registrados (seção 1).
-- [ ] QR, URL textual e PDF offline aparecem como entregas obrigatórias.
-- [ ] A apresentação funciona sem animação.
+- [x] ODPs v0.3 existem no Drive e são as fontes canônicas da F2.
+- [x] Os PDFs dos wireframes mostram oito slides na sequência da seção 5 e um guia A4 de uma página.
+- [x] Os títulos visíveis dos wireframes foram inspecionados em tamanho de projeção, sem corte.
+- [x] Contrastes da paleta estão registrados na seção 1.
+- [x] QR, URL textual e PDF offline possuem espaços identificados para as fases de publicação correspondentes.
+- [x] Os wireframes são compreensíveis sem animação ou imagem externa.
+- [ ] Na versão completa, conferir individualmente fonte mínima de 18 pt no corpo e 16 pt nos rótulos após a inclusão dos textos.
 
 ---
 
 ## 12. Fontes canônicas e entregas planejadas
 
-- ODP canônico da apresentação: `apresentacao_trabalho_v0.1.odp`.
-- ODP canônico do guia: `guia_decisao_v0.1.odp`.
+- ODP canônico da apresentação F2: [`apresentacao_trabalho_v0.3.odp`](https://drive.google.com/file/d/1Vp2uU61dLgb-zOcejiXrOzPvrwBmylSq/view).
+- ODP canônico do guia F2: [`guia_decisao_v0.3.odp`](https://drive.google.com/file/d/1XVcTCXEK_ACW6iwwfGoKBLEGUMYzAbfc/view).
+- Exportação [PPTX da apresentação](https://docs.google.com/presentation/d/1EK0yHjwUCdT_SSADCRmRnVkMY0WOac09/edit), [PDF dos wireframes da apresentação](https://drive.google.com/file/d/1OqScrcldG1hZQShOSJ2mfQ6LKfFgMADT/view) e [PDF do wireframe do guia](https://drive.google.com/file/d/1ppIiWxSdytp3weZBV8shJ9CcJUSUzqZ0/view).
 - Exportações: PPTX e PDF da apresentação; PDF do guia único.
 - Pasta `assets` com origem e licença.
 - QR do Looker Studio, URL textual e PDF do dashboard (contingência offline).
-- Google Drive serve só para backup e compartilhamento.
+- O Drive privado guarda os ODPs editáveis e os PDFs; o Git público guarda este guia e o storyboard em Markdown. Nenhum ODP, PPTX ou PDF deve ser adicionado ao Git.
