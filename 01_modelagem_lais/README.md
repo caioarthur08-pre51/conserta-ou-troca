@@ -63,3 +63,10 @@ Modelo didático simplificado. Não considera inflação, juros, financiamento, 
 ## Testes de referência
 
 Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio serão produzidos e validados nas fases seguintes.
+
+## Fase 3: fonte do Looker Studio
+
+- **Arquivo canônico que gerou a fonte:** `modelo_tco_v0.2_2026-11-03.ods`, no Drive, com contrato em `ExportCSV!A1:R9` e `casos.csv` (SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46`).
+- **Commit Git de origem:** `0c02bc5`.
+- **Fonte derivada:** Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`, abas `fonte_looker` e `metadados`, com 15 colunas, 16 linhas e 8 IDs; versão v0.3 e data de corte 2026-11-04. Os valores dos oito casos são os mesmos da base v0.2.
+- **Relatório:** `Conserta ou Troca — Custo Total do Dispositivo — v0.3`, com credenciais da proprietária. A URL de visualização é registrada na tarefa do Notion e ainda não autoriza QR definitivo.
