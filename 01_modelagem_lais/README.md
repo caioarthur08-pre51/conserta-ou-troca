@@ -62,11 +62,17 @@ Modelo didático simplificado. Não considera inflação, juros, financiamento, 
 
 ## Testes de referência
 
-Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio serão produzidos e validados nas fases seguintes.
+Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio são tratados na Fase 3, na seção abaixo.
 
 ## Fase 3: fonte do Looker Studio
 
-- **Arquivo canônico que gerou a fonte:** `modelo_tco_v0.2_2026-11-03.ods`, no Drive, com contrato em `ExportCSV!A1:R9` e `casos.csv` (SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46`).
+- **Fonte canônica editável:** `modelo_tco_canonico.ods`, no Drive.
+- **Cópia versionada:** `modelo_tco_v0.2_2026-11-03.ods`, no Drive, com contrato em `ExportCSV!A1:R9`.
+- **CSV de contrato (18 campos, 8 registros):** `casos.csv`. O mesmo conteúdo tem dois hashes, conforme o fim de linha:
+  - arquivo LF no Git, 1.607 bytes: SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`;
+  - checkout Windows com CRLF, 1.616 bytes: SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46`.
+- **CSV importado na fonte (15 colunas, 16 linhas, 8 IDs):** `fonte_looker_v0.3.csv`, LF, 3.022 bytes, SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B`.
 - **Commit Git de origem:** `0c02bc5`.
-- **Fonte derivada:** Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`, abas `fonte_looker` e `metadados`, com 15 colunas, 16 linhas e 8 IDs; versão v0.3 e data de corte 2026-11-04. Os valores dos oito casos são os mesmos da base v0.2.
+- **Fonte derivada:** Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`, abas `fonte_looker` e `metadados`.
+- **Datas:** corte dos casos em 03/11/2026 (base v0.2); campo `data_corte` da fonte v0.3 em 04/11/2026; cópia para o Sheets em 06/11/2026, 00h40; relatório publicado em 06/11/2026. Os valores dos oito casos são os mesmos da base v0.2.
 - **Relatório:** `Conserta ou Troca — Custo Total do Dispositivo — v0.3`, com credenciais da proprietária. A URL de visualização é registrada na tarefa do Notion e ainda não autoriza QR definitivo.
