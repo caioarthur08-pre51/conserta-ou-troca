@@ -71,8 +71,9 @@ Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os teste
 - **CSV de contrato (18 campos, 8 registros):** `casos.csv`. O mesmo conteúdo tem dois hashes, conforme o fim de linha:
   - arquivo LF no Git, 1.607 bytes: SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`;
   - checkout Windows com CRLF, 1.616 bytes: SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46`.
-- **CSV importado na fonte (15 colunas, 16 linhas, 8 IDs):** `fonte_looker_v0.3.csv`, LF, 3.022 bytes, SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B`.
+- **CSV derivado e versionado (15 colunas, 16 linhas, 8 IDs):** `fonte_looker_v0.3.csv`, 2.954 bytes neste checkout, SHA-256 `3A3D34A90DEEE5310F81BE46BA4A6E6378D94A1DC283CB00F8E1BA0315DBC502`. Os valores correspondem à aba `fonte_looker` do Sheets candidato. O CSV não é uma segunda regra de cálculo: deriva dos 18 campos do contrato.
 - **Commit Git de origem:** `0c02bc5`.
-- **Fonte derivada:** Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`, abas `fonte_looker` e `metadados`.
-- **Datas:** corte dos casos em 03/11/2026 (base v0.2); campo `data_corte` da fonte v0.3 em 04/11/2026; cópia para o Sheets em 06/11/2026, 00h40; relatório publicado em 06/11/2026. Os valores dos oito casos são os mesmos da base v0.2.
-- **Relatório:** `Conserta ou Troca — Custo Total do Dispositivo — v0.3`, com credenciais da proprietária. A URL de visualização é registrada na tarefa do Notion e ainda não autoriza QR definitivo.
+- **Fonte derivada candidata:** [Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit), abas `fonte_looker` e `metadados`, localidade Brasil e fuso `America/Sao_Paulo`.
+- **Datas distintas e explícitas:** a base de oito casos foi congelada em 03/11/2026 (v0.2); `data_corte` da derivação v0.3 é 04/11/2026; a materialização e a cópia para o Sheets ocorreram em 06/11/2026 às 19h37. Os valores dos casos não foram alterados entre essas datas.
+- **Permissões ainda não conformes:** a fonte está restrita, mas Caio é proprietário no Drive e as duas contas atribuídas a Laís aparecem como editoras. A orientação exige Laís como proprietária e única editora; portanto a fonte é candidata e não está liberada para consumo pelo relatório anônimo.
+- **Relatório Looker:** ainda não há URL, captura, teste anônimo ou PDF candidato comprovados. Não publicar `CAPTURA LOOKER LIBERADA`, não gerar QR definitivo e não declarar a tarefa F3 concluída até a criação na conta de Laís, com credenciais da proprietária e acesso público somente de visualizador.
