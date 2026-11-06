@@ -13,7 +13,7 @@
 
 `I-F3-01` exige uma decisão de reprogramação, não um prazo inventado para o trabalho de outro cargo. A nova programação de cada entrega depende da confirmação do respectivo responsável. Enquanto isso, a tarefa de Caio pode avançar com índice e controle; não cabe marcar `F3 INTEGRADA` ou a F4 como concluídas.
 
-## Entradas F3 ainda não publicadas
+## Fotografia das entradas ainda não publicadas em 05/11/2026
 
 | Marco necessário | Proprietário da fonte | Evidência atual | Consequência para Caio | Ação verificável |
 | --- | --- | --- | --- | --- |
@@ -23,6 +23,16 @@
 | `F3 VISUAL CANDIDATO`, `F3 PROVA DO GUIA` e retorno `FIDELIDADE CONFERIDA` | Larissa; fidelidade textual por Letícia | Wireframes ODP/PPTX/PDF F2 disponíveis; versão visual completa F3 e prova de fidelidade não localizadas | Não pode fazer a integração final das cinco branches | Após `F3 ENTRADAS INTEGRADAS`, receber ODP/PPTX/PDF candidatos, guia único, versões consumidas, teste de abertura/acessibilidade e retorno de Letícia |
 
 As quatro tarefas dos outros cargos e a de Caio constavam como `Pendente` na consulta inicial ao quadro F3 em 05/11. A produção deste índice coloca a tarefa de Caio em andamento; as quatro entregas alheias ainda aguardam publicação. Também não havia commits F3 nas branches remotas dos autores. A evidência negativa refere-se somente às fontes verificadas; não afirma que ninguém esteja trabalhando localmente.
+
+## Atualização das incompatibilidades — 06/11/2026
+
+| ID | Fato observado | Arquivos e efeito | Proprietário | Correção e prazo | Teste de correção | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| I-F3-04 | O README de Laís afirmava painel publicado sem URL ou evidência; fonte CSV derivada citada nem estava versionada | `01_modelagem_lais/README.md` e tarefa F3; consumidores poderiam tratar como liberado um painel inexistente | Laís no domínio; apoio técnico Codex | README foi corrigido e CSV derivado publicado em `codex/lais-f3` `8bef79f`; Laís ainda precisa aprovar fonte e publicar painel pela conta dela antes de `F3 ENTRADAS INTEGRADAS` | Abrir Looker anonimamente como Viewer, conferir filtros, C01/C03, versão, PDF e URL na tarefa | Parcialmente corrigida; alegação falsa removida na branch de apoio, painel ainda ausente |
+| I-F3-05 | O Sheets candidato foi criado pela conta conectada de Caio; Caio aparece como proprietário, embora a regra exija Laís como proprietária e única editora | [Sheets v0.3](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit); a fonte não pode ser considerada canônica nem conectada com credenciais da proprietária exigida | Laís e Caio para a transferência ou substituição controlada | Transferir propriedade se a interface permitir; caso contrário, Laís cria a fonte na própria conta e informa a URL única. Após equivalência e testes, retirar a fonte candidata de Caio da pasta para não deixar duas fontes | Metadados mostram Laís proprietária, somente ela editora, quatro leitores e acesso geral restrito; 15 campos/16 linhas/8 IDs iguais ao CSV versionado | Aberta; bloqueia liberação de dados F3 |
+| I-F3-06 | A apresentação candidata de Larissa contém reserva no slide 7 porque ainda não existe captura Looker; guia e slide 8 mantêm URL/QR reservados | [Prova visual v0.4](https://drive.google.com/file/d/1Vv-DLl-ksyiuEUQqAiH0Fzo9LbDG56OS/view), [guia A4](https://drive.google.com/file/d/1NBT6cFtecZowfRgF2cB7qk3HLATGr1Jj/view); sem painel e resposta editorial, a prova não pode ser aceita como visual completo | Laís publica painel/captura; Larissa recompõe; Letícia confere fidelidade | Após `CAPTURA LOOKER LIBERADA` e `F3 ENTRADAS INTEGRADAS`, substituir reserva por captura real, reexportar, devolver `F3 PROVA DO GUIA` e obter `FIDELIDADE CONFERIDA`; QR definitivo só após URL liberada | Abrir ODP/PDF atualizados, comparar texto v0.8 do guia, conferir slide 7 real e resposta de Letícia citando versão | Aberta; F3 visual é apenas candidato |
+
+Guilherme publicou MVP F3 `2208cbf` com teste local e captura; Letícia publicou pacote textual candidato `741ed4a` com ODT/DOCX/PDF; Larissa publicou prova v0.4 `d5d9a6d`. Essas entregas substituem as ausências da fotografia de 05/11, mas não eliminam I-F3-05/06. A F2 permanece válida e `main` segue em `0c02bc5`. Não mover candidatos para a entrega final nem emitir os marcos de integração antes dos testes pendentes.
 
 ## Controles que permanecem válidos
 

@@ -70,6 +70,20 @@ Não há uma nova versão corrente F3 para os quatro domínios alheios até cada
 
 **Recebimento em 06/11/2026:** a branch de Laís chegou ao commit `8d229c9`, com atualização de README que declara Sheets e Looker v0.3. O [índice](../90_integracao/indice_pacote.md) e a [incompatibilidade I-F3-04](incompatibilidades_f3.md) registram as evidências ainda não verificáveis e a distinção entre SHA-256 do CSV em CRLF e do blob Git em LF. Esse commit é candidato recebido, não nova versão corrente integrada nem autorização para o marco `CAPTURA LOOKER LIBERADA`.
 
+## Estado verificado da Fase 3 — 06/11/2026
+
+As versões F2 da tabela principal permanecem congeladas como histórico. Os candidatos F3 abaixo são as versões correntes **para conferência**, ainda fora de `main` e de `02_entrega_final`. Nenhum deles equivale à integração final ou a aprovação pessoal do responsável. O índice corrente registra os links de cada exportação.
+
+| Domínio | Versão candidata e origem | Evidência técnica | Passagem pendente |
+| --- | --- | --- | --- |
+| Laís | CSV derivado v0.3 em `codex/lais-f3` `8bef79f`; [Sheets restrito](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit) | 15 campos, 16 linhas, 8 IDs, C01/C03 conferidos; SHA-256 do CSV derivado no checkout `3A3D34A90DEEE5310F81BE46BA4A6E6378D94A1DC283CB00F8E1BA0315DBC502`; 14 testes do modelo aprovados | Transferir propriedade ou criar a fonte única na conta de Laís; criar/testar Looker Viewer anônimo e colocar PDF pela própria Laís; publicar `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA` |
+| Guilherme | MVP v0.3 em `guilherme/produto` `2208cbf` | `file://`, oito casos, dez entradas inválidas, sensibilidade, C01/C03/empate, restauração, impressão e captura 390 px testados; [capturas e PDF na pasta](https://drive.google.com/drive/folders/1Hgjk_AYS7Pu4GFqtjr8CSukWGor7s8vD) | Marco `CAPTURA MVP LIBERADA` registrado; aceite pessoal do cargo não presumido |
+| Letícia | Guia e roteiro v0.8, matriz e relatório em `codex/leticia-f3-producao` `741ed4a` | [ODT canônico](https://drive.google.com/file/d/14QJfuI7_fhUgBlAEfqvSnPwPwqPvKku-/view), DOCX e PDF na pasta; 13 seções, sumário atualizado e referências rastreadas | Auto revisão editorial, liberação pessoal do conteúdo e conferência da prova do guia após a captura Looker |
+| Larissa | Apresentação e guia único v0.4 em `codex/larissa-f3-producao` `d5d9a6d` | [Pasta visual F3](https://drive.google.com/drive/folders/1SeII7XT2dOEaB86i60OJP4rzNJB7zIwc): ODP/PPTX/PDF de oito slides e ODP/PDF do guia A4; PDFs marcados e prova visual inspecionada | Captura Looker para slide 7, resposta `FIDELIDADE CONFERIDA` de Letícia e reconhecimento das fontes após `F3 ENTRADAS INTEGRADAS` |
+| Caio | `caio/governanca`, índice e incompatibilidades atualizados | Origem, destino, versão, cargo, consumidores e bloqueios registrados sem alterar as branches de outro domínio | `F3 ENTRADAS INTEGRADAS` e `F3 INTEGRADA` aguardam o painel e as passagens; não publicar hash fictício de `main` |
+
+As pastas editáveis contêm uma única versão F3 identificada de cada artefato e formato. Os ODS/XLSX e wireframes F1/F2 anteriores têm função histórica, não são alternativas F3. A planilha Google criada sob propriedade de Caio é uma fonte candidata e deverá ser retirada da pasta se Laís criar uma substituta em sua conta; nunca manter duas fontes concorrentes publicadas. A autoria funcional permanece associada aos cargos, e os commits de materialização assistida identificam Codex como executor técnico.
+
 ## Controle obrigatório das passagens
 
 Esta tabela complementa o inventário acima. Caio preenche uma linha para cada versão liberada; não basta registrar apenas o arquivo final.

@@ -1,10 +1,22 @@
 # Índice do pacote — acompanhamento da Fase 3
 
-**Responsável pelo índice:** Caio Rocha (governança e integração). **Registro técnico:** 05/11/2026. **Base integrada conferida:** `origin/main` em `0c02bc5360fe2e69b6a5ab58e76f73e260f047c7` (fechamento da F2). Este índice identifica versões e dependências; ele ainda não é o pacote operacional da F4/F5.
+**Responsável pelo índice:** Caio Rocha (governança e integração). **Registro técnico:** atualizado em 06/11/2026. **Base integrada conferida:** `origin/main` em `0c02bc5360fe2e69b6a5ab58e76f73e260f047c7` (fechamento da F2). Este índice identifica versões e dependências; ele ainda não é o pacote operacional da F4/F5.
 
-`Publicado F2` significa que a fonte existente foi conferida na integração da F2. `Não publicado F3` significa que não foi localizada uma versão candidata da F3 nas branches remotas, nas tarefas F3 do Notion ou nas pastas editáveis do [Drive do projeto](https://drive.google.com/drive/folders/10ijJh6opepOq2tLa5_BwmuMxNXJYlupW) na conferência de 05/11/2026. A ausência de publicação não reprova o trabalho em elaboração do proprietário.
+`Publicado F2` significa que a fonte existente foi conferida na integração da F2. A tabela histórica abaixo conserva a fotografia da conferência de 05/11. A situação corrente, com os candidatos F3 publicados e as dependências, aparece primeiro.
 
-## Versões e destinos
+## Situação corrente — 06/11/2026
+
+| Domínio | Versão candidata verificada | Evidência consumível | Estado para integração |
+| --- | --- | --- | --- |
+| Caio | `caio/governanca` em `f15e557` e atualização deste índice | Manifesto, incompatibilidades e tarefas Notion | Governança em andamento; `main` continua na F2 |
+| Laís | `codex/lais-f3` em `8bef79f`; fonte longa v0.3 com 15 campos, 16 linhas e 8 IDs | [Sheets candidato restrito](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit), [CSV derivado](https://github.com/caioarthur08-pre51/conserta-ou-troca/blob/codex/lais-f3/01_modelagem_lais/fonte_looker_v0.3.csv), [registro técnico](https://github.com/caioarthur08-pre51/conserta-ou-troca/blob/codex/lais-f3/01_modelagem_lais/registro_f3.md) | **Bloqueia F3 ENTRADAS INTEGRADAS:** Caio ainda é proprietário do Sheets; Looker, URL Viewer, teste anônimo, captura e PDF não existem nas fontes verificadas |
+| Guilherme | `guilherme/produto` em `2208cbf`; MVP F3 v0.3 | `02_produto_guilherme/app/`, [captura C01](https://drive.google.com/file/d/1mhNMOIID0g1JeU0fkIeriYxcxDXd5DIA/view), [C03](https://drive.google.com/file/d/1GRL4iOMOnXWVEFgN7hJ02TsYATd5wf_5/view), [empate](https://drive.google.com/file/d/1WGu1k7C2f4d6dEOYYOCfAQq5hLhTn7c4/view), [PDF](https://drive.google.com/file/d/1EZGoJL0vCghotrWCj3EJ37-Jv-Wn3a57/view) | Oito casos e entradas inválidas testados em `file://`; `CAPTURA MVP LIBERADA` registrada na tarefa |
+| Letícia | `codex/leticia-f3-producao` em `741ed4a`; guia e roteiro v0.8, matriz e relatório candidato | [ODT](https://drive.google.com/file/d/14QJfuI7_fhUgBlAEfqvSnPwPwqPvKku-/view), [DOCX](https://docs.google.com/document/d/1J1oXLDhnO44WkNQILkjq-dGfzBUs9cuq/edit), [PDF](https://drive.google.com/file/d/1dfnxaK285y4ynclSZ3Np1V1j7SbycG7a/view), [registro técnico](https://github.com/caioarthur08-pre51/conserta-ou-troca/blob/codex/leticia-f3-producao/03_conteudo_leticia/registro_f3.md) | Produção técnica candidata publicada; auto revisão editorial e resposta à prova visual pendentes; texto do painel condicionado ao teste de Laís |
+| Larissa | `codex/larissa-f3-producao` em `d5d9a6d`; apresentação v0.4 e guia único v0.4 | [Apresentação ODP](https://drive.google.com/file/d/1ZVC51wBigrOzSMSeVdXGpIukZ77OHYCx/view), [PPTX](https://docs.google.com/presentation/d/1crWdBHhYUf3vnebTJnSQmHIOvwWYsnnv/edit), [PDF](https://drive.google.com/file/d/1Vv-DLl-ksyiuEUQqAiH0Fzo9LbDG56OS/view); [guia ODP](https://drive.google.com/file/d/1Da3qxItFTMfkOIL_Fbd69QqzyjIDecu5/view), [PDF](https://drive.google.com/file/d/1NBT6cFtecZowfRgF2cB7qk3HLATGr1Jj/view) | Prova visual legível e corrigida; slide 7, URL e QR reservados até Looker; `FIDELIDADE CONFERIDA` por Letícia pendente |
+
+As versões F2 permanecem como histórico. Nas pastas conferidas há uma única versão F3 por artefato e formato, identificada como candidata; ODS, XLSX e wireframes anteriores não são substitutos concorrentes. Nenhum arquivo F3 foi movido a `02_entrega_final`. As branches de apoio técnico identificam Codex como executor, preservando o domínio funcional de cada cargo sem atribuir assinatura pessoal não verificada.
+
+## Fotografia da conferência inicial — 05/11/2026
 
 | Artefato | Origem verificável | Destino previsto | Cargo responsável | Versão corrente comprovada | Consumidores | Estado na F3 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -19,11 +31,13 @@
 
 Os artefatos binários permanecem no Drive. Não foram movidas versões intermediárias para `02_entrega_final`. O [manifesto](../00_governanca_caio/manifesto_integracao.md) conserva links, tamanhos e SHA-256 das fontes binárias F2; este índice mostra a situação de consumo na F3.
 
-## Candidato de Laís recebido em 06/11/2026
+## Histórico do candidato de Laís recebido em 06/11/2026
 
 A branch remota `lais/modelagem-dados` chegou ao commit `8d229c9e2e94b5658a6acc593ffe788d25c8033e`, descendente direto do `main` F2. O único delta é um bloco de sete linhas no `01_modelagem_lais/README.md`: ele declara uma fonte Google Sheets e um relatório Looker v0.3, mas remete a URL para a tarefa F3 sem incluí-la no Git. A data de corte declarada é 04/11, enquanto a base F2 dos mesmos oito casos registrava corte em 03/11; Laís deve distinguir corte da base de data de cópia/publicação. Na conferência de 06/11, a tarefa ainda não continha URL, teste anônimo, captura/PDF candidato nem os marcos `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA`. A fonte privada pode existir na conta de Laís sem aparecer no Drive de Caio; a ausência de acesso/evidência não prova que ela não foi produzida. **Recebido para revisão, ainda não liberado para o checkpoint nem integrado em `main`.**
 
 O SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46` citado no README é do arquivo CSV do checkout Windows com CRLF (1.616 bytes). O blob Git do mesmo CSV usa LF (1.607 bytes) e tem SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`. Laís deve identificar qual cópia alimentou o Sheets e registrar o hash dessa cópia; os oito registros de dados são equivalentes, mas os hashes de bytes não são intercambiáveis.
+
+O bloco acima descreve a primeira leitura do commit `8d229c9`. A branch da própria Laís avançou para `a8cefb6`; o apoio técnico publicou a fonte derivada verificável e corrigiu a alegação de painel publicado em `8bef79f`. A ausência de Looker e o problema de propriedade do Sheets permanecem explícitos na situação corrente.
 
 ## Portões de integração
 
