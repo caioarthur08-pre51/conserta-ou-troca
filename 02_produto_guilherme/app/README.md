@@ -1,15 +1,33 @@
-# Comparador local — esqueleto da Fase 2
+# Comparador local — MVP candidato da Fase 3
 
-**Domínio responsável:** Guilherme Almeida. **Estado:** esqueleto executável F2, conferido em 05/11/2026 após `F2 ENTRADAS INTEGRADAS`. A conferência técnica assistida não equivale à assinatura pessoal do responsável.
+**Domínio responsável:** Guilherme Almeida. **Versão:** v0.3 candidata. **Execução técnica assistida:** Codex, a pedido de Caio; a auto revisão e a aprovação do cargo não são presumidas.
 
-Abra `index.html` por duplo clique em Chrome, Edge ou Firefox em um computador. O endereço começa por `file://`; não é preciso servidor nem internet. O seletor deve mostrar os oito casos C01–C08. Nesta fase, os botões de cálculo, restauração e impressão permanecem desativados e os resultados ficam ocultos. O cálculo e a sensibilidade completos são da Fase 3.
+## Abrir e usar
 
-Para reconstruir `js/dados.js` a partir do CSV canônico, na raiz do repositório execute:
+Em um computador, abra `index.html` por duplo clique. O endereço começa por `file://`; o aplicativo não requer servidor, instalação ou internet. Escolha C01–C08, revise o custo do reparo e a vida adicional, depois pressione **Calcular**. A tabela e o gráfico mostram os mesmos custos anuais em R$/ano. A sensibilidade compara a classificação com a do caso original. **Restaurar caso** recupera as entradas; **Imprimir/salvar PDF** fica disponível após um cálculo válido.
+
+O aviso no topo deixa claro que os dados são sintéticos e a comparação é educativa, sem recomendação de compra. Garantias, risco, necessidade e impacto ambiental aparecem fora da fórmula financeira. O aplicativo não coleta nem envia dados pessoais.
+
+## Fonte e reconstrução
+
+A origem é `01_modelagem_lais/casos.csv` de 18 campos, C01–C08, no main F2 `0c02bc5`. `app/dados/casos.csv` é sua cópia fiel. No checkout Windows, ambos possuem SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46` (fins de linha CRLF). O blob LF normalizado pelo Git possui SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`; indique o formato ao conferir hashes.
+
+Para reconstruir `js/dados.js` a partir da mesma fonte, execute na raiz do repositório:
 
 ```powershell
 node 02_produto_guilherme/scripts/gerar_dados.mjs 01_modelagem_lais/casos.csv 02_produto_guilherme/app/js/dados.js
 ```
 
-O conversor exige o cabeçalho A:R e oito IDs únicos, rejeitando linhas incompletas, texto em campo numérico, vida vazia e categorias fora do contrato. `app/dados/casos.csv` é uma cópia exata do CSV consumido. O teste da F2 confirmou que a regeneração produziu o mesmo `dados.js` do aplicativo, com normalização de fim de linha.
+O conversor valida cabeçalho A:R, oito IDs únicos, números, categorias e custos líquidos. Ele não altera a fonte. Os scripts do app são clássicos e locais: não usam `fetch()`, módulos, CDN nem bibliotecas externas.
 
-Os scripts são clássicos e locais, sem `fetch`, módulos ou bibliotecas externas. Consulte [`../especificacao_mvp.md`](../especificacao_mvp.md) para contrato, validações e evidência do teste de abertura por `file://`.
+## Conferência F3
+
+Na raiz do repositório:
+
+```powershell
+node 02_produto_guilherme/testes/calculos.test.mjs
+```
+
+O teste confere os oito resultados, dez entradas inválidas, empate técnico e mudança de classificação. Na tela, C01 deve mostrar Reparar (R$ 253,33 × R$ 315,00 por ano), C03 deve mostrar Trocar (R$ 370,00 × R$ 282,86), e C01 com custo do reparo de R$ 512,50 deve mostrar Empate técnico. Entradas vazias, negativas, vida zero e custo líquido negativo não geram um resultado plausível.
+
+Esta é a versão candidata F3. Os testes completos de três navegadores, duas larguras e o congelamento do pacote pertencem à Fase 4; o ZIP operacional pertence à Fase 5. Consulte [`../especificacao_mvp.md`](../especificacao_mvp.md) para contrato e limites.
