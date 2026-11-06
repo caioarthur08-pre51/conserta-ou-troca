@@ -19,6 +19,12 @@
 
 Os artefatos binários permanecem no Drive. Não foram movidas versões intermediárias para `02_entrega_final`. O [manifesto](../00_governanca_caio/manifesto_integracao.md) conserva links, tamanhos e SHA-256 das fontes binárias F2; este índice mostra a situação de consumo na F3.
 
+## Candidato de Laís recebido em 06/11/2026
+
+A branch remota `lais/modelagem-dados` chegou ao commit `8d229c9e2e94b5658a6acc593ffe788d25c8033e`, descendente direto do `main` F2. O único delta é um bloco de sete linhas no `01_modelagem_lais/README.md`: ele declara uma fonte Google Sheets e um relatório Looker v0.3, mas remete a URL para a tarefa F3 sem incluí-la no Git. A data de corte declarada é 04/11, enquanto a base F2 dos mesmos oito casos registrava corte em 03/11; Laís deve distinguir corte da base de data de cópia/publicação. Na conferência de 06/11, a tarefa ainda não continha URL, teste anônimo, captura/PDF candidato nem os marcos `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA`. A fonte privada pode existir na conta de Laís sem aparecer no Drive de Caio; a ausência de acesso/evidência não prova que ela não foi produzida. **Recebido para revisão, ainda não liberado para o checkpoint nem integrado em `main`.**
+
+O SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46` citado no README é do arquivo CSV do checkout Windows com CRLF (1.616 bytes). O blob Git do mesmo CSV usa LF (1.607 bytes) e tem SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`. Laís deve identificar qual cópia alimentou o Sheets e registrar o hash dessa cópia; os oito registros de dados são equivalentes, mas os hashes de bytes não são intercambiáveis.
+
 ## Portões de integração
 
 1. Laís publica `DADOS F3 LIBERADOS` com a versão de `casos.csv` efetivamente usada, hash e fonte longa; Guilherme confirma a cópia em `dados.js`.

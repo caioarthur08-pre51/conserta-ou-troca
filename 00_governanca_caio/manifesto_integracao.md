@@ -68,6 +68,8 @@ O inventário acima documenta as versões F2, não a conclusão da F3. O [índic
 
 Não há uma nova versão corrente F3 para os quatro domínios alheios até cada proprietário publicar o candidato com versão, testes e commit ou hash. A integração intermediária depende de Laís, Guilherme e Letícia; a final também depende de Larissa e da conferência textual de Letícia. A falta desses marcos não invalida a F2 e impede apenas declarar a F3 integrada. Nenhuma fonte intermediária foi movida para `02_entrega_final`.
 
+**Recebimento em 06/11/2026:** a branch de Laís chegou ao commit `8d229c9`, com atualização de README que declara Sheets e Looker v0.3. O [índice](../90_integracao/indice_pacote.md) e a [incompatibilidade I-F3-04](incompatibilidades_f3.md) registram as evidências ainda não verificáveis e a distinção entre SHA-256 do CSV em CRLF e do blob Git em LF. Esse commit é candidato recebido, não nova versão corrente integrada nem autorização para o marco `CAPTURA LOOKER LIBERADA`.
+
 ## Controle obrigatório das passagens
 
 Esta tabela complementa o inventário acima. Caio preenche uma linha para cada versão liberada; não basta registrar apenas o arquivo final.
