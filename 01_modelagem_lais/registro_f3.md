@@ -1,21 +1,18 @@
-# Registro técnico da fonte candidata F3
+# Registro técnico da fonte e do painel F3
 
-Domínio funcional: Laís Eulálio. Materialização técnica assistida por Codex em 06/11/2026. O aceite da responsável e a configuração na conta proprietária não foram presumidos.
+Domínio funcional: Laís Eulálio. Conferência e correção de duplicatas por Codex em 06/11/2026. As declarações de Laís nos comentários da tarefa F3 são identificadas abaixo como tais; a conferência técnica não substitui a auto revisão da autora.
 
-## Fonte preparada
+## Entrega publicada por Laís
 
-- Origem: `modelo_tco_canonico.ods`, aba `ExportCSV!A1:R9`, espelhada por `casos.csv` de 18 campos no commit integrado F2 `0c02bc5`.
-- Derivação versionada: `fonte_looker_v0.3.csv`, 15 campos, 16 linhas e oito IDs. Cada ID aparece uma vez como Reparar e uma como Trocar. Os critérios de risco, necessidade e impacto ambiental reproduzem as colunas O:Q sem entrar no cálculo.
-- C01: R$ 253,33/ano para Reparar e R$ 315,00/ano para Trocar. C03: R$ 370,00/ano para Reparar e R$ 282,86/ano para Trocar.
-- SHA-256 do CSV derivado neste checkout: `3A3D34A90DEEE5310F81BE46BA4A6E6378D94A1DC283CB00F8E1BA0315DBC502`.
-- [Google Sheets candidato](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit) na pasta `01_editaveis/Lais`; abas `fonte_looker` e `metadados`, localidade `pt_BR`, fuso de São Paulo, acesso geral restrito. O XLSX local serviu apenas à conferência e não foi publicado no Drive como concorrente.
+- Origem do contrato: `modelo_tco_canonico.ods`, `ExportCSV!A1:R9`, e `casos.csv`, commit F2 `0c02bc5`.
+- Laís declarou no [comentário `DADOS F3 LIBERADOS`](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9) o CSV importado `fonte_looker_v0.3.csv`, LF, 3.022 bytes, SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B`, com 15 campos, 16 linhas e oito IDs. O arquivo exato ainda não está versionado nem foi disponibilizado para conferência independente do hash.
+- O corte dos casos F2 é 03/11/2026; `data_corte` da fonte F3 é 04/11/2026. Laís declarou que copiou a fonte para o Sheets em 06/11/2026 às 00h40.
+- [Looker Studio v0.3](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc), [PDF candidato](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view). PDF e captura existem na pasta `03_contingencia/Lais` e seus metadados apontam `laislne1@gmail.com` como proprietário. A publicação do PDF nessa pasta corresponde à ação que Laís havia reservado para sua conta.
+- O painel foi aberto em sessão sem login Google: exibiu tabela de 16 linhas/8 IDs e critérios qualitativos para os oito casos, sem controle de edição. O filtro `caso_id=C03` reduziu a tabela a duas linhas: Trocar R$ 282,86/ano, Reparar R$ 370,00/ano; o estado foi restaurado. Laís declarou também teste de atualização de dados em cópia temporária e registrou que falta teste por conta de colega.
 
-O corte dos casos F2 é 03/11/2026; o campo `data_corte` da derivação F3 é 04/11/2026. Essa diferença de datas representa base de casos versus materialização da fonte, sem mudança nos valores. Os metadados do Sheets explicitam ambas.
+## Conferência ainda necessária para a integração
 
-## Bloqueios objetivos
-
-O Sheets candidato foi criado pela conta conectada de Caio e aparece com Caio como proprietário. O conector disponível não consegue efetivar a transferência de propriedade; Laís aparece como editora por duas contas, e os demais como leitores. A fonte **não** atende ainda ao requisito de propriedade e edição exclusiva de Laís. Ela deve assumir a propriedade ou criar, na própria conta, uma única fonte equivalente e indicar a URL canônica. Se usar cópia, a fonte candidata de Caio deve ser retirada da pasta após a equivalência e as permissões da nova fonte serem verificadas, para evitar duas fontes concorrentes.
-
-Na verificação das permissões em 06/11, `laeulalio@gmail.com` tinha acesso de **leitor** à pasta `01_editaveis/Lais`, embora tivesse edição direta no Sheets candidato e na pasta `03_contingencia/Lais`. A pasta de editáveis concedia edição a `laislne1@gmail.com`. Não foi confirmado qual endereço Laís usará como conta proprietária canônica. O conector não aceitou alterar a permissão da pasta. Se a conta escolhida for a primeira, é preciso conceder edição à pasta pela interface do Drive ou criar a fonte na própria área de Laís e organizar a pasta após verificar a equivalência. A permissão de edição na planilha não substitui a permissão de criar arquivos na pasta.
-
-Não foi encontrado relatório Looker Studio, URL de visualização, teste anônimo, captura ou PDF candidato. A conta disponível no navegador não está autenticada como Laís. A própria Laís precisa conectar o Sheets com credenciais da proprietária, construir o painel com tabela, barras agrupadas, filtros e critérios, publicar somente como Viewer anônimo e registrar o link e o PDF na sua tarefa. O PDF do painel será colocado por ela, conforme combinado com Caio. Até isso, `CAPTURA LOOKER LIBERADA` e `URL LIBERADA PARA QR` não devem ser emitidos.
+- Laís declarou uma fonte Google Sheets privada com ela como proprietária e quatro integrantes leitores, mas não registrou a URL da planilha. A busca no Drive de Caio não localizou essa fonte; não foi possível conferir os metadados nem o CSV de 3.022 bytes. Solicitar URL canônica da planilha, identificação da conta proprietária, acesso de leitura para Caio e o arquivo CSV exato ou hash conferível.
+- Na pasta `01_editaveis/Lais`, `laeulalio@gmail.com` aparece como leitor e `laislne1@gmail.com` como editor. O perfil Notion de `laeulalio@gmail.com` já tem **acesso completo** à tarefa F3. Confirmar qual conta pertence à fonte canônica antes de mudar permissões da pasta; se Laís precisar criar com a primeira conta, conceder edição pela interface do Drive. O conector não permite alterar permissão de pasta.
+- A planilha auxiliar de 2.954 bytes criada por Codex não correspondia ao hash declarado por Laís nem era a fonte do relatório. Foi removida do Drive e do ramo de apoio para manter uma única fonte corrente. A versão histórica F2 (ODS/XLSX) continua identificada como base, não como concorrente F3.
+- O marco `CAPTURA LOOKER LIBERADA` consta nos comentários de Laís, mas não equivale à aceitação final da integração por Caio. Concluir o teste por conta de colega e a conferência de propriedade/CSV antes de `F3 ENTRADAS INTEGRADAS`. Não emitir `URL LIBERADA PARA QR` nem QR definitivo nesta fase.
