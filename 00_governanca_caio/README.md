@@ -49,14 +49,14 @@ Sem este cargo, a equipe pode produzir arquivos corretos que não formam uma ent
 - Antes de integrar a Fase 4, conferir a sequência `F4 DADOS CANDIDATOS` → `F4 EQUIVALÊNCIA CONFIRMADA` → `URL LIBERADA PARA QR` → `QR CANDIDATO` → `F4 DESTINO DO QR VALIDADO` → `VISUAL CONGELADO` → `FIDELIDADE CONFERIDA`.
 - Na Fase 5, recolher `ENTREGA FINAL LIBERADA` dos cinco autores, completar o manifesto, publicar `PACOTE FINAL INTEGRADO` e `TAG PUBLICADA`, e só encerrar após quatro respostas `TAG CONFERIDA`.
 
-Caio não aceita “pronto” como informação suficiente. Se faltar artefato, versão, teste, ação esperada, prazo ou impacto, ele devolve o registro para ser completado, sem alterar o arquivo do autor.
+Caio não aceita “pronto” como informação suficiente. Se faltar artefato, versão, teste, ação esperada, prazo ou impacto, ele devolve o registro para ser completado. A decisão D-023 registra a exceção autorizada em 07/11/2026: assistência técnica pode corrigir e produzir no domínio de cada cargo, com executor real no histórico, responsável funcional e acesso de edição preservados. A auto revisão e o aceite pessoal não são simulados.
 
 ## Auto revisão
 
 - Todas as tarefas têm responsável, fase, prazo, arquivo e critério de conclusão.
 - O cronograma original previa terminar em 06/11/2026; após a regularização técnica da F2 em 05/11, as datas F3–F5 exigem nova decisão registrada. Cada fase só avança após as cinco entregas e a integração correspondente.
 - O pacote não contém duas versões concorrentes do mesmo artefato.
-- Nenhum arquivo dos demais cargos foi alterado por Caio.
+- Arquivos dos demais cargos só recebem correção técnica delegada conforme D-023; o registro distingue responsável funcional, executor técnico e aceite pessoal.
 - A micro-oficina possui versão offline e cabe em 20 minutos.
 - Todos os marcos obrigatórios possuem emissor, destinatário, versão, teste e confirmação de recebimento.
 - Planejamento logístico está separado de qualquer dado proibido dos participantes.
