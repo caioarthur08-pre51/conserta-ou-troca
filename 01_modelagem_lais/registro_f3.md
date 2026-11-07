@@ -9,6 +9,7 @@ Domínio funcional: Laís Eulálio. Conferência e correção de duplicatas por 
 - O corte dos casos F2 é 03/11/2026; `data_corte` da fonte F3 é 04/11/2026. Laís declarou que copiou a fonte para o Sheets em 06/11/2026 às 00h40.
 - [Looker Studio v0.3](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc), [PDF candidato](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view). PDF e captura existem na pasta `03_contingencia/Lais` e seus metadados apontam `laislne1@gmail.com` como proprietário. A publicação do PDF nessa pasta corresponde à ação que Laís havia reservado para sua conta.
 - O painel foi aberto em sessão sem login Google: exibiu tabela de 16 linhas/8 IDs e critérios qualitativos para os oito casos, sem controle de edição. O filtro `caso_id=C03` reduziu a tabela a duas linhas: Trocar R$ 282,86/ano, Reparar R$ 370,00/ano; o estado foi restaurado. Laís declarou também teste de atualização de dados em cópia temporária e registrou que falta teste por conta de colega.
+- O PDF tem uma página e os valores C01/C03 legíveis, mas o cabeçalho `custo_anual` da tabela aparece abreviado como `custo_a...`. Laís deve ampliar essa coluna na exportação e substituir o PDF candidato sem deixar uma segunda versão F3 concorrente; a nova versão deve ter hash atualizado na tarefa.
 
 ## Conferência ainda necessária para a integração
 
