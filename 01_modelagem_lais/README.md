@@ -62,4 +62,17 @@ Modelo didático simplificado. Não considera inflação, juros, financiamento, 
 
 ## Testes de referência
 
-Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio serão produzidos e validados nas fases seguintes.
+Na pasta `01_modelagem_lais`, execute `python -m unittest discover -v`. Os testes cobrem fórmulas e limites, cabeçalho A:R, oito IDs únicos, quatro casos de cada tipo, categorias, garantias inteiras e resultados C01/C03. A ODS e sua exportação XLSX foram validadas na F2; Google Sheets e Looker Studio são tratados na Fase 3, na seção abaixo.
+
+## Fase 3: fonte do Looker Studio
+
+- **Fonte canônica editável:** `modelo_tco_canonico.ods`, no Drive.
+- **Cópia versionada:** `modelo_tco_v0.2_2026-11-03.ods`, no Drive, com contrato em `ExportCSV!A1:R9`.
+- **CSV de contrato (18 campos, 8 registros):** `casos.csv`. O mesmo conteúdo tem dois hashes, conforme o fim de linha:
+  - arquivo LF no Git, 1.607 bytes: SHA-256 `694792AD4E772F102787C5E45942DAE3B332D789F60E9CD142101C4543EE7DBB`;
+  - checkout Windows com CRLF, 1.616 bytes: SHA-256 `AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46`.
+- **CSV importado na fonte (15 colunas, 16 linhas, 8 IDs):** Laís declarou `fonte_looker_v0.3.csv`, LF, 3.022 bytes, SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B` na [tarefa F3](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9). O arquivo exato e a URL da planilha proprietária ainda não estão disponíveis neste repositório para conferir o hash diretamente. A reconstrução técnica de 2.954 bytes feita por Codex tinha hash diferente e foi retirada para não concorrer com a fonte publicada por Laís.
+- **Commit Git de origem:** `0c02bc5`.
+- **Fonte derivada:** Laís declarou Google Sheets privado `Conserta ou Troca — Fonte Looker — v0.3`, abas `fonte_looker` e `metadados`, sob propriedade dela. A URL e os metadados de permissão dessa planilha ainda precisam ser apresentados para conferência externa; o Sheets auxiliar criado por Codex na pasta foi removido por não ser a fonte usada no painel.
+- **Datas distintas e explícitas:** a base de oito casos foi congelada em 03/11/2026 (v0.2); `data_corte` da derivação v0.3 é 04/11/2026; Laís declarou cópia para o Sheets em 06/11/2026 às 00h40 e publicação do relatório no mesmo dia. Os valores exibidos dos casos conferidos não mudaram.
+- **Relatório Looker:** [v0.3 publicado](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc), com [PDF candidato](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view) na pasta de contingência de Laís. Em 06/11 o relatório abriu sem login, mostrou 16 linhas/8 IDs e o filtro C03 retornou R$ 282,86/ano para Trocar e R$ 370,00/ano para Reparar. Em 07/11, Codex corrigiu tecnicamente apenas o cabeçalho truncado `custo_anual` do PDF, substituindo o mesmo arquivo do Drive (65.969 bytes; SHA-256 `B80E6218B4A66015531D7616185D3E8EEA756B0E1530E3FB039DD11D34BD150F`), sem alterar o Looker. Laís continua responsável funcional e editora do PDF no Drive. Ela registrou os marcos `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA` nos comentários da tarefa. Resta conferir a URL da planilha, suas permissões e o teste com conta de colega antes de integrar; a URL ainda não autoriza QR definitivo.
