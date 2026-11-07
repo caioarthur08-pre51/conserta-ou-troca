@@ -186,7 +186,7 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 
 **Ação do estudante:** localiza no painel o caso em que trocar custa menos por ano (modo C: o apresentador aponta).
 
-**Recurso:** slide 7. Esta fala fica condicionada à captura e ao teste anônimo do painel de Laís. A fonte candidata contém os oito casos, mas isso ainda não comprova que o relatório Looker publicado os mostra. Confirmar com Larissa e Laís antes da prova visual definitiva e do ensaio.
+**Recurso:** slide 7. O painel F3 foi aberto sem autenticação, mostrou os oito casos e dispõe de captura e PDF no Drive. Antes do ensaio, confirmar se a versão visual projetada corresponde ao painel publicado e se o endereço/QR final foram liberados para uso.
 
 ### 17:00–18:00 · Síntese, limites, QR e URL textual (slide 8)
 
@@ -238,7 +238,7 @@ O apresentador demonstra tudo. O público responde só oralmente ou por gesto, e
 | 17:00–18:00 | Completa a frase oralmente | Igual ao A | Igual ao A |
 | 18:00–20:00 | Gesto ou voz | Igual ao A | Igual ao A |
 
-Contingência de rede: se o painel não abrir, usar o PDF do dashboard do pacote offline somente depois que Laís publicar e Larissa verificar a captura candidata. Até lá, a demonstração do painel permanece pendente e o apresentador pode explicar a regra de leitura pelo caso C01 sem declarar uma abertura não realizada.
+Contingência de rede: se o painel não abrir, usar o PDF do dashboard F3 publicado no Drive, após conferir que os valores exibidos correspondem à versão congelada para a oficina. O apresentador pode explicar a regra de leitura pelo caso C01 sem depender da conexão.
 
 ## Cortes de contingência
 
