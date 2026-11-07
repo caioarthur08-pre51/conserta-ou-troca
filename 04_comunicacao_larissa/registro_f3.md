@@ -20,6 +20,7 @@ Os arquivos v0.1–v0.3 da pasta são marcos históricos das fases anteriores. A
 - Guia: uma página A4, baseada em `03_conteudo_leticia/guia_decisao_conteudo.md` v0.8, commit técnico `741ed4a`. A prova corrigiu a omissão inicial da condição de 1,5 ano e da inversão com um ano. Os três critérios não financeiros permanecem fora da fórmula.
 - Os PDFs têm marcação estrutural na exportação e foram inspecionados visualmente sem corte aparente. Isso não substitui a revisão editorial de fidelidade de Letícia nem a checagem completa de acessibilidade na fase seguinte.
 - Em 07/11, a [conferência técnica de fidelidade](conferencia_fidelidade_f3.md) comparou a prova ao guia de Letícia v0.8 e ao roteiro v0.9. ODPs receberam título, idioma pt-BR e descrições alternativas; PDFs foram reexportados com opção PDF/UA e `/Lang` pt-BR. Todas as figuras do PDF têm texto alternativo. O PPTX foi corrigido para preservar as barras verde/laranja e a reserva branca do QR após reabertura no LibreOffice. As cinco atualizações conservaram os mesmos IDs do Drive. O [inventário de ativos](assets/README.md) registra as duas capturas sem criar versões concorrentes.
+- Na reconferência, a nota do ODP do guia passou a registrar explicitamente `fonte_texto`, `versao_texto` e `data da prova` (07/11/2026); o PDF foi reexportado no mesmo ID, sem alteração visual. Os hashes correntes constam na conferência técnica vinculada acima.
 
 ## Dependências para encerrar a prova F3
 

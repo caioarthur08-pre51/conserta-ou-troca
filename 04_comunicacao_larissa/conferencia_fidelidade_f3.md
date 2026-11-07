@@ -28,6 +28,8 @@ Os ODPs canônicos têm título de documento e idioma Português (Brasil). As du
 
 Os cinco arquivos foram atualizados **nos mesmos IDs do Drive** em `01_editaveis/Larissa`. A pasta continua com um único candidato F3 por artefato e formato. Os PNGs de origem estão incorporados sem alteração no ODP; o [inventário de ativos](assets/README.md) documenta origem e SHA-256, sem criar cópias concorrentes.
 
+Na reconferência de 07/11, a nota do ODP do guia recebeu os campos explícitos `fonte_texto`, `versao_texto` e `data da prova`, exigidos pela orientação do cargo. O PDF A4 foi reexportado no mesmo ID; página, aparência, idioma e estrutura acessível permaneceram iguais. SHA-256 corrente: ODP `6E29F9B3B213C71C47F0B5726D65E47D2F0924D11588F060E8B918A200697990`; PDF `896BD85FF3D9C2CE0C06806830FF6F0FE1C9759399910286FC60AE08EB9F553C`.
+
 ## Passagens humanas ainda necessárias
 
 O status da tarefa segue bloqueado até Caio registrar `F3 ENTRADAS INTEGRADAS`; Larissa confirmar pessoalmente `RECEBIDO`, revisar a prova e encaminhar `F3 PROVA DO GUIA`; Letícia registrar `FIDELIDADE CONFERIDA`. Só depois cabe `F3 VISUAL CANDIDATO` como entrega aceita. Esta conferência técnica facilita essas passagens e não as substitui.
