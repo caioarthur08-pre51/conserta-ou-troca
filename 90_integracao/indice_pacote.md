@@ -16,6 +16,8 @@
 
 As versões F2 permanecem como histórico. Nas pastas conferidas há uma única versão F3 por artefato e formato, identificada como candidata; ODS, XLSX e wireframes anteriores não são substitutos concorrentes. Nenhum arquivo F3 foi movido a `02_entrega_final`. As branches de apoio técnico identificam Codex como executor, preservando o domínio funcional de cada cargo sem atribuir assinatura pessoal não verificada.
 
+As cinco branches foram reunidas sem conflitos na [branch de ensaio `codex/f3-preflight`](https://github.com/caioarthur08-pre51/conserta-ou-troca/tree/codex/f3-preflight), hash `ce97ffa`; o teste do MVP passou. Esse hash é prova técnica de mesclagem e **não** é `F3 ENTRADAS INTEGRADAS` nem `F3 INTEGRADA`. `main` continua no fechamento F2 até os portões documentados abaixo.
+
 **Acessos conferidos em 07/11:** o GitHub retorna permissão `write` para `laeulalio-boop`, `guialmeidacr`, `lestephcp` e `larissakosta`. As quatro pastas editáveis do Drive concedem edição à conta Google do respectivo cargo; na pasta de Laís, `laeulalio@gmail.com` e `laislne1@gmail.com` são editoras, com acesso geral restrito. As quatro tarefas F3 no Notion concedem acesso completo à conta Notion existente de cada responsável; para Letícia, a conta Notion é `leticiastephany@hotmail.com` e a editora do Drive é `leticiastephanycp@gmail.com`. A responsabilidade funcional não altera o autor real dos commits de apoio.
 
 ## Fotografia da conferência inicial — 05/11/2026

@@ -94,6 +94,8 @@ O [índice do pacote](../90_integracao/indice_pacote.md) tem os links e os port�
 
 Em integração **local de ensaio**, as cinco branches candidatas foram reunidas sem conflitos e `node --test 02_produto_guilherme/testes/calculos.test.mjs` passou. Esse ensaio não move `main` nem publica os marcos. A revisão visual final de Larissa em `7c27683` acrescentou metadados pt-BR, texto alternativo e PDF/UA; o PPTX recuperou as cores e o contraste da fonte. Os cinco arquivos foram substituídos nos mesmos IDs do Drive e a [conferência técnica](../04_comunicacao_larissa/conferencia_fidelidade_f3.md) compara a prova com o guia v0.8 e roteiro v0.9. O conector GitHub confirmou permissão `write` para os quatro logins dos integrantes. As pastas Drive e as tarefas F3 do Notion concedem edição aos respectivos cargos; as duas contas Google de Laís podem editar sua pasta e Letícia usa contas distintas no Notion e no Drive. A decisão D-023 autoriza a assistência técnica entre domínios, com o executor real identificado nos commits, e preserva a auto revisão pessoal exigida para a conclusão de cada tarefa.
 
+O ensaio também está publicado na [branch `codex/f3-preflight`](https://github.com/caioarthur08-pre51/conserta-ou-troca/tree/codex/f3-preflight), hash `ce97ffa`, para revisão. É uma mesclagem candidata, não o checkpoint `F3 ENTRADAS INTEGRADAS` nem a integração final em `main`.
+
 ## Controle obrigatório das passagens
 
 Esta tabela complementa o inventário acima. Caio preenche uma linha para cada versão liberada; não basta registrar apenas o arquivo final.
