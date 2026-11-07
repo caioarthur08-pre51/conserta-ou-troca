@@ -1,6 +1,6 @@
 # Errata operacional — tempos do PDF individual de Caio
 
-**Data:** 05/11/2026. **Documentos afetados:** `Planejamento_Caio_Rocha.pdf` e `Guia_Caio_Rocha.pdf`, v1.4, página 19, bloco “Ensaio” da Fase 5. As páginas de F3 (13–15) têm o mesmo texto nos dois PDFs. **Responsável pela orientação:** Caio Rocha. Esta errata é um registro de governança da F3; não representa um ensaio já realizado nem substitui a necessidade de publicar novas versões dos PDFs quando forem revisados.
+**Data do registro:** 05/11/2026. **Documentos afetados originalmente:** `Planejamento_Caio_Rocha.pdf` e `Guia_Caio_Rocha.pdf`, v1.4, página 19, bloco “Ensaio” da Fase 5. As páginas de F3 (13–15) tinham o mesmo texto nos dois PDFs. **Responsável pela orientação:** Caio Rocha. Em 06/11/2026, a correção foi incorporada ao único [PDF canônico v1.5](https://drive.google.com/file/d/1Nm4jd7xocLwCUSjauwiPU20JZ0Nvj4lY/view), `Planejamento_Caio_Rocha.pdf`, 21 páginas, SHA-256 `036996B82DB45847A49B3554F61E097606EF6B47222BB153E14DB3C14876DC46`. A cópia `Guia_Caio_Rocha.pdf` v1.4, obsoleta, foi removida localmente. Este registro não representa ensaio já realizado.
 
 O bloco antigo agrupa cálculo manual em 2–5 min e MVP em 5–10 min. A sequência vigente para preparar e cronometrar a oficina é a da [página principal do projeto](https://app.notion.com/p/3c9e84185835809c8673f78325c4b142), do [roteiro v0.3 de Letícia](../03_conteudo_leticia/roteiro_microoficina.md) e do [storyboard v0.3 de Larissa](../04_comunicacao_larissa/storyboard_f2.md):
 

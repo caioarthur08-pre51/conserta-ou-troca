@@ -70,7 +70,7 @@ Não há uma nova versão corrente F3 para os quatro domínios alheios até cada
 
 **Recebimento em 06/11/2026:** a branch de Laís chegou ao commit `8d229c9`, com atualização de README que declara Sheets e Looker v0.3. O [índice](../90_integracao/indice_pacote.md) e a [incompatibilidade I-F3-04](incompatibilidades_f3.md) registram as evidências ainda não verificáveis e a distinção entre SHA-256 do CSV em CRLF e do blob Git em LF. Esse commit é candidato recebido, não nova versão corrente integrada nem autorização para o marco `CAPTURA LOOKER LIBERADA`.
 
-## Estado verificado da Fase 3 — 06/11/2026
+## Fotografia anterior da Fase 3 — 06/11/2026
 
 As versões F2 da tabela principal permanecem congeladas como histórico. Os candidatos F3 abaixo são as versões correntes **para conferência**, ainda fora de `main` e de `02_entrega_final`. Nenhum deles equivale à integração final ou a aprovação pessoal do responsável. O índice corrente registra os links de cada exportação.
 
@@ -82,7 +82,15 @@ As versões F2 da tabela principal permanecem congeladas como histórico. Os can
 | Larissa | Apresentação e guia único v0.4 em `codex/larissa-f3-producao` `d5d9a6d` | [Pasta visual F3](https://drive.google.com/drive/folders/1SeII7XT2dOEaB86i60OJP4rzNJB7zIwc): ODP/PPTX/PDF de oito slides e ODP/PDF do guia A4; PDFs marcados e prova visual inspecionada | Captura Looker para slide 7, resposta `FIDELIDADE CONFERIDA` de Letícia e reconhecimento das fontes após `F3 ENTRADAS INTEGRADAS` |
 | Caio | `caio/governanca`, índice e incompatibilidades atualizados | Origem, destino, versão, cargo, consumidores e bloqueios registrados sem alterar as branches de outro domínio | `F3 ENTRADAS INTEGRADAS` e `F3 INTEGRADA` aguardam o painel e as passagens; não publicar hash fictício de `main` |
 
-As pastas editáveis contêm uma única versão F3 identificada de cada artefato e formato. Os ODS/XLSX e wireframes F1/F2 anteriores têm função histórica, não são alternativas F3. A planilha Google criada sob propriedade de Caio é uma fonte candidata e deverá ser retirada da pasta se Laís criar uma substituta em sua conta; nunca manter duas fontes concorrentes publicadas. A autoria funcional permanece associada aos cargos, e os commits de materialização assistida identificam Codex como executor técnico.
+As pastas editáveis continham uma única versão F3 identificada de cada artefato e formato naquela conferência. Os ODS/XLSX e wireframes F1/F2 anteriores têm função histórica, não são alternativas F3. A planilha Google criada sob propriedade de Caio foi posteriormente retirada ao se constatar que tinha hash diferente e não alimentava o painel publicado por Laís. A autoria funcional permanece associada aos cargos, e os commits de materialização assistida identificam Codex como executor técnico.
+
+## Situação corrente da Fase 3 — 07/11/2026
+
+A [tarefa F3 de Laís](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9) contém os marcos `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA`, publicados pela própria responsável em comentários. O [Looker v0.3](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc) abriu sem login, exibiu 16 linhas/8 IDs e filtrou C03 corretamente. [PDF](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view) estão na contingência de Laís. O CSV importado de 3.022 bytes e SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B` é **declaração da autora**; faltam arquivo/URL da planilha para conferência direta do hash e propriedade, além do teste por conta de colega. A reconstrução auxiliar de Codex, de hash diferente, foi removida do Drive e da branch de apoio `a63e324`; não há duas fontes F3 correntes na pasta.
+
+Guilherme mantém o MVP candidato `2208cbf`; Letícia mantém o texto/relatório candidato `741ed4a`. Larissa atualizou apresentação e guia de v0.4 para **v0.5** em `52e1812`, com a captura real do Looker no slide 7, substituindo os mesmos cinco IDs do Drive, sem cópia F3 concorrente. O único [PDF de orientação de Caio v1.5](https://drive.google.com/file/d/1Nm4jd7xocLwCUSjauwiPU20JZ0Nvj4lY/view), SHA-256 `036996B82DB45847A49B3554F61E097606EF6B47222BB153E14DB3C14876DC46`, incorporou a sequência de tempos e `FIDELIDADE CONFERIDA`; a cópia v1.4 obsoleta foi removida localmente.
+
+O [índice do pacote](../90_integracao/indice_pacote.md) tem os links e os portões atuais. Antes de `F3 ENTRADAS INTEGRADAS`, Caio precisa conferir a fonte privada de Laís e os aceites pessoais das três entradas. Depois, Larissa deve confirmar recebimento e publicar a prova v0.5; Letícia deve responder `FIDELIDADE CONFERIDA`. `main` continua em `0c02bc5` e os marcos de integração não foram emitidos.
 
 ## Controle obrigatório das passagens
 

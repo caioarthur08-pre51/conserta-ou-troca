@@ -1,5 +1,7 @@
 # Incompatibilidades e dependências — Fase 3
 
+**Leitura corrente:** consultar a atualização de 07/11/2026 abaixo. As tabelas de 05 e 06/11 são fotografias da evidência disponível naquele momento; Laís publicou novos marcos em comentários da tarefa durante a auditoria.
+
 **Responsável pelo registro:** Caio Rocha. **Conferência técnica delegada:** 05/11/2026. **Base:** `origin/main` em `0c02bc5360fe2e69b6a5ab58e76f73e260f047c7`, tarefas F3 do Notion, branches remotas e pastas `01_editaveis` do Drive. Este registro não altera arquivos dos demais cargos nem certifica autoaprovação deles.
 
 ## Incompatibilidades observadas
@@ -34,6 +36,18 @@ As quatro tarefas dos outros cargos e a de Caio constavam como `Pendente` na con
 | I-F3-07 | O endereço `laeulalio@gmail.com` tem apenas leitura na pasta `01_editaveis/Lais`; `laislne1@gmail.com` tem edição. A conta canônica de Laís ainda não foi confirmada. | A primeira conta pode editar o Sheets candidato por permissão direta, mas não criar sua própria cópia dentro da pasta de editáveis; impede a substituição controlada do arquivo cuja propriedade é de Caio. | Laís escolhe a conta proprietária; Caio ajusta acesso à pasta se necessário. | Confirmar a conta canônica. Se for `laeulalio@gmail.com`, conceder edição na pasta pela interface do Drive; o conector rejeitou alteração de permissão de pasta. Alternativamente, Laís cria na própria área, compartilha a URL para validação e organiza-se o destino após a equivalência. | Verificar metadados da pasta e da nova planilha; manter só uma fonte canônica na pasta após a troca, com Laís proprietária e única editora. | Aberta; não autoriza liberar dados F3 |
 
 Guilherme publicou MVP F3 `2208cbf` com teste local e captura; Letícia publicou pacote textual candidato `741ed4a` com ODT/DOCX/PDF; Larissa publicou prova v0.4 `d5d9a6d`. Essas entregas substituem as ausências da fotografia de 05/11, mas não eliminam I-F3-05/06. A F2 permanece válida e `main` segue em `0c02bc5`. Não mover candidatos para a entrega final nem emitir os marcos de integração antes dos testes pendentes.
+
+## Atualização corrente — 07/11/2026
+
+| ID | Evidência nova | Estado e ação restante |
+| --- | --- | --- |
+| I-F3-02 e I-F3-03 | O único [PDF de Caio v1.5](https://drive.google.com/file/d/1Nm4jd7xocLwCUSjauwiPU20JZ0Nvj4lY/view), SHA-256 `036996B82DB45847A49B3554F61E097606EF6B47222BB153E14DB3C14876DC46`, usa a sequência 7:00–9:00 para cálculo manual, 9:00–12:00 para MVP e o marco `FIDELIDADE CONFERIDA`. A cópia `Guia_Caio_Rocha.pdf` v1.4 foi retirada localmente. | **Resolvidas** no documento corrente; a [errata](errata_tempos_pdf_caio.md) preserva o histórico. |
+| I-F3-04 | Laís publicou nos comentários da [tarefa F3](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9) `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA`, com [URL Looker v0.3](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc), [PDF](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view). A visualização sem login exibiu 16 linhas/8 IDs e C03 filtrado com R$ 282,86 e R$ 370,00/ano. | **Parcialmente resolvida**: painel e arquivos comprovados; falta URL da planilha, conferir metadados de propriedade e acesso, obter o CSV exato de 3.022 bytes para verificar SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B` e completar teste por conta de colega. |
+| I-F3-05 | O Sheets auxiliar criado por Codex tinha hash diferente do CSV declarado por Laís e não era a fonte do painel. Foi apagado do Drive e retirado da branch de apoio em `a63e324`. | **Duplicata eliminada**. A fonte privada de Laís não foi localizada na conta conectada de Caio; sua URL e permissões ainda precisam ser comprovadas antes da integração. |
+| I-F3-06 | Larissa incorporou a captura real do painel no slide 7 e substituiu os cinco arquivos v0.4 pelos v0.5 **nos mesmos IDs do Drive**, com registro em `52e1812`. | Reserva do slide 7 **resolvida** sem duplicata F3. Restam `F3 ENTRADAS INTEGRADAS`, auto revisão de Larissa, `F3 PROVA DO GUIA` e `FIDELIDADE CONFERIDA` por Letícia. QR definitivo continua fora da F3. |
+| I-F3-07 | A página F3 do Notion mostra `laeulalio@gmail.com` como convidada com **acesso completo**. Na pasta `01_editaveis/Lais`, esse endereço tem leitura e `laislne1@gmail.com` tem edição; os arquivos PDF/captura são propriedade de `laislne1@gmail.com`. | Permissão da tarefa **resolvida**. Confirmar com Laís qual conta é proprietária do Sheets. Só mudar o acesso da pasta se a conta escolhida precisar criar arquivos ali; o conector não altera permissões de pastas. |
+
+O painel validado não elimina a necessidade de conferir sua fonte privada. `main` permanece em `0c02bc5`; não registrar `F3 ENTRADAS INTEGRADAS` nem `F3 INTEGRADA` até que as fontes e os aceites exigidos estejam comprovados.
 
 ## Controles que permanecem válidos
 
