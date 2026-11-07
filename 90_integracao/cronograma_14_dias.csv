@@ -9,7 +9,7 @@ fase,periodo,data_limite,responsavel,tarefa,arquivo_ou_saida,criterio_conclusao,
 2,"02-03/11",2026-11-03,Guilherme,"Criar esqueleto executável","app/","index.html abre e estrutura está documentada",Concluída
 2,"02-03/11",2026-11-03,Letícia,"Produzir roteiro e referências iniciais","roteiro_microoficina.md","Sequência cabe em 20 minutos",Concluída
 2,"02-03/11",2026-11-03,Larissa,"Criar wireframes e storyboard","ODP editável no Drive + guia_visual.md no Git","Oito slides possuem propósito",Concluída
-3,"04/11",2026-11-04,Caio,"Manter quadro e índice do pacote","Notion e manifesto","Todas as dependências visíveis",Pendente
+3,"04/11",2026-11-04,Caio,"Manter quadro e índice do pacote","Notion e manifesto","Todas as dependências visíveis",Em andamento
 3,"04/11",2026-11-04,Laís,"Concluir planilha e Data Studio inicial","ODS, XLSX e URL","Fórmulas e fonte funcionais",Pendente
 3,"04/11",2026-11-04,Guilherme,"Concluir MVP","app/","Oito casos e sensibilidade funcionam",Pendente
 3,"04/11",2026-11-04,Letícia,"Concluir relatório e materiais textuais","ODT, DOCX e roteiro","Versão completa para revisão",Pendente
