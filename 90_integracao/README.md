@@ -1,8 +1,8 @@
 # Integração final
 
-Esta pasta reúne índices, checklists e cópias finais. Caio não altera os artefatos recebidos. Se uma correção for necessária, o arquivo retorna ao autor e uma nova versão substitui a anterior.
+Esta pasta reúne índices, checklists e cópias finais. A regra ordinária é devolver ao responsável uma correção necessária. A decisão D-023 autoriza assistência técnica excepcional dentro do domínio de cada cargo, com executor real no histórico, edição preservada para o responsável e substituição da versão corrente sem duplicata. Isso não substitui a auto revisão pessoal.
 
-O arquivo `cronograma_14_dias.csv` conserva o nome histórico para não quebrar links. Seu conteúdo vigente foi reprogramado em 02/11/2026 para concluir a Fase 5 em 06/11/2026; a coluna `periodo` e a decisão D-019 prevalecem sobre o número no nome.
+O arquivo `cronograma_14_dias.csv` conserva o nome histórico para não quebrar links. A decisão D-019, de 02/11/2026, previa concluir a Fase 5 em 06/11/2026. Como a F2 só foi regularizada tecnicamente em 05/11, o [índice da F3](indice_pacote.md) e o [registro de incompatibilidades](../00_governanca_caio/incompatibilidades_f3.md) identificam a necessidade de reprogramar F3–F5 antes de tratar essas datas como vigentes.
 
 As passagens entre autores são verificadas conforme `../00_governanca_caio/protocolo_comunicacao.md`. Caio não integra um artefato consumido por outro cargo enquanto o marco obrigatório estiver sem versão, teste ou confirmação do destinatário.
 
