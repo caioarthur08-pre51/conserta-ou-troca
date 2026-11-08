@@ -36,6 +36,12 @@ button {
   background: var(--primaria);
   border: 0;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 button:focus-visible, input:focus-visible, select:focus-visible {
@@ -43,13 +49,79 @@ button:focus-visible, input:focus-visible, select:focus-visible {
   outline-offset: 2px;
 }
 
+output {
+  display: block;
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #eef1f6;
+}
+
+.erro {
+  color: var(--erro);
+  border: 2px solid var(--erro);
+}
+
+.sucesso {
+  color: var(--sucesso);
+  border: 2px solid var(--sucesso);
+}
+
+#decisao { font-weight: 700; }
+
+#tabela-resultados { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid var(--borda);
+  text-align: left;
+}
+
+th { background: #eef1f6; }
+
+.grupo-barra { margin-block: 1rem; }
+
+.grupo-barra p { margin-bottom: 0.25rem; }
+
+.trilho {
+  height: 1.5rem;
+  background: #e1e5ec;
+  border: 1px solid var(--borda);
+}
+
+.barra {
+  height: 100%;
+  background: var(--primaria);
+}
+
+dt { font-weight: 700; margin-top: 0.75rem; }
+dd { margin-left: 0; }
+
+.apenas-impressao { display: none; }
+
 @media (min-width: 48rem) {
   main { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
   #resultados { grid-column: 1 / -1; }
 }
 
 @media print {
-  button, form { display: none !important; }
+  @page { size: A4; margin: 12mm; }
+  header, main > section:first-child, form, #mensagem { display: none !important; }
   body { background: white; color: black; }
-  section { border: 1px solid black; break-inside: avoid; }
+  .apenas-impressao { display: block; }
+  #resultados { border: 1px solid black; padding: 0.75rem; break-inside: avoid; }
+  #resultados h2 { margin-block: 0.25rem 0.5rem; }
+  #resultados p { margin-block: 0.45rem; }
+  #resultados th, #resultados td { padding: 0.45rem; }
+  #resultados dt { margin-top: 0.4rem; }
+  .barra { background: #555; print-color-adjust: exact; }
 }
+
+#criterios { padding-left: 1.25rem; }
+#criterios li { margin-block: 0.35rem; }
