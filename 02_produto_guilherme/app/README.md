@@ -1,6 +1,6 @@
 # Comparador local — MVP candidato da Fase 3
 
-**Domínio responsável:** Guilherme Almeida. **Versão:** v0.3 candidata. **Execução técnica assistida:** Codex, a pedido de Caio; a auto revisão e a aprovação do cargo não são presumidas.
+**Domínio responsável:** Guilherme Almeida. **Versão:** v0.3.1 candidata (critérios não financeiros com a redação exata do contrato textual v0.3). **Execução técnica assistida:** Codex, a pedido de Caio; a auto revisão e a aprovação do cargo não são presumidas.
 
 ## Abrir e usar
 

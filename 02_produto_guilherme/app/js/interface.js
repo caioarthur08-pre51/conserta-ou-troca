@@ -132,15 +132,17 @@
       criarBarra("Trocar", resultado.custo_anual_trocar, maximo)
     );
 
+    // Redação exata de 03_conteudo_leticia/textos_interface.md (contrato v0.3).
     document.querySelector("#garantia-reparo").textContent =
-      caso.garantia_reparo_meses + " meses";
+      "Garantia do reparo: " + caso.garantia_reparo_meses + " meses.";
     document.querySelector("#garantia-substituto").textContent =
-      caso.garantia_substituto_meses + " meses";
-    document.querySelector("#risco-reparo").textContent = caso.risco_reparo;
+      "Garantia do substituto: " + caso.garantia_substituto_meses + " meses.";
+    document.querySelector("#risco-reparo").textContent =
+      "Risco do reparo: " + caso.risco_reparo;
     document.querySelector("#necessidade-usuario").textContent =
-      caso.necessidade_usuario;
+      "Necessidade do usuário: " + caso.necessidade_usuario;
     document.querySelector("#impacto-ambiental").textContent =
-      caso.impacto_ambiental;
+      "Impacto ambiental (reflexão qualitativa, não é medição): " + caso.impacto_ambiental;
   }
 
   globalThis.preencherCasos = preencherCasos;

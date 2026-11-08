@@ -122,3 +122,6 @@ dd { margin-left: 0; }
   #resultados dt { margin-top: 0.4rem; }
   .barra { background: #555; print-color-adjust: exact; }
 }
+
+#criterios { padding-left: 1.25rem; }
+#criterios li { margin-block: 0.35rem; }
