@@ -65,3 +65,7 @@ Responda pelos números. Quando concordar com a recomendação, basta escrever, 
 15. **Escopo da fase 5.** Confirma que a fase 5 termina com pacote completo, ensaiado e publicado, sem inventar aplicação presencial ou resultados com estudantes antes do evento?
     **A — recomendado:** confirmar.
     **B:** houve mudança formal de escopo; fornecer a decisão e a nova orientação.
+
+16. **Conta de Laís no Drive.** Qual conta deve receber edição nas evidências restritas? Atualmente `laislne1@gmail.com` possui escrita, mas `laeulalio@gmail.com` não.
+    **A — recomendado:** manter a primeira e adicionar a segunda, se ambas forem de Laís.
+    **B:** informar qual é a única conta oficial e remover a outra somente depois da confirmação.
