@@ -1,71 +1,30 @@
-# Perguntas abertas para a execução autônoma
+# Respostas consolidadas para a execução autônoma
 
-Responda pelos números. Quando concordar com a recomendação, basta escrever, por exemplo, `1A, 2A, 3A`.
+Data da consolidação: 08/11/2026
 
-1. **PDFs individuais ausentes.** Quais são os links exatos dos PDFs de Laís, Guilherme, Letícia e Larissa? Até agora foi possível identificar com segurança apenas o PDF de Caio.
-   **A — recomendado:** enviar os quatro links ou anexar os arquivos.
-   **B:** autorizar que as páginas individuais do Notion sejam usadas provisoriamente, registrando a ausência dos PDFs como limitação.
+As perguntas originalmente abertas foram respondidas por Caio Rocha. Este arquivo conserva as decisões aplicáveis e não deve ser interpretado como aceite pessoal de outro integrante.
 
-2. **Aceites e revisões pessoais.** Como proceder quando uma tarefa exige auto-revisão, aceite ou comentário do integrante?
-   **A — recomendado:** manter a D-023; o apoio técnico prepara tudo, mas cada integrante confirma seus próprios atos.
-   **B:** criar uma nova decisão permitindo “validação técnica pela coordenação”, assinada por Caio e Codex, sem fingir que o integrante revisou pessoalmente. O item pessoal continuará identificado como não realizado.
-   **C:** informar outra regra de delegação já autorizada pela equipe e fornecer a evidência dessa autorização.
+1. **Orientações individuais:** os cinco PDFs estão disponíveis localmente na raiz do projeto: `Planejamento_Caio_Rocha.pdf`, `Planejamento_Guilherme_Almeida.pdf`, `Planejamento_Lais_Eulalio.pdf`, `Planejamento_Larissa_Costa.pdf` e `Planejamento_Leticia_Costa.pdf`.
+2. **Execução e autoria:** Caio autorizou a execução técnica centralizada por Caio/Codex. Cada artefato mantém o cargo funcional responsável, mas os registros identificam a execução técnica real e não simulam auto-revisão, comentário ou aceite pessoal de outro integrante.
+3. **GitHub:** a autonomia inclui branch, pull request, integração e publicação. A tag final `v1.0.0` só pode apontar para o pacote efetivamente testado; gates físicos ou humanos não executados devem permanecer explícitos e não podem ser declarados como concluídos.
+4. **Datas:** usar a data real de produção, congelamento e teste. As datas vencidas permanecem somente no histórico.
+5. **Destino do QR:** manter o relatório público atual: https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc
+6. **QR físico:** Caio executará os testes em dois celulares e numa prova impressa. Até a evidência ser registrada, esse gate permanece externo.
+7. **Ensaios:** Codex executa a aferição técnica do roteiro, pacote e tempos. Teste por iniciante, apresentação por pessoa física e projeção em equipamento externo só podem ser marcados como realizados mediante evidência humana.
+8. **Logística confirmada:** 11/11/2026, 08:00–12:00, Unidade Escolar Dom Severino, para estudantes do 8º ano, 9º ano e Ensino Médio. Quantidade de grupos e infraestrutura permanecem contingências operacionais.
+9. **NBR 6023:2025:** a equipe informou possuir acesso legal, mas a norma não foi entregue ao executor. Aplicar o guia institucional público indicado no projeto e registrar essa limitação na revisão bibliográfica.
+10. **Fotos:** nenhuma fotografia integra o pacote atual. Pastas restritas permanecem vazias até existirem arquivos autorizados.
+11. **Identidade visual:** preservar a identidade produzida no domínio de Larissa; alterar somente o necessário para conteúdo final, acessibilidade, proveniência, QR e URL.
+12. **Drive:** preservar históricos, manter uma única versão final ativa por formato e usar a área de staging autônoma antes de publicar nos diretórios finais. Arquivo superado só perde o estado ativo depois da validação do sucessor.
+13. **Destinos externos:** limitar a publicação ao GitHub, Google Drive e Notion.
+14. **Metadados acadêmicos confirmados:** Centro Universitário UNI-CET; Engenharia de Computação com IA, 4º período; BI e Finanças 2026.2; Prof. Me. Tadeu Duarte; Teresina–PI; Caio Rocha, Laís Eulálio, Guilherme Almeida, Letícia Costa e Larissa Costa.
+15. **Limite da fase 5:** pacote completo, tecnicamente ensaiado e publicado, sem inventar aplicação, participação, aprendizagem, opinião ou resultado dos estudantes antes do evento.
+16. **Continuidade:** nenhum novo comentário, alteração ou sinalização de integrante será aguardado. A responsabilidade funcional por cargo é preservada; a execução técnica remanescente é centralizada.
 
-3. **Publicação no GitHub.** Depois do QA, qual é o limite da autonomia?
-   **A — recomendado:** publicar branch/PR; Caio autoriza o merge em `main`, a release e a tag `v1.0.0`.
-   **B:** autorizar desde já branch, merge, release e tag quando todos os gates técnicos estiverem aprovados.
+## Únicos gates externos remanescentes
 
-4. **Reprogramação das datas.** Quais são as novas datas-limite das fases 3, 4 e 5? As datas 05/11 e 06/11 já venceram.
-   **A — recomendado:** usar a data real de cada congelamento e preservar as antigas apenas no histórico.
-   **B:** fornecer as três datas exatas.
-   **C:** autorizar a sequência “primeira data tecnicamente possível”, sem data artificial retroativa.
+- teste físico do QR em dois celulares e numa prova impressa, a ser feito por Caio;
+- teste humano por iniciante, ensaio presencial e projeção em equipamento externo, caso a equipe deseje comprovação além da aferição técnica;
+- confirmação da quantidade de grupos e da infraestrutura da escola.
 
-5. **Destino final do QR.** O relatório Looker atual deve se tornar o destino definitivo, após atualização e testes?
-   URL atual: https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc
-   **A — recomendado:** sim, manter a URL e congelá-la após refresh/QA.
-   **B:** criar um novo relatório/URL; indicar a conta ou o motivo.
-
-6. **Testes físicos do QR.** Quem fará os testes em dois celulares e em uma cópia impressa e fornecerá data, modelos dos aparelhos e resultado? Isso não pode ser comprovado honestamente apenas por simulação.
-   **A — recomendado:** Caio ou Larissa executa e envia a evidência.
-   **B:** manter o teste físico como pendência externa, sem bloquear os demais artefatos.
-
-7. **Testes humanos do pacote.** Quem fará o ensaio de 18–20 minutos, o teste do ZIP por iniciante e, se possível, a abertura em outro computador/projetor?
-   **A — recomendado:** indicar pelo menos uma pessoa e registrar duração/resultado.
-   **B:** autorizar aferição técnica provisória e manter o ensaio humano como pendência claramente identificada.
-
-8. **Logística presencial.** Houve definição de escola, data, horário, turmas, infraestrutura e custo?
-   **A — recomendado quando ainda não houver:** registrar `LOGÍSTICA PENDENTE — CONTINGÊNCIA ATIVA`, sem bloquear o pacote.
-   **B:** fornecer os dados já confirmados.
-
-9. **Referências NBR 6023:2025.** A equipe possui acesso à norma completa?
-   **A — recomendado:** usar o guia institucional público indicado na página principal, registrar a limitação e pedir conferência final de Letícia.
-   **B:** fornecer o arquivo ou acesso legal à norma completa.
-
-10. **Fotos e evidências restritas.** Existem fotos autorizadas da equipe para guardar até 31/12/2026?
-    **A — recomendado se não existirem:** manter as pastas restritas vazias.
-    **B:** fornecer os arquivos e confirmar consentimento/destinação.
-
-11. **Identidade visual.** Existe logo, template ou manual institucional obrigatório além do material já produzido por Larissa?
-    **A — recomendado se não houver:** preservar a identidade atual e corrigir apenas acessibilidade, proveniência e QR.
-    **B:** fornecer o arquivo oficial e as regras de uso.
-
-12. **Organização do Drive e descarte.** Posso usar as pastas atuais de cada cargo para editáveis e as pastas `02_entrega_final` para v1.0.0, movendo versões superadas apenas depois de validar o sucessor?
-    **A — recomendado:** sim; manter histórico versionado, uma versão final ativa por formato e hashes no manifesto.
-    **B:** apagar versões antigas após validação, inclusive históricos; indicar quais.
-    **C:** criar uma nova pasta de staging no Drive, apesar do risco de duplicação.
-
-13. **Envio externo final.** Além de GitHub, Drive e Notion, existe AVA, formulário, e-mail ou outro destino de submissão?
-    **A — recomendado se não houver:** limitar a publicação às três plataformas já definidas.
-    **B:** fornecer link, prazo e regra de submissão; credenciais devem ser inseridas pelo usuário, não registradas nos documentos.
-
-14. **Metadados acadêmicos.** Confirma como finais: Centro Universitário UNI-CET; Engenharia de Computação com IA, 4º período; BI e Finanças 2026.2; Prof. Me. Tadeu Duarte; Teresina–PI; equipe Caio Rocha, Laís Eulálio, Guilherme Almeida, Letícia Costa e Larissa Costa?
-    **A — recomendado:** confirmar.
-    **B:** informar as correções exatas.
-
-15. **Escopo da fase 5.** Confirma que a fase 5 termina com pacote completo, ensaiado e publicado, sem inventar aplicação presencial ou resultados com estudantes antes do evento?
-    **A — recomendado:** confirmar.
-    **B:** houve mudança formal de escopo; fornecer a decisão e a nova orientação.
-
-16. **Conta de Laís no Drive.** Qual conta deve receber edição nas evidências restritas? Atualmente `laislne1@gmail.com` possui escrita, mas `laeulalio@gmail.com` não.
-    **A — recomendado:** manter a primeira e adicionar a segunda, se ambas forem de Laís.
-    **B:** informar qual é a única conta oficial e remover a outra somente depois da confirmação.
+Esses itens não autorizam afirmações fictícias. Eles não bloqueiam a produção do candidato operacional, mas impedem declarar como executado qualquer teste físico ou humano ainda sem evidência.

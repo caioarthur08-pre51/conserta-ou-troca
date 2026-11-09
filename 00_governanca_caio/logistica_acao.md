@@ -1,22 +1,25 @@
 # Registro canônico da logística da ação
 
-**Proprietário:** Caio Rocha  
-**Fonte externa principal:** Prof. Me. Tadeu Duarte  
-**Situação geral:** A CONFIRMAR  
-**Última atualização:** 2026-11-02
+**Proprietário:** Caio Rocha
+
+**Fonte da atualização:** confirmação registrada por Caio Rocha
+
+**Situação geral:** DATA, JANELA, UNIDADE E PÚBLICO CONFIRMADOS; INFRAESTRUTURA E GRUPOS EM CONTINGÊNCIA
+
+**Última atualização:** 2026-11-08
 
 Este arquivo registra somente o planejamento necessário para executar a ação. Ele não registra presença, nomes, respostas, desempenho, opiniões, fotografias de estudantes nem qualquer resultado da aplicação.
 
-## Dados a confirmar
+## Dados confirmados e contingências
 
 | Campo de planejamento | Valor | Situação | Fonte | Data e hora da confirmação |
 |---|---|---|---|---|
-| Escola parceira | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
+| Escola parceira | Unidade Escolar Dom Severino | Confirmada | Caio Rocha | 08/11/2026 |
 | Endereço | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Bairro | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
-| Data da ação | A confirmar; o pacote do projeto deverá estar pronto até 06/11/2026 | Pendente | Prazo informado pela equipe em 02/11; data da escola ainda desconhecida | — |
-| Horário inicial e final | 09h–12h como hipótese, sem confirmação | Pendente | Informação provável da equipe em 02/11; confirmar com o Prof. Me. Tadeu Duarte | — |
-| Séries previstas | 8º e 9º anos e Ensino Médio; distribuição a confirmar | Parcial | Projeto aprovado | 2026-10-18 |
+| Data da ação | 11/11/2026 (quarta-feira) | Confirmada | Caio Rocha | 08/11/2026 |
+| Horário inicial e final | 08:00–12:00 | Confirmado | Caio Rocha | 08/11/2026 |
+| Séries previstas | 8º ano, 9º ano e Ensino Médio | Confirmada no escopo | Projeto aprovado e Caio Rocha | 08/11/2026 |
 | Quantidade de grupos | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Quantidade de sessões de 20 minutos | A confirmar | Pendente | Prof. Me. Tadeu Duarte | — |
 | Estudantes por grupo | A confirmar | Pendente | Instituição | — |
@@ -28,13 +31,13 @@ Este arquivo registra somente o planejamento necessário para executar a ação.
 | Permissão para fotografar apenas a equipe | Provavelmente permitida; confirmar | Pendente | Instituição | — |
 | Quantidade final de QR impressos | A confirmar após número de grupos | Bloqueada | Caio e Larissa | — |
 
-## Procedimento de confirmação de Caio
+## Procedimento para as lacunas remanescentes
 
-1. Solicitar ao Prof. Me. Tadeu Duarte todos os campos ainda pendentes em uma única mensagem objetiva.
-2. Quando receber a resposta, registrar literalmente os dados confirmados, a fonte, a data e a hora.
-3. Não estimar escola, endereço, número de grupos nem infraestrutura.
-4. Registrar no Notion o marco `LOGÍSTICA CONFIRMADA`, mesmo que alguns campos continuem pendentes, indicando cada lacuna.
-5. Enviar as passagens abaixo usando `protocolo_comunicacao.md`.
+1. Tratar data, janela, unidade e público como fatos confirmados de planejamento.
+2. Não estimar endereço, bairro, número de grupos, tamanho dos grupos ou infraestrutura.
+3. Preparar pacote integralmente offline, uma prova reutilizável do QR e PDF do painel enquanto essas lacunas permanecerem abertas.
+4. Registrar no Notion o marco `LOGÍSTICA CONFIRMADA — CONTINGÊNCIAS ATIVAS`, enumerando as lacunas.
+5. Se surgir informação nova, registrar fonte, data e impacto antes de alterar o pacote.
 
 ## Passagens obrigatórias após a confirmação
 
