@@ -9,11 +9,11 @@ Este registro documenta a produção técnica realizada no domínio do cargo sem
 | Artefato | Formatos | Escopo |
 | --- | --- | --- |
 | `apresentacao_trabalho_v1.0.0_2026-11-08` | PPTX, ODP e PDF | Oito slides 16:9, editáveis, com notas do apresentador, identidade v0.5 preservada, QR e URL textual. |
-| `guia_decisao_v1.0.0_2026-11-08` | ODP e PDF; PPTX intermediário técnico | Uma página A4, conteúdo editorial final do domínio de Letícia, composição visual do domínio de Larissa, QR e URL textual. |
+| `guia_decisao_v1.0.0_2026-11-08` | ODP e PDF | Uma página A4, conteúdo editorial final do domínio de Letícia, composição visual do domínio de Larissa, QR e URL textual. |
 | `assets_comunicacao_v1.0.0_2026-11-08.zip` | ZIP | QR PNG/SVG, parâmetros JSON, evidência digital e inventário de ativos/licenças. |
 | `manifesto_comunicacao_v1.0.0_2026-11-08.json` | JSON | Tamanho e SHA-256 dos artefatos congelados. |
 
-Os arquivos finais são produzidos em `.build/final_f5/04_larissa`. Não houve publicação externa nem substituição de arquivos no Drive nesta execução.
+Os arquivos finais são produzidos em `.build/final_f5/04_larissa`. O PPTX usado apenas como ponte técnica para compor o guia foi retirado do pacote final e preservado exclusivamente em `.build/qa_intermediarios/04_larissa`, fora do manifesto e da entrega. Não houve publicação externa nem substituição de arquivos no Drive nesta execução.
 
 ## Alterações consolidadas
 
