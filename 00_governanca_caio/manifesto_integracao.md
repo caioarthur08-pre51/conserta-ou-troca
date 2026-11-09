@@ -122,3 +122,26 @@ Para cada mudança, duplique a linha, mantenha a anterior como `SUBSTITUÍDA` no
 7. Caio publica `PACOTE FINAL INTEGRADO` com commit de `main`, versão do manifesto, resultado dos testes e tag candidata.
 8. Caio publica `TAG PUBLICADA`; cada proprietário confere seus artefatos em `v1.0.0` somente para leitura e responde `TAG CONFERIDA` com o hash observado.
 
+## Fechamento técnico centralizado F3–F5 — 09/11/2026
+
+Por autorização de Caio Rocha, as pendências remanescentes passaram a execução técnica centralizada, sem atribuir aos integrantes comentários, aceites ou testes presenciais que eles não realizaram. A autoria funcional permanece associada ao cargo definido nos planejamentos individuais.
+
+| Cargo funcional | Versão final ativa | Evidência de QA | Publicação final no Drive |
+|---|---|---|---|
+| Caio — governança e integração | pacote operacional, checklist físico, marcos e manifesto | inventário de 43 artefatos distribuíveis; nenhum link pendente no manifesto | [Pasta final](https://drive.google.com/drive/folders/1FXNCDvh293lew5pegMmtOKYoxdB-9xfL) |
+| Laís — dados e BI | ODS/XLSX, dois CSVs, dicionário, README, Looker PDF/captura e links | 14 testes; sete abas; zero erro de fórmula; 16 registros/8 IDs; C03 anônimo aprovado | [Pasta final](https://drive.google.com/drive/folders/1A6pxNuSx6MonH1fIb7z2eH7FfCkHlbsa) |
+| Guilherme — MVP | ZIP offline, README, PDF e manifestos | oito casos, dez limites, equivalência 8/8, três navegadores e duas resoluções | [Pasta final](https://drive.google.com/drive/folders/14Wk9kLckyao9dPZyS0yirr85HqCK8z7k) |
+| Letícia — conteúdo | relatório, roteiro, guia textual, referências, matriz, contrato e manifesto | DOCX/ODT íntegros; PDFs 8/6 páginas; 28 páginas inspecionadas; TTS 10:57,59 | [Pasta final](https://drive.google.com/drive/folders/1LmOHhYMxtqzyfmTRaSznBlrBmq-zHe95) |
+| Larissa — comunicação visual | apresentação PPTX/ODP/PDF, guia ODP/PDF, QR, assets ZIP e manifesto | oito slides + A4 inspecionados; QR digital exato; slide 6 corrigido; zero achados do finalizador | [Pasta final](https://drive.google.com/drive/folders/1sg9a4gRLaOs84HNJN4rB5m1oIlooEYG6) |
+
+O [manifesto CSV](https://drive.google.com/file/d/1EdYthOMSPq50_VJC62CEhdJAhpLd3wis/view) e o [manifesto JSON](https://drive.google.com/file/d/1P1W8XO629E0t8xmBOlJFiDWom2Ko5PQP/view) registram caminho, cargo, versão, tamanho, SHA-256 e link individual dos 43 artefatos. Os cinco destinos finais e os cinco destinos de staging não contêm títulos duplicados. Históricos F1–F3 permanecem preservados nas pastas editáveis e não concorrem com a v1.0.0.
+
+### Estado dos gates
+
+- F1 e F2: concluídas e preservadas como histórico.
+- F3: concluída tecnicamente nas cinco frentes pela integração centralizada.
+- F4: dados, equivalência, conteúdo, URL, QR digital e visual aprovados; `F4 DESTINO DO QR VALIDADO` continua pendente do teste físico de Caio.
+- F5: pacotes dos cinco cargos produzidos e publicados; o ensaio humano, a conferência do equipamento real e a tag `v1.0.0` continuam pendentes.
+
+O hash final de `main` e a tag não são antecipados neste manifesto. Eles serão registrados no Notion somente depois da integração do commit testado e da evidência dos gates físicos/humanos.
+

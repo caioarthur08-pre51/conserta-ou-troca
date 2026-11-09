@@ -52,3 +52,27 @@ O bloco acima descreve a primeira leitura do commit `8d229c9`. Depois disso, a b
 5. Caio confere as cinco saídas, atualiza este índice/manifesto e a [lista de incompatibilidades](../00_governanca_caio/incompatibilidades_f3.md), integra as cinco branches e registra `F3 INTEGRADA` com o hash de `main`. **Este marco permanece pendente nesta revisão.**
 
 Para cada arquivo recebido, verificar abertura, instrução de uso, versão, cargo proprietário, commit ou SHA-256, aderência ao contrato e pendência crítica com responsável e prazo. A assinatura pessoal do titular ou a confirmação `RECEBIDO` de outro cargo não é presumida por esta conferência técnica.
+
+## Situação corrente — 09/11/2026
+
+Este bloco substitui a fotografia operacional de 07/11, sem apagá-la. A execução técnica centralizada produziu e publicou a v1.0.0 das cinco frentes. Os arquivos históricos permanecem preservados; apenas os arquivos abaixo são tratados como finais ativos.
+
+| Domínio | Pacote v1.0.0 | Contagem final | Estado |
+|---|---|---:|---|
+| Caio | [governança e manifesto](https://drive.google.com/drive/folders/1FXNCDvh293lew5pegMmtOKYoxdB-9xfL) | 5 | publicado; gates presenciais pendentes |
+| Laís | [dados e BI](https://drive.google.com/drive/folders/1A6pxNuSx6MonH1fIb7z2eH7FfCkHlbsa) | 10 | publicado; Looker e fonte privada verificados |
+| Guilherme | [MVP offline](https://drive.google.com/drive/folders/14Wk9kLckyao9dPZyS0yirr85HqCK8z7k) | 5 | publicado; ZIP e três navegadores aprovados |
+| Letícia | [conteúdo e documentos](https://drive.google.com/drive/folders/1LmOHhYMxtqzyfmTRaSznBlrBmq-zHe95) | 13 | publicado; formatos e referências validados |
+| Larissa | [comunicação visual](https://drive.google.com/drive/folders/1sg9a4gRLaOs84HNJN4rB5m1oIlooEYG6) | 12 | publicado; QR digital, slides e guia aprovados |
+
+O [manifesto final JSON](https://drive.google.com/file/d/1P1W8XO629E0t8xmBOlJFiDWom2Ko5PQP/view) contém os links individuais dos 43 artefatos distribuíveis. O staging autônomo permanece em [05_staging_autonomo_f3_f5_2026-11-08](https://drive.google.com/drive/folders/1geRZxcVSLdNKVifTat8c9PLHyVQ0QFGv). A planilha autônoma privada concede edição às duas contas de Laís; o painel público continua somente para visualização.
+
+### Pendências que impedem declarar as cinco fases integralmente encerradas
+
+1. Caio lê o QR em dois celulares e numa prova impressa a aproximadamente 30, 60 e 100 cm.
+2. Caio registra um ensaio humano cronometrado com navegação, cálculo e transição; a medição TTS não substitui esse ato.
+3. Caio confere computador, navegador, projetor/TV, tomadas e contingência reais.
+4. A branch técnica é integrada em `main` depois dos testes finais.
+5. A tag `v1.0.0` é publicada somente sobre o mesmo commit efetivamente testado.
+
+Nenhuma dessas ações foi presumida. Até sua execução, a formulação correta é: **F1–F3 concluídas; F4–F5 tecnicamente prontas, com gates presenciais/humanos e tag final pendentes**.

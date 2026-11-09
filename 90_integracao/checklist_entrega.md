@@ -35,3 +35,23 @@
 - [ ] `logistica_acao.md` contém a última situação externa e os quatro cargos consumidores confirmaram o modo ou a contingência correspondente.
 - [ ] Caio publicou `PACOTE FINAL INTEGRADO` com o commit testado de `main` e a tag candidata.
 
+## Fotografia técnica da execução centralizada — 09/11/2026
+
+- [x] As cinco frentes funcionais possuem artefatos v1.0.0 materializados e validados tecnicamente.
+- [x] Os oito casos produzem resultados equivalentes na planilha e no MVP.
+- [x] O MVP opera por `file://`, sem servidor, instalação, internet ou dependência externa.
+- [x] Chrome, Edge e Firefox foram testados em 390 × 844 e 1280 × 720.
+- [x] O Looker Studio abriu sem login, mostrou 16 registros/8 IDs e filtrou C03 corretamente.
+- [x] O QR foi decodificado digitalmente para a URL pública exata.
+- [x] Relatório, roteiro, apresentação, guia e PDFs de contingência foram renderizados e inspecionados.
+- [x] A planilha possui sete abas e zero erro de fórmula na inspeção.
+- [x] A fala sintética cabe nos intervalos de 18 + 2 minutos previstos.
+- [x] Os artefatos distinguem planejamento, validação técnica e resultados esperados de resultados reais da ação.
+- [x] Não há dados pessoais de estudantes nem resultados inventados da aplicação.
+- [x] As versões originais e históricas permanecem preservadas; só a v1.0.0 é tratada como final ativa.
+- [ ] QR testado fisicamente por Caio em dois celulares.
+- [ ] QR testado numa prova impressa a aproximadamente 30, 60 e 100 cm.
+- [ ] Ensaio humano cronometrado com navegação e transição registrado.
+- [ ] Computador, projetor/TV, tomadas e contingência reais conferidos no local ou antes da ação.
+- [ ] Branch final integrada em `main` e tag `v1.0.0` publicada sobre o mesmo commit testado.
+

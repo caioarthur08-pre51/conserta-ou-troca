@@ -19,3 +19,17 @@ As cinco pastas originais `02_entrega_final` estavam vazias na leitura imediatam
 3. Evidências restritas não recebem material público nem fotografias inexistentes.
 4. Cada upload é relido pela listagem da pasta e registrado com ID, link, tamanho e SHA-256 no manifesto.
 5. Se um upload falhar, não se cria uma segunda cópia às cegas; a pasta é relida antes de qualquer nova tentativa.
+
+## Resultado da publicação — 09/11/2026
+
+| Cargo | Staging | Entrega final | Contingência | Títulos duplicados |
+|---|---:|---:|---:|---:|
+| Caio | 5 | 5 | 5 | 0 |
+| Laís | 10 | 10 | 8, incluindo históricos de contingência | 0 |
+| Guilherme | 5 | 5 | 4 | 0 |
+| Letícia | 13 | 13 | 3 | 0 |
+| Larissa | 12 | 12 | 7 | 0 |
+
+Os títulos de todas as quinze pastas foram relidos após a publicação. Não houve repetição de nome dentro de nenhuma pasta. O pacote local final possui 45 arquivos: 43 artefatos distribuíveis e os dois manifestos centrais (CSV e JSON); não contém arquivo `sanitized`, intermediário técnico, pasta extraída do MVP nem relatório de inspeção.
+
+O arquivo extraído do MVP e o PPTX intermediário do guia foram preservados somente em `.build/qa_intermediarios`, fora do pacote distribuível. Eles permanecem recuperáveis para auditoria e não concorrem com os formatos finais.
