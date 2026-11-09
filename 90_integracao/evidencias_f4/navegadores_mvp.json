@@ -1,0 +1,67 @@
+{
+  "fase": 4,
+  "gate": "RESULTADOS MVP LIBERADOS",
+  "arquivo": "02_produto_guilherme/app/index.html",
+  "execucao_offline": true,
+  "testes": [
+    {
+      "navegador": "Chrome",
+      "largura": 390,
+      "altura": 844,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "DOM dinâmico; opções=8; estado inicial=True."
+    },
+    {
+      "navegador": "Chrome",
+      "largura": 1280,
+      "altura": 720,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "DOM dinâmico; opções=8; estado inicial=True."
+    },
+    {
+      "navegador": "Edge",
+      "largura": 390,
+      "altura": 844,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "DOM dinâmico; opções=8; estado inicial=True."
+    },
+    {
+      "navegador": "Edge",
+      "largura": 1280,
+      "altura": 720,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "DOM dinâmico; opções=8; estado inicial=True."
+    },
+    {
+      "navegador": "Firefox",
+      "largura": 390,
+      "altura": 844,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "Captura headless gerada e página carregada."
+    },
+    {
+      "navegador": "Firefox",
+      "largura": 1280,
+      "altura": 720,
+      "modo": "file:// offline",
+      "aprovado": true,
+      "codigo_saida": 0,
+      "detalhe": "Captura headless gerada e página carregada."
+    }
+  ],
+  "resumo": {
+    "total": 6,
+    "aprovados": 6,
+    "aprovado": true
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "fase": 4,
+  "gate": "F4 EQUIVALÊNCIA CONFIRMADA",
+  "fontes": {
+    "csv": "01_modelagem_lais/casos.csv",
+    "modelo": "01_modelagem_lais/modelo.py",
+    "mvp": "02_produto_guilherme/app/js/calculos.js"
+  },
+  "tolerancia": "1E-9",
+  "casos": [
+    {
+      "caso_id": "C01",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C02",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C03",
+      "resultado_modelo": "Trocar",
+      "resultado_mvp": "Trocar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C04",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C05",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C06",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C07",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    },
+    {
+      "caso_id": "C08",
+      "resultado_modelo": "Reparar",
+      "resultado_mvp": "Reparar",
+      "equivalente": true,
+      "problemas": []
+    }
+  ],
+  "resumo": {
+    "total": 8,
+    "equivalentes": 8,
+    "aprovado": true
+  }
+}

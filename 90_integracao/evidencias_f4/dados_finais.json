@@ -1,0 +1,35 @@
+{
+  "fase": 4,
+  "gate": "F4 DADOS CANDIDATOS",
+  "versao_pacote": "1.0.0",
+  "versao_base": "v0.3",
+  "data_corte": "2026-11-04",
+  "congelamento_tecnico": "2026-11-09",
+  "csv": {
+    "arquivo": "casos_v1.0.0_2026-11-08.csv",
+    "campos": 18,
+    "registros": 8,
+    "ids_unicos": 8,
+    "sha256": "AF130CF8B43D0F3C6634311F863F0AE78C526F492A8E6AD06AF34B9670DABC46"
+  },
+  "fonte_looker": {
+    "arquivo": "fonte_looker_v0.3_16_registros.csv",
+    "campos": 15,
+    "registros": 16,
+    "ids_unicos": 8,
+    "sha256": "BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B"
+  },
+  "planilha": {
+    "abas": ["Leia-me", "Resumo", "Casos", "Calculos", "DataStudio", "ExportCSV", "Fontes"],
+    "xlsx_sha256": "72151929F38C768DE2E4B7B98206A0B2EA26EE2E7BA35F1412DB5B0D883F0288",
+    "ods_sha256": "5FB11FB56CF73F52531DFBA5ABF32333F912AF9524B381E0DD9C09E44CF4FEF4",
+    "erros_formula": 0,
+    "qa_visual": "aprovado em sete abas"
+  },
+  "resultados_referencia": {
+    "C01": {"reparar": 253.33333333333334, "trocar": 315, "resultado": "Reparar"},
+    "C03": {"reparar": 370, "trocar": 282.85714285714283, "resultado": "Trocar"}
+  },
+  "aprovado": true,
+  "limite": "Validação técnica; não declara teste físico do QR nem auto-revisão pessoal."
+}

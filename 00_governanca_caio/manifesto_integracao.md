@@ -54,6 +54,48 @@ O contrato de campos, testes, consumidores e ordem de integração da Fase 2 est
 
 Caio atualiza este manifesto a cada liberação. O responsável pelo domínio informa versão, data, commit, link do **arquivo**, tamanho e SHA-256 quando aplicável e publica `ENTREGA FINAL LIBERADA` na Fase 5. Nesta regularização da F2, a produção técnica assistida ocorreu sob delegação para as lacunas de cada cargo; os commits identificam a assistência sem se passar pelos integrantes. A propriedade de cada artefato e as decisões de conteúdo permanecem nos respectivos cargos. O caminho canônico continua existindo; o arquivo versionado é uma cópia congelada. O hash do commit que contém este próprio manifesto será registrado no Notion depois do `push`, pois não pode constar dentro do mesmo commit sem gerar outro hash.
 
+## Acompanhamento da Fase 3 — 05/11/2026
+
+O inventário acima documenta as versões F2, não a conclusão da F3. O [índice do pacote](../90_integracao/indice_pacote.md), v0.1, registra origem, destino, responsável, versão, consumidor e estado de cada candidato. A [lista de incompatibilidades](incompatibilidades_f3.md) registra a divergência de prazos e a errata da sequência de ensaio. No início desta produção, `origin/main` estava em `0c02bc5360fe2e69b6a5ab58e76f73e260f047c7`; as quatro branches remotas dos demais cargos ainda não traziam commits F3 e as tarefas F3 do Notion permaneciam pendentes. Isso não descreve eventuais arquivos locais ainda não enviados pelos autores.
+
+| Domínio | Versão única comprovada nesta revisão | Candidato F3 necessário | Passagem aguardada |
+| --- | --- | --- | --- |
+| Caio | Manifesto F2 v0.4; índice e incompatibilidades F3 v0.1 publicados na branch de governança | Atualização das cinco entradas, decisão de reprogramação e integração publicada | `F3 ENTRADAS INTEGRADAS` e `F3 INTEGRADA` ainda não emitidos |
+| Laís | CSV/ODS/XLSX F2 v0.2 | Fonte privada de 16 linhas, relatório Looker candidato, URL e captura | `DADOS F3 LIBERADOS`; `CAPTURA LOOKER LIBERADA` |
+| Guilherme | Esqueleto MVP F2 v0.2 | Comparador com cálculo/sensibilidade e captura estável | `CAPTURA MVP LIBERADA` |
+| Letícia | Roteiro/interface/referências F2 v0.3; guia Markdown F2 v0.2; ODT de trabalho F1 v0.1 | Relatório completo, DOCX e texto do guia liberado | `CONTEÚDO DO GUIA LIBERADO`; depois `FIDELIDADE CONFERIDA` |
+| Larissa | Wireframes ODP/PPTX/PDF F2 v0.3 | Apresentação e guia completos, prova do guia, exportações candidatas | `F3 PROVA DO GUIA`; `F3 VISUAL CANDIDATO` |
+
+Não há uma nova versão corrente F3 para os quatro domínios alheios até cada proprietário publicar o candidato com versão, testes e commit ou hash. A integração intermediária depende de Laís, Guilherme e Letícia; a final também depende de Larissa e da conferência textual de Letícia. A falta desses marcos não invalida a F2 e impede apenas declarar a F3 integrada. Nenhuma fonte intermediária foi movida para `02_entrega_final`.
+
+**Recebimento em 06/11/2026:** a branch de Laís chegou ao commit `8d229c9`, com atualização de README que declara Sheets e Looker v0.3. O [índice](../90_integracao/indice_pacote.md) e a [incompatibilidade I-F3-04](incompatibilidades_f3.md) registram as evidências ainda não verificáveis e a distinção entre SHA-256 do CSV em CRLF e do blob Git em LF. Esse commit é candidato recebido, não nova versão corrente integrada nem autorização para o marco `CAPTURA LOOKER LIBERADA`.
+
+## Fotografia anterior da Fase 3 — 06/11/2026
+
+As versões F2 da tabela principal permanecem congeladas como histórico. Os candidatos F3 abaixo são as versões correntes **para conferência**, ainda fora de `main` e de `02_entrega_final`. Nenhum deles equivale à integração final ou a aprovação pessoal do responsável. O índice corrente registra os links de cada exportação.
+
+| Domínio | Versão candidata e origem | Evidência técnica | Passagem pendente |
+| --- | --- | --- | --- |
+| Laís | CSV derivado v0.3 em `codex/lais-f3` `8bef79f`; [Sheets restrito](https://docs.google.com/spreadsheets/d/1kTtj5dAstqlrg_KlhrJNKB5KcZYKiXwqmpM8c19_RLE/edit) | 15 campos, 16 linhas, 8 IDs, C01/C03 conferidos; SHA-256 do CSV derivado no checkout `3A3D34A90DEEE5310F81BE46BA4A6E6378D94A1DC283CB00F8E1BA0315DBC502`; 14 testes do modelo aprovados | Transferir propriedade ou criar a fonte única na conta de Laís; criar/testar Looker Viewer anônimo e colocar PDF pela própria Laís; publicar `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA` |
+| Guilherme | MVP v0.3 em `guilherme/produto` `2208cbf` | `file://`, oito casos, dez entradas inválidas, sensibilidade, C01/C03/empate, restauração, impressão e captura 390 px testados; [capturas e PDF na pasta](https://drive.google.com/drive/folders/1Hgjk_AYS7Pu4GFqtjr8CSukWGor7s8vD) | Marco `CAPTURA MVP LIBERADA` registrado; aceite pessoal do cargo não presumido |
+| Letícia | Guia e roteiro v0.8, matriz e relatório em `codex/leticia-f3-producao` `741ed4a` | [ODT canônico](https://drive.google.com/file/d/14QJfuI7_fhUgBlAEfqvSnPwPwqPvKku-/view), DOCX e PDF na pasta; 13 seções, sumário atualizado e referências rastreadas | Auto revisão editorial, liberação pessoal do conteúdo e conferência da prova do guia após a captura Looker |
+| Larissa | Apresentação e guia único v0.4 em `codex/larissa-f3-producao` `d5d9a6d` | [Pasta visual F3](https://drive.google.com/drive/folders/1SeII7XT2dOEaB86i60OJP4rzNJB7zIwc): ODP/PPTX/PDF de oito slides e ODP/PDF do guia A4; PDFs marcados e prova visual inspecionada | Captura Looker para slide 7, resposta `FIDELIDADE CONFERIDA` de Letícia e reconhecimento das fontes após `F3 ENTRADAS INTEGRADAS` |
+| Caio | `caio/governanca`, índice e incompatibilidades atualizados | Origem, destino, versão, cargo, consumidores e bloqueios registrados sem alterar as branches de outro domínio | `F3 ENTRADAS INTEGRADAS` e `F3 INTEGRADA` aguardam o painel e as passagens; não publicar hash fictício de `main` |
+
+As pastas editáveis continham uma única versão F3 identificada de cada artefato e formato naquela conferência. Os ODS/XLSX e wireframes F1/F2 anteriores têm função histórica, não são alternativas F3. A planilha Google criada sob propriedade de Caio foi posteriormente retirada ao se constatar que tinha hash diferente e não alimentava o painel publicado por Laís. A autoria funcional permanece associada aos cargos, e os commits de materialização assistida identificam Codex como executor técnico.
+
+## Fotografia da Fase 3 — 07/11/2026
+
+A [tarefa F3 de Laís](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9) contém os marcos `DADOS F3 LIBERADOS` e `CAPTURA LOOKER LIBERADA`, publicados pela própria responsável em comentários. O [Looker v0.3](https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc) abriu sem login, exibiu 16 linhas/8 IDs e filtrou C03 corretamente. [PDF](https://drive.google.com/file/d/1XRbvmfUWGMsOXkfj5XN-9XKPNGHy0uvo/view) e [captura](https://drive.google.com/file/d/1izrhIeo7G_IE-qeoIy45M5bQ15Q1JCak/view) estão na contingência de Laís. O CSV importado de 3.022 bytes e SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B` é **declaração da autora**; faltam arquivo/URL da planilha para conferência direta do hash e propriedade, além do teste por conta de colega. A reconstrução auxiliar de Codex, de hash diferente, foi removida do Drive e da branch de apoio `a63e324`; não há duas fontes F3 correntes na pasta.
+
+Guilherme mantém o MVP candidato `2208cbf`, reconferido com oito casos, dez limites e sensibilidade. Letícia atualizou roteiro e relatório para v0.9 em `ccf646f`; ODT, DOCX e PDF foram substituídos nos mesmos IDs, e o PDF A4 de nove páginas foi inspecionado. Laís teve o cabeçalho `custo_anual` corrigido apenas no PDF, no mesmo ID do Drive, com SHA-256 `B80E6218B4A66015531D7616185D3E8EEA756B0E1530E3FB039DD11D34BD150F`; o apoio técnico está em `146f26d`. Larissa atualizou apresentação e guia de v0.4 para **v0.5** em `52e1812`, com a captura real do Looker no slide 7, substituindo os mesmos cinco IDs do Drive, sem cópia F3 concorrente. O único [PDF de orientação de Caio v1.5](https://drive.google.com/file/d/1Nm4jd7xocLwCUSjauwiPU20JZ0Nvj4lY/view), SHA-256 `036996B82DB45847A49B3554F61E097606EF6B47222BB153E14DB3C14876DC46`, incorporou a sequência de tempos e `FIDELIDADE CONFERIDA`; a cópia v1.4 obsoleta foi removida localmente.
+
+O [índice do pacote](../90_integracao/indice_pacote.md) tem os links e os portões atuais. Antes de `F3 ENTRADAS INTEGRADAS`, Caio precisa conferir a fonte privada de Laís e os aceites pessoais das três entradas. Depois, Larissa deve confirmar recebimento e publicar a prova v0.5; Letícia deve responder `FIDELIDADE CONFERIDA`. `main` continua em `0c02bc5` e os marcos de integração não foram emitidos.
+
+Em integração **local de ensaio**, as cinco branches candidatas foram reunidas sem conflitos e `node --test 02_produto_guilherme/testes/calculos.test.mjs` passou. Esse ensaio não move `main` nem publica os marcos. A revisão visual final de Larissa em `7c27683` acrescentou metadados pt-BR, texto alternativo e PDF/UA; o PPTX recuperou as cores e o contraste da fonte. Os cinco arquivos foram substituídos nos mesmos IDs do Drive e a [conferência técnica](../04_comunicacao_larissa/conferencia_fidelidade_f3.md) compara a prova com o guia v0.8 e roteiro v0.9. O conector GitHub confirmou permissão `write` para os quatro logins dos integrantes. As pastas Drive e as tarefas F3 do Notion concedem edição aos respectivos cargos; as duas contas Google de Laís podem editar sua pasta e Letícia usa contas distintas no Notion e no Drive. A decisão D-023 autoriza a assistência técnica entre domínios, com o executor real identificado nos commits, e preserva a auto revisão pessoal exigida para a conclusão de cada tarefa.
+
+Após essa fotografia, o registro de Laís chegou a `afc768e` para refletir as duas contas editoras da pasta; o guia de Larissa chegou a `c8f5af8` com fonte textual, versão e data explícitas nas notas do ODP, substituindo o mesmo ID do Drive. O ensaio atualizado está publicado na [branch `codex/f3-preflight`](https://github.com/caioarthur08-pre51/conserta-ou-troca/tree/codex/f3-preflight), hash `21a0b8b`, para revisão. É uma mesclagem candidata, não o checkpoint `F3 ENTRADAS INTEGRADAS` nem a integração final em `main`.
+
 ## Controle obrigatório das passagens
 
 Esta tabela complementa o inventário acima. Caio preenche uma linha para cada versão liberada; não basta registrar apenas o arquivo final.
@@ -79,4 +121,27 @@ Para cada mudança, duplique a linha, mantenha a anterior como `SUBSTITUÍDA` no
 6. Caio integra as branches, executa o checklist e registra hashes.
 7. Caio publica `PACOTE FINAL INTEGRADO` com commit de `main`, versão do manifesto, resultado dos testes e tag candidata.
 8. Caio publica `TAG PUBLICADA`; cada proprietário confere seus artefatos em `v1.0.0` somente para leitura e responde `TAG CONFERIDA` com o hash observado.
+
+## Fechamento técnico centralizado F3–F5 — 09/11/2026
+
+Por autorização de Caio Rocha, as pendências remanescentes passaram a execução técnica centralizada, sem atribuir aos integrantes comentários, aceites ou testes presenciais que eles não realizaram. A autoria funcional permanece associada ao cargo definido nos planejamentos individuais.
+
+| Cargo funcional | Versão final ativa | Evidência de QA | Publicação final no Drive |
+|---|---|---|---|
+| Caio — governança e integração | pacote operacional, checklist físico, marcos e manifesto | inventário de 43 artefatos distribuíveis; nenhum link pendente no manifesto | [Pasta final](https://drive.google.com/drive/folders/1FXNCDvh293lew5pegMmtOKYoxdB-9xfL) |
+| Laís — dados e BI | ODS/XLSX, dois CSVs, dicionário, README, Looker PDF/captura e links | 14 testes; sete abas; zero erro de fórmula; 16 registros/8 IDs; C03 anônimo aprovado | [Pasta final](https://drive.google.com/drive/folders/1A6pxNuSx6MonH1fIb7z2eH7FfCkHlbsa) |
+| Guilherme — MVP | ZIP offline, README, PDF e manifestos | oito casos, dez limites, equivalência 8/8, três navegadores e duas resoluções | [Pasta final](https://drive.google.com/drive/folders/14Wk9kLckyao9dPZyS0yirr85HqCK8z7k) |
+| Letícia — conteúdo | relatório, roteiro, guia textual, referências, matriz, contrato e manifesto | DOCX/ODT íntegros; PDFs 8/6 páginas; 28 páginas inspecionadas; TTS 10:57,59 | [Pasta final](https://drive.google.com/drive/folders/1LmOHhYMxtqzyfmTRaSznBlrBmq-zHe95) |
+| Larissa — comunicação visual | apresentação PPTX/ODP/PDF, guia ODP/PDF, QR, assets ZIP e manifesto | oito slides + A4 inspecionados; QR digital exato; slide 6 corrigido; zero achados do finalizador | [Pasta final](https://drive.google.com/drive/folders/1sg9a4gRLaOs84HNJN4rB5m1oIlooEYG6) |
+
+O [manifesto CSV](https://drive.google.com/file/d/1EdYthOMSPq50_VJC62CEhdJAhpLd3wis/view) e o [manifesto JSON](https://drive.google.com/file/d/1P1W8XO629E0t8xmBOlJFiDWom2Ko5PQP/view) registram caminho, cargo, versão, tamanho, SHA-256 e link individual dos 43 artefatos. Os cinco destinos finais e os cinco destinos de staging não contêm títulos duplicados. Históricos F1–F3 permanecem preservados nas pastas editáveis e não concorrem com a v1.0.0.
+
+### Estado dos gates
+
+- F1 e F2: concluídas e preservadas como histórico.
+- F3: concluída tecnicamente nas cinco frentes pela integração centralizada.
+- F4: dados, equivalência, conteúdo, URL, QR digital e visual aprovados; `F4 DESTINO DO QR VALIDADO` continua pendente do teste físico de Caio.
+- F5: pacotes dos cinco cargos produzidos e publicados; o ensaio humano, a conferência do equipamento real e a tag `v1.0.0` continuam pendentes.
+
+O hash final de `main` e a tag não são antecipados neste manifesto. Eles serão registrados no Notion somente depois da integração do commit testado e da evidência dos gates físicos/humanos.
 

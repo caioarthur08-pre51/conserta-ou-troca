@@ -1,42 +1,44 @@
-# Guia de decisão: reparar ou trocar?
+# Guia de decisão reparar ou trocar
 
-Versão do conteúdo: v0.2 (Fase 2) · Autoria: Letícia Costa · Destino único: diagramação e exportação do PDF por Larissa (`guia_decisao.pdf`)
+Versão do texto: **v1.0.0, congelada em 08/11/2026** · Responsável funcional pelo conteúdo: **Letícia Costa** · Execução técnica final: **Codex sob coordenação de Caio Rocha** · Destino: **um único guia diagramado no domínio visual de Larissa Costa**.
 
-> Notas para Larissa: o guia deve caber em uma página e seguir os mínimos do guia visual (18 pt no corpo e 16 pt nas tabelas). Confira o encaixe no ODP/PDF; ele ainda não é comprovado por este Markdown. Diagrame sem reescrever o sentido. Se faltar espaço, peça uma versão curta e não reduza a fonte. O QR e a URL textual do Looker Studio entram na seção 6 quando o endereço final for liberado.
+## Conteúdo para o guia
 
-## 1. Pergunta central
+### 1. Pergunta
 
 Em quais condições reparar custa menos por ano do que trocar?
 
-## 2. Duas fórmulas
+### 2. Compare pelo mesmo período
 
-**Reparar:** (custo do reparo + manutenção adicional − valor residual do reparado) ÷ vida adicional
+**Reparar:** (reparo + manutenção adicional − valor residual do reparado) ÷ vida adicional.
 
-**Trocar:** (preço do substituto + acessórios − venda do atual − valor residual do substituto) ÷ vida do substituto
+**Trocar:** (substituto + acessórios − venda do atual − valor residual do substituto) ÷ vida do substituto.
 
 O valor pago pelo aparelho atual no passado fica fora da conta.
 
-## 3. Exemplo C01 (celular fictício)
+### 3. Caso C01, celular fictício
 
 | Opção | Custo anual |
-| --- | --- |
+| --- | ---: |
 | Reparar | R$ 253,33 |
 | Trocar | R$ 315,00 |
 
-Reparar pode favorecer, se o reparo durar mais 1,5 ano.
+Reparar custa R$ 61,67 a menos por ano **se** durar mais 1,5 ano. Com vida adicional de 1 ano, reparar sobe para R$ 380,00/ano e trocar passa a ter menor custo anual.
 
-## 4. Três critérios não financeiros
+### 4. O número não decide sozinho
 
-- Risco do reparo
-- Necessidade do usuário
-- Impacto ambiental
+Considere também o risco do reparo, a necessidade de uso e o impacto ambiental. Eles não alteram a fórmula.
 
-## 5. Como justificar
+### 5. Justifique com cautela
 
-Use pelo menos um dado financeiro e uma limitação.
+Use ao menos **um dado financeiro** e **uma limitação**: “Reparar custa menos no C01, mas isso depende da vida adicional estimada.”
 
-Simulação educativa com dados sintéticos. Não é recomendação comercial.
+**Simulação educativa com dados sintéticos. Não é recomendação comercial.**
 
-## 6. Painel interativo
+### 6. Leia o painel
 
-Looker Studio: [LINK_DASHBOARD_RESERVADO]
+Compare Reparar e Trocar **dentro do mesmo caso**. Use o QR e o endereço impressos na versão diagramada para explorar os oito casos.
+
+## Instrução de diagramação
+
+Este bloco é instrução de produção e **não integra o PDF do guia**. Mantenha o corpo legível em uma página, com no mínimo 18 pt no corpo e 16 pt na tabela, conforme `04_comunicacao_larissa/guia_visual.md`. Não encurte fórmulas nem altere o sentido. Use o endereço público do painel, `https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc`, em texto e no QR final. A validação automatizada do destino não substitui o teste físico em dois celulares e em prova impressa, assumido por Caio.

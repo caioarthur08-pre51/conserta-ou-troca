@@ -1,10 +1,10 @@
-# Referências iniciais (NBR 6023:2025)
+# Referências finais
 
-Versão: v0.2 (Fase 2) · Responsável editorial: Letícia Costa
-Modelo operacional: Orientações para elaboração de referências de acordo com a NBR 6023/2025 (Biblioteca Antonio Candido, IEL/Unicamp, atualizado em set. 2025).
+Versão: v1.0.0 · congelamento técnico: 08/11/2026 · Responsável funcional: Letícia Costa · Execução técnica final: Codex sob coordenação de Caio Rocha
+Modelo operacional: *Orientações para elaboração de referências de acordo com a NBR 6023/2025* (Biblioteca Antonio Candido, IEL/Unicamp, atualizado em set. 2025).
 
-**Estado:** as referências A01–A07 foram registradas em 03/11/2026. A revisão técnica assistida de 05/11/2026 conferiu a definição de sensibilidade (A08) em fonte institucional e o art. 32 do CDC na versão atualizada da Câmara. A matriz A01–A08 tem fonte identificada; a validação editorial do cargo permanece com Letícia.
-Regras aplicadas: sem cidade, editora ou data inventadas (dado ausente fica entre colchetes: [S. l.], [s. n.], [s. d.]); sem citar IA; sem comprar a norma.
+**Estado:** as referências A01–A08 têm fonte institucional identificada e correspondência registrada na matriz. Em 08/11/2026, a conferência técnica reabriu as páginas oficiais da Câmara dos Deputados, o CPC 27, o documento da EPA e o guia do IEL/Unicamp. O guia institucional declara que não substitui a consulta integral à NBR 6023:2025; por isso, este pacote registra conformidade operacional com o guia, sem declarar auditoria integral da norma licenciada.
+Regras aplicadas: nenhum local, editora ou data foi inventado; dados ausentes aparecem entre colchetes; ferramentas de IA não são citadas como fonte acadêmica.
 
 ## Lista
 

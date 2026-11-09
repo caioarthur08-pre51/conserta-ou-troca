@@ -53,3 +53,30 @@ Responsável editorial: Letícia Costa. A revisão técnica assistida de 05/11/2
 - `medir_roteiro_tts.ps1`: comando reproduzível da verificação temporal da Fase 2. Execute em PowerShell com uma voz Windows pt-BR instalada. Não representa ensaio da oficina.
 
 O link do Looker Studio e o QR definitivo pertencem às fases seguintes. O marcador `[LINK_DASHBOARD_RESERVADO]` é intencional nesta fase.
+
+## Pacote textual candidato da Fase 3
+
+Responsável editorial: Letícia Costa. A redação e a revisão técnica assistidas por Codex não equivalem à auto revisão pessoal da responsável.
+
+- `guia_decisao_conteudo.md`: texto v0.8 do guia único, entregue a Larissa para prova diagramada. O PDF do guia é de responsabilidade visual de Larissa.
+- `roteiro_microoficina.md`: versão v0.9 consolidada, com fala do painel apoiada no teste anônimo e na captura F3. O ensaio humano permanece para a fase posterior.
+- `matriz_afirmacoes_fontes.csv`: oito afirmações rastreadas, com autoria, URL, data de acesso, referência candidata e situação da revisão NBR 6023:2025. A validação editorial final está explicitamente pendente.
+- `textos_interface.md`: contrato textual v0.3 mantido; rótulos e fórmulas foram comparados ao MVP F3.
+
+O relatório de planejamento v0.9 usa o ODT como arquivo canônico, com DOCX e PDF gerados por exportação. As três versões F3 estão em `01_editaveis/Leticia` no Drive, nos mesmos IDs anteriores:
+
+- [ODT canônico](https://drive.google.com/file/d/14QJfuI7_fhUgBlAEfqvSnPwPwqPvKku-/view)
+- [DOCX exportado](https://docs.google.com/document/d/1J1oXLDhnO44WkNQILkjq-dGfzBUs9cuq/edit)
+- [PDF de conferência](https://drive.google.com/file/d/1dfnxaK285y4ynclSZ3Np1V1j7SbycG7a/view)
+
+O sumário automático foi atualizado no LibreOffice. O texto distingue planejamento, testes técnicos comprovados e resultados esperados. Nenhum resultado de estudantes foi incluído. O relatório v0.9 registra o estado de 07/11: teste anônimo e captura do Looker concluídos, mas a URL da planilha privada ainda sem comprovação naquele fechamento. Em 08/11, Laís disponibilizou na própria [tarefa F3](https://app.notion.com/p/3fbe84185835817d9d54df0a0b4aa3e9) a URL da planilha conectada, o CSV importado exato (3.022 bytes; SHA-256 `BB247D36AAFCF23FEDB765E86EFF27269732B852C31E7504459F45EAC8B41E7B`) e a revisão pessoal. A leitura dos 16 registros e a comparação com o CSV foram conferidas tecnicamente; a lista completa de permissões da planilha não foi exposta pelo conector. Guilherme publicou [MVP v0.3.1, commit `389f866`](https://github.com/caioarthur08-pre51/conserta-ou-troca/commit/389f866f81064049f9d24d78cd395c908c2806de), com redação dos critérios não financeiros alinhada ao contrato textual v0.3; a captura F3 existente ainda representa a versão v0.3. O ODT/DOCX/PDF será atualizado de forma coordenada nos mesmos IDs após a captura estável, sem antecipar aceite editorial de Letícia. A aceitação editorial pessoal e o QR definitivo ainda dependem dos respectivos marcos. Os modelos F1 permanecem como histórico e não competem com o relatório v0.9 F3.
+
+## Fechamento técnico F4-F5
+
+Em 09/11/2026, a execução técnica centralizada materializou o pacote textual v1.0.0, mantendo Letícia Costa como responsável funcional pelo conteúdo e identificando Caio Rocha e Codex como executores técnicos. O fechamento não atribui a Letícia uma auto revisão ou assinatura pessoal que não ocorreu.
+
+O pacote final contém o relatório em DOCX, ODT e PDF; o roteiro em Markdown, DOCX, ODT e PDF; o conteúdo do guia, as referências, o contrato de interface e a matriz A01-A08. O relatório possui 13 seções, sumário alinhado, rodapé uniforme `Página n` e oito páginas. O roteiro possui seis páginas e conserva a separação entre 18 minutos de conteúdo e dois minutos de interação/transição.
+
+As 14 páginas foram renderizadas e inspecionadas. Os dois DOCX tiveram zero achados de acessibilidade; DOCX e ODT passaram na verificação estrutural; os PDFs têm oito e seis páginas, respectivamente, sem página vazia, corte ou sobreposição. A matriz contém oito afirmações e dez colunas. As referências foram conferidas tecnicamente com o guia público do IEL/Unicamp para a NBR 6023:2025, sem declarar auditoria integral da norma licenciada.
+
+O [registro F4-F5](registro_f4_f5.md) distingue as validações concluídas dos controles externos ainda reais: ensaio humano cronometrado, teste físico do QR e aplicação na escola. Nenhum resultado de estudante foi inventado ou incorporado ao relatório.
