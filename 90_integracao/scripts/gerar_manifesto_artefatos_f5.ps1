@@ -21,7 +21,7 @@ $excludedPatterns = @(
 )
 
 $rows = foreach ($file in Get-ChildItem -LiteralPath $resolvedRoot -Recurse -File) {
-    $relative = $file.FullName.Substring($resolvedRoot.Length).TrimStart("\\", "/")
+    $relative = $file.FullName.Substring($resolvedRoot.Length).TrimStart([char[]]'\/')
     $skip = $false
     foreach ($pattern in $excludedPatterns) {
         if ($relative -match $pattern) {
