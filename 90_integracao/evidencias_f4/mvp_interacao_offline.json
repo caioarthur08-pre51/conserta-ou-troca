@@ -1,0 +1,67 @@
+{
+  "fase": 4,
+  "gate": "RESULTADOS MVP LIBERADOS",
+  "versao_entrega": "1.0.0",
+  "origem_testada": "ZIP extraído em pasta limpa",
+  "execucao": "Chrome headless, file://, HTTP e HTTPS bloqueados",
+  "recursos_locais": true,
+  "casos": {
+    "c01": {
+      "caso": "C01",
+      "decisao": "Resultado financeiro: Reparar.",
+      "linhas": [
+        "RepararR$ 380,00R$ 253,33",
+        "TrocarR$ 1.260,00R$ 315,00"
+      ],
+      "imprimir_habilitado": true,
+      "sem_overflow_horizontal": true
+    },
+    "c03": {
+      "caso": "C03",
+      "decisao": "Resultado financeiro: Trocar.",
+      "linhas": [
+        "RepararR$ 370,00R$ 370,00",
+        "TrocarR$ 990,00R$ 282,86"
+      ],
+      "imprimir_habilitado": true,
+      "sem_overflow_horizontal": true
+    },
+    "empate": {
+      "caso": "C01",
+      "decisao": "Resultado financeiro: Empate técnico.",
+      "linhas": [
+        "RepararR$ 472,50R$ 315,00",
+        "TrocarR$ 1.260,00R$ 315,00"
+      ],
+      "imprimir_habilitado": true,
+      "sem_overflow_horizontal": true
+    }
+  },
+  "teclado": {
+    "foco_inicial": "calcular",
+    "resultados_visiveis": true,
+    "botao_imprimir_habilitado": true,
+    "custo_simulado": "430",
+    "restauracao_por_enter": true,
+    "impressao_por_enter": true
+  },
+  "arquivos": {
+    "mobile": {
+      "arquivo": "mvp_v1.0.0_c01_390x844.png",
+      "tamanho_bytes": 85461,
+      "sha256": "0A6886A33A7F416A4A7936E3268F47D42B19BAAC76C5E46F46C414930B32F641"
+    },
+    "desktop": {
+      "arquivo": "mvp_v1.0.0_c03_1280x720.png",
+      "tamanho_bytes": 93797,
+      "sha256": "3CD700480BBC2AFF38A8E76EC89D67E33F45637A761F9DFF92E955331F295B97"
+    },
+    "pdf": {
+      "arquivo": "mvp_v1.0.0_resultado.pdf",
+      "tamanho_bytes": 39552,
+      "sha256": "8613BDC623BAA232762F9485BBAD9795271730098DB25807C58D8478B7285C3E"
+    }
+  },
+  "aprovado": true,
+  "limitacao": "Teste automatizado técnico; não substitui validação humana de leitor de tela nem prova física."
+}

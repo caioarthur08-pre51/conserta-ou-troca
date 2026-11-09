@@ -1,6 +1,6 @@
-# Comparador local — MVP candidato da Fase 3
+# Comparador local — entrega final v1.0.0
 
-**Domínio responsável:** Guilherme Almeida. **Versão:** v0.3.1 candidata (critérios não financeiros com a redação exata do contrato textual v0.3). **Execução técnica assistida:** Codex, a pedido de Caio; a auto revisão e a aprovação do cargo não são presumidas.
+**Domínio responsável:** Guilherme Almeida. **Versão do aplicativo:** v0.3.1, congelada no pacote v1.0.0 em 09/11/2026. **Execução técnica de fechamento:** Codex sob coordenação de Caio Rocha. O registro preserva o cargo funcional e não atribui a Guilherme testes pessoais que ele não declarou.
 
 ## Abrir e usar
 
@@ -30,4 +30,16 @@ node 02_produto_guilherme/testes/calculos.test.mjs
 
 O teste confere os oito resultados, dez entradas inválidas, empate técnico e mudança de classificação. Na tela, C01 deve mostrar Reparar (R$ 253,33 × R$ 315,00 por ano), C03 deve mostrar Trocar (R$ 370,00 × R$ 282,86), e C01 com custo do reparo de R$ 512,50 deve mostrar Empate técnico. Entradas vazias, negativas, vida zero e custo líquido negativo não geram um resultado plausível.
 
-Esta é a versão candidata F3. Os testes completos de três navegadores, duas larguras e o congelamento do pacote pertencem à Fase 4; o ZIP operacional pertence à Fase 5. Consulte [`../especificacao_mvp.md`](../especificacao_mvp.md) para contrato e limites.
+## Validação F4 e pacote F5
+
+O mesmo conteúdo foi testado por `file://` e com recursos HTTP/HTTPS bloqueados nos seguintes ambientes locais: Chrome, Edge e Firefox em 390 × 844 e 1280 × 720. O teste interativo automatizado conferiu C01, C03, empate técnico, restauração por teclado, impressão por teclado e ausência de rolagem horizontal nos dois pontos de vista. A equivalência entre o modelo Python e o JavaScript foi aprovada para 8/8 casos.
+
+O ZIP final contém somente esta pasta `app`, sem dependências, perfis ou evidências temporárias. Para usar:
+
+1. extraia todo o ZIP para uma pasta local;
+2. abra `index.html` por duplo clique;
+3. mantenha as subpastas `css`, `js` e `dados` ao lado do arquivo inicial;
+4. escolha um caso e pressione **Calcular**;
+5. se o navegador bloquear a impressão, use o PDF de contingência fornecido separadamente.
+
+Os testes automatizados não substituem a experiência de um iniciante, leitor de tela humano ou computador/projetor externo. Consulte `registro_f4_f5.md` no repositório para os ambientes, evidências e hashes.
