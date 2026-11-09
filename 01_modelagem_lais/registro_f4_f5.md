@@ -1,7 +1,9 @@
 # Registro técnico F4-F5 — dados e BI
 
-**Domínio funcional:** Modelagem Financeira e Inteligência de Dados — Laís Eulálio  
-**Execução técnica de fechamento:** Codex sob coordenação de Caio Rocha  
+**Domínio funcional:** Modelagem Financeira e Inteligência de Dados — Laís Eulálio
+
+**Execução técnica de fechamento:** Codex sob coordenação de Caio Rocha
+
 **Pacote:** v1.0.0, congelamento técnico em 09/11/2026
 
 ## Fonte única e versões

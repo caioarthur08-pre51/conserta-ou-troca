@@ -1,7 +1,9 @@
 # Registro técnico F4-F5 — comparador local
 
-**Domínio funcional:** Engenharia do Comparador Local — Guilherme Almeida  
-**Execução técnica de fechamento:** Codex sob coordenação de Caio Rocha  
+**Domínio funcional:** Engenharia do Comparador Local — Guilherme Almeida
+
+**Execução técnica de fechamento:** Codex sob coordenação de Caio Rocha
+
 **Pacote:** v1.0.0, congelamento técnico em 09/11/2026
 
 ## Gates aprovados
