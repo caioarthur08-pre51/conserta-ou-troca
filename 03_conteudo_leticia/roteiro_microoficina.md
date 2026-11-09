@@ -1,6 +1,8 @@
-# Roteiro da micro-oficina — Conserta ou Troca? O custo total do dispositivo
+# Roteiro da micro-oficina Conserta ou Troca
 
-Versão: v0.8 (candidata Fase 3; consolida a v0.3 da Fase 2) · Responsável editorial: Letícia Costa · Apoio técnico à consolidação: Codex · Disciplina: BI e Finanças (Prof. Me. Tadeu Duarte) · 2026.2
+Versão: v1.0.0, congelada em 08/11/2026 · Responsável funcional pelo conteúdo: Letícia Costa · Execução técnica final: Codex sob coordenação de Caio Rocha · Disciplina: BI e Finanças (Prof. Me. Tadeu Duarte) · 2026.2
+
+Aplicação planejada: 11/11/2026, das 8h às 12h, na Unidade Escolar Dom Severino, para estudantes do 8º e 9º ano do Ensino Fundamental e do Ensino Médio. A programação não constitui registro de presença ou de realização da atividade.
 
 Pergunta orientadora: em quais condições consertar um celular ou notebook custa menos por ano do que trocar?
 
@@ -186,7 +188,7 @@ Os textos entre colchetes, como [aviso_educativo] ou [rotulo_reparar], vêm de `
 
 **Ação do estudante:** localiza no painel o caso em que trocar custa menos por ano (modo C: o apresentador aponta).
 
-**Recurso:** slide 7. O painel F3 foi aberto sem autenticação, mostrou os oito casos e dispõe de captura e PDF no Drive. Antes do ensaio, confirmar se a versão visual projetada corresponde ao painel publicado e se o endereço/QR final foram liberados para uso.
+**Recurso:** slide 7. O painel público foi aberto sem autenticação, mostra os oito casos e possui PDF de contingência. Endereço: `https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc`. Antes da aplicação, Caio deve concluir o teste físico do QR em dois celulares e em prova impressa.
 
 ### 17:00–18:00 · Síntese, limites, QR e URL textual (slide 8)
 
@@ -238,7 +240,7 @@ O apresentador demonstra tudo. O público responde só oralmente ou por gesto, e
 | 17:00–18:00 | Completa a frase oralmente | Igual ao A | Igual ao A |
 | 18:00–20:00 | Gesto ou voz | Igual ao A | Igual ao A |
 
-Contingência de rede: se o painel não abrir, usar o PDF do dashboard F3 publicado no Drive, após conferir que os valores exibidos correspondem à versão congelada para a oficina. O apresentador pode explicar a regra de leitura pelo caso C01 sem depender da conexão.
+Contingência de rede: se o painel não abrir, usar o PDF final do dashboard publicado no Drive, depois de conferir que os valores correspondem à versão congelada para a oficina. O apresentador pode explicar a regra de leitura pelo caso C01 sem depender da conexão.
 
 ## Cortes de contingência
 
@@ -250,7 +252,7 @@ Se a leitura passar de 18:00, corte nesta ordem:
 
 **Nunca corte:** o cálculo manual antes do MVP e o aviso educativo ([aviso_educativo]). Nunca elimine a margem final de 18:00 a 20:00.
 
-## Verificação reproduzível de duração da Fase 2
+## Verificação técnica reproduzível de duração
 
 Em 05/11/2026, `medir_roteiro_tts.ps1` extraiu somente as falas marcadas neste roteiro e sintetizou cada trecho com a voz Windows **Microsoft Maria Desktop**, pt-BR, velocidade normal (`Rate=0`). A duração foi calculada pelo tamanho do áudio PCM gerado, sem reproduzi-lo em tempo real. O teste inclui a fala opcional de erro. Os valores arredondados abaixo são **tempo de fala sintética**, não tempo da oficina nem leitura humana.
 
@@ -269,4 +271,4 @@ Em 05/11/2026, `medir_roteiro_tts.ps1` extraiu somente as falas marcadas neste r
 
 No slide 4, os 48,13 segundos de fala somados ao minuto de cálculo independente ocupam 1:48,13 do intervalo 7:00–9:00; sobram cerca de 12 segundos para passagem. Até 18:00, a fala TTS ocupa 10:34,89, deixando 7:25,11 distribuídos entre ações e transições. O slide 8 tem apenas 19 segundos para a resposta oral. Em projeção ou com computadores lentos, use os cortes de contingência acima e preserve a margem final.
 
-Houve leitura em voz alta sem cronômetro, que não comprova a duração real. **O ensaio humano cronometrado ainda não foi realizado e não é atribuído a Letícia nem aos demais integrantes.** A síntese de voz indica viabilidade, mas só o ensaio com navegação, cálculo manual e troca de grupo mede a execução completa.
+Houve leitura em voz alta sem cronômetro, que não comprova a duração real. **O ensaio humano cronometrado permanece pendente e não é atribuído a integrante algum.** A síntese de voz indica viabilidade, mas somente o ensaio com navegação, cálculo manual e troca de grupo mede a execução completa.

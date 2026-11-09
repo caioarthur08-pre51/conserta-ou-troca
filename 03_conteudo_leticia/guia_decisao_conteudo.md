@@ -1,6 +1,6 @@
-# Guia de decisão: reparar ou trocar?
+# Guia de decisão reparar ou trocar
 
-Versão do texto: **v0.8, candidata F3** · Responsável editorial: **Letícia Costa** · Apoio técnico à redação: Codex sob coordenação de Caio · Destino: **um único guia diagramado por Larissa**.
+Versão do texto: **v1.0.0, congelada em 08/11/2026** · Responsável funcional pelo conteúdo: **Letícia Costa** · Execução técnica final: **Codex sob coordenação de Caio Rocha** · Destino: **um único guia diagramado no domínio visual de Larissa Costa**.
 
 ## Conteúdo para o guia
 
@@ -39,6 +39,6 @@ Use ao menos **um dado financeiro** e **uma limitação**: “Reparar custa meno
 
 Compare Reparar e Trocar **dentro do mesmo caso**. Use o QR e o endereço impressos na versão diagramada para explorar os oito casos.
 
-## Passagem para Larissa
+## Instrução de diagramação
 
-Este bloco é instrução de produção e **não integra o PDF do guia**. Mantenha o corpo legível em uma página, com os mínimos de 18 pt no corpo e 16 pt na tabela indicados em `04_comunicacao_larissa/guia_visual.md`. Não encurte fórmulas ou altere o sentido sem devolver prova a Letícia. A URL candidata do Looker ainda não autoriza QR definitivo; inclua QR e endereço públicos somente após o marco **URL LIBERADA PARA QR**. Até lá, a seção 6 pode ficar sem link clicável na prova visual F3, identificada como candidata.
+Este bloco é instrução de produção e **não integra o PDF do guia**. Mantenha o corpo legível em uma página, com no mínimo 18 pt no corpo e 16 pt na tabela, conforme `04_comunicacao_larissa/guia_visual.md`. Não encurte fórmulas nem altere o sentido. Use o endereço público do painel, `https://datastudio.google.com/reporting/ef7da896-dae5-4e7c-b986-1d644ad94ffc`, em texto e no QR final. A validação automatizada do destino não substitui o teste físico em dois celulares e em prova impressa, assumido por Caio.
