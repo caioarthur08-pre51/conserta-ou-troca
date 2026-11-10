@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17324d">
+    <meta name="referrer" content="no-referrer">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'"
+    >
+    <meta
+      name="description"
+      content="Simulador educativo para comparar o custo anual de reparar ou trocar um dispositivo."
+    >
+    <title>Simulador Conserta ou Troca?</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="core.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o formulário</a>
+
+    <header class="cabecalho">
+      <div class="limite">
+        <p class="marca">Conserta ou Troca?</p>
+        <h1>Simulador Conserta ou Troca?</h1>
+        <p class="subtitulo">
+          Digite valores da sua situação e compare o custo anual de reparar e trocar.
+        </p>
+        <div class="aviso-privacidade" role="note">
+          <strong>Os valores digitados ficam neste aparelho.</strong>
+          Eles não são enviados nem salvos. Ao terminar, você poderá baixar sua própria planilha.
+        </div>
+        <p id="estado-rede" class="estado-rede" aria-live="polite"></p>
+      </div>
+    </header>
+
+    <main id="conteudo" class="limite">
+      <noscript>
+        <p class="mensagem mensagem-erro">
+          Ative o JavaScript do navegador para fazer os cálculos.
+        </p>
+      </noscript>
+
+      <form id="formulario-analise" novalidate>
+        <section class="secao" aria-labelledby="titulo-reparar">
+          <div class="cabecalho-secao">
+            <span class="numero-etapa" aria-hidden="true">1</span>
+            <div>
+              <p class="rotulo-etapa">Valores para reparar</p>
+              <h2 id="titulo-reparar">Quanto custa continuar com o aparelho atual?</h2>
+            </div>
+          </div>
+
+          <details>
+            <summary>Como o custo de reparar é calculado?</summary>
+            <p>
+              Somamos o reparo e a manutenção adicional, descontamos o valor residual
+              do aparelho reparado e dividimos pela vida adicional estimada.
+            </p>
+          </details>
+
+          <div class="grade-campos">
+            <div class="campo">
+              <label for="custo-reparo">Custo do reparo</label>
+              <p id="ajuda-custo-reparo" class="ajuda">Peças e mão de obra.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="custo-reparo" name="custo_reparo" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-custo-reparo">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="manutencao-adicional">Manutenção adicional</label>
+              <p id="ajuda-manutencao" class="ajuda">Gastos previstos depois do reparo. Use zero se não houver.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="manutencao-adicional" name="manutencao_adicional" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-manutencao">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="residual-reparado">Valor residual do aparelho reparado</label>
+              <p id="ajuda-residual-reparado" class="ajuda">Quanto ele ainda poderá valer ao fim do período.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="residual-reparado" name="residual_reparado" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-reparado">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="vida-adicional">Vida adicional após o reparo</label>
+              <p id="ajuda-vida-adicional" class="ajuda">Estimativa em meses inteiros.</p>
+              <div class="entrada-com-unidade entrada-com-unidade-final">
+                <input id="vida-adicional" name="vida_adicional_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-adicional">
+                <span aria-hidden="true">meses</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo-trocar">
+          <div class="cabecalho-secao">
+            <span class="numero-etapa" aria-hidden="true">2</span>
+            <div>
+              <p class="rotulo-etapa">Valores para trocar</p>
+              <h2 id="titulo-trocar">Quanto custa usar um aparelho substituto?</h2>
+            </div>
+          </div>
+
+          <details>
+            <summary>Como o custo de trocar é calculado?</summary>
+            <p>
+              Somamos o preço do substituto e os acessórios, descontamos a venda do
+              aparelho atual e o valor residual do substituto, e dividimos pela vida útil.
+              O valor pago no passado pelo aparelho atual fica fora da conta.
+            </p>
+          </details>
+
+          <div class="grade-campos">
+            <div class="campo">
+              <label for="preco-substituto">Preço do dispositivo substituto</label>
+              <p id="ajuda-preco-substituto" class="ajuda">Valor de compra do outro aparelho.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="preco-substituto" name="preco_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-preco-substituto">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="custos-acessorios">Acessórios necessários</label>
+              <p id="ajuda-acessorios" class="ajuda">Carregador, adaptador, capa ou outros. Use zero se não houver.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="custos-acessorios" name="custos_acessorios" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-acessorios">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="valor-venda-atual">Valor de venda do aparelho atual</label>
+              <p id="ajuda-venda-atual" class="ajuda">Quanto você espera receber agora. Use zero se não vender.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="valor-venda-atual" name="valor_venda_atual" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-venda-atual">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="residual-substituto">Valor residual do substituto</label>
+              <p id="ajuda-residual-substituto" class="ajuda">Quanto o substituto poderá valer ao fim da vida útil informada.</p>
+              <div class="entrada-com-unidade">
+                <span aria-hidden="true">R$</span>
+                <input id="residual-substituto" name="residual_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-substituto">
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="vida-substituto">Vida útil do substituto</label>
+              <p id="ajuda-vida-substituto" class="ajuda">Estimativa em meses inteiros.</p>
+              <div class="entrada-com-unidade entrada-com-unidade-final">
+                <input id="vida-substituto" name="vida_substituto_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-substituto">
+                <span aria-hidden="true">meses</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="secao" aria-labelledby="titulo-criterios">
+          <div class="cabecalho-secao">
+            <span class="numero-etapa" aria-hidden="true">3</span>
+            <div>
+              <p class="rotulo-etapa">Além dos números</p>
+              <h2 id="titulo-criterios">O que também pesa na sua decisão?</h2>
+            </div>
+          </div>
+          <p>
+            Estes critérios aparecem no resultado, mas não alteram a fórmula financeira.
+          </p>
+
+          <fieldset class="grupo-opcoes">
+            <legend>Risco de o reparo não resolver</legend>
+            <p class="ajuda">Considere diagnóstico, garantia e incerteza técnica.</p>
+            <div class="opcoes">
+              <label><input type="radio" name="risco_reparo" value="Baixo" required> Baixo</label>
+              <label><input type="radio" name="risco_reparo" value="Médio"> Médio</label>
+              <label><input type="radio" name="risco_reparo" value="Alto"> Alto</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo-opcoes">
+            <legend>Urgência da necessidade de uso</legend>
+            <p class="ajuda">Pense por quanto tempo você pode ficar sem o aparelho.</p>
+            <div class="opcoes">
+              <label><input type="radio" name="urgencia_uso" value="Baixa" required> Baixa</label>
+              <label><input type="radio" name="urgencia_uso" value="Média"> Média</label>
+              <label><input type="radio" name="urgencia_uso" value="Alta"> Alta</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo-opcoes">
+            <legend>Importância ambiental de prolongar a vida útil</legend>
+            <p class="ajuda">Considere reuso, descarte responsável e geração de resíduos.</p>
+            <div class="opcoes">
+              <label><input type="radio" name="prioridade_ambiental" value="Baixa" required> Baixa</label>
+              <label><input type="radio" name="prioridade_ambiental" value="Média"> Média</label>
+              <label><input type="radio" name="prioridade_ambiental" value="Alta"> Alta</label>
+            </div>
+          </fieldset>
+        </section>
+
+        <div id="mensagem-erro" class="mensagem mensagem-erro" role="alert" hidden tabindex="-1"></div>
+
+        <div class="acoes-formulario">
+          <button class="botao botao-primario" type="submit">Calcular minha análise</button>
+          <button class="botao botao-secundario" type="reset">Limpar os dados</button>
+        </div>
+      </form>
+
+      <section id="resultado" class="secao resultado" aria-labelledby="titulo-resultado" hidden tabindex="-1">
+        <div class="cabecalho-secao">
+          <span class="numero-etapa" aria-hidden="true">4</span>
+          <div>
+            <p class="rotulo-etapa">Sua comparação</p>
+            <h2 id="titulo-resultado">Resultado da análise</h2>
+          </div>
+        </div>
+
+        <p id="resultado-principal" class="resultado-principal"></p>
+        <p id="resultado-limite" class="resultado-limite"></p>
+
+        <div class="grade-resultados">
+          <article class="cartao-resultado cartao-reparar">
+            <p class="etiqueta">Reparar</p>
+            <p id="custo-anual-reparar" class="valor-resultado"></p>
+            <p id="custo-liquido-reparar"></p>
+          </article>
+          <article class="cartao-resultado cartao-trocar">
+            <p class="etiqueta">Trocar</p>
+            <p id="custo-anual-trocar" class="valor-resultado"></p>
+            <p id="custo-liquido-trocar"></p>
+          </article>
+        </div>
+
+        <dl class="detalhes-resultado">
+          <div>
+            <dt>Diferença anual</dt>
+            <dd id="diferenca-anual"></dd>
+          </div>
+          <div>
+            <dt>Vida adicional para o reparo empatar</dt>
+            <dd id="vida-equilibrio"></dd>
+          </div>
+        </dl>
+
+        <div class="criterios-resultado">
+          <h3>Critérios que não entram na fórmula</h3>
+          <ul id="lista-criterios"></ul>
+        </div>
+
+        <form id="formulario-decisao" class="decisao-final" novalidate>
+          <fieldset class="grupo-opcoes">
+            <legend>Com base no resultado, qual é a sua decisão?</legend>
+            <div class="opcoes opcoes-decisao">
+              <label><input type="radio" name="decisao_aluno" value="Reparar" required> Reparar</label>
+              <label><input type="radio" name="decisao_aluno" value="Trocar"> Trocar</label>
+              <label><input type="radio" name="decisao_aluno" value="Ainda não decidi"> Ainda não decidi</label>
+            </div>
+          </fieldset>
+
+          <div class="campo">
+            <label for="justificativa">Justifique sua decisão</label>
+            <p id="ajuda-justificativa" class="ajuda">
+              Use pelo menos um resultado financeiro e uma limitação da análise.
+            </p>
+            <textarea id="justificativa" name="justificativa" rows="5" minlength="10" required aria-describedby="ajuda-justificativa"></textarea>
+          </div>
+
+          <div id="mensagem-decisao" class="mensagem mensagem-erro" role="alert" hidden></div>
+
+          <button id="baixar-planilha" class="botao botao-download" type="submit" hidden>
+            Baixar minha planilha (.csv)
+          </button>
+          <p class="ajuda-download">
+            O arquivo abre no Excel, LibreOffice Calc e Google Planilhas. O download
+            acontece somente no seu aparelho.
+          </p>
+        </form>
+
+        <button id="nova-analise" class="botao botao-secundario" type="button">Fazer outra análise</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="limite">
+        <p><strong>Ferramenta educativa.</strong> Não é recomendação comercial.</p>
+        <p>
+          O resultado depende das estimativas informadas, especialmente da vida útil e
+          dos valores residuais. Critérios técnicos, de segurança e ambientais também devem ser considerados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

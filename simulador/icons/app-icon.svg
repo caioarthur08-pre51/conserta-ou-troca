@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Conserta ou Troca</title>
+  <desc id="descricao">Balança simples com as letras R e T.</desc>
+  <rect width="512" height="512" rx="96" fill="#17324d"/>
+  <path d="M256 104v286M142 390h228M126 174h260" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/>
+  <path d="M126 174 74 286h104L126 174Zm260 0-52 112h104l-52-112Z" fill="#2e6f9e" stroke="#fff" stroke-width="14" stroke-linejoin="round"/>
+  <circle cx="256" cy="174" r="34" fill="#2f7d5a" stroke="#fff" stroke-width="14"/>
+  <text x="126" y="265" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700" text-anchor="middle">R</text>
+  <text x="386" y="265" fill="#fff" font-family="Arial, sans-serif" font-size="54" font-weight="700" text-anchor="middle">T</text>
+</svg>

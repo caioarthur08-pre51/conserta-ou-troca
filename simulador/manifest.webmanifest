@@ -1,0 +1,19 @@
+{
+  "name": "Simulador Conserta ou Troca?",
+  "short_name": "Conserta ou Troca",
+  "description": "Compara o custo anual de reparar ou trocar um dispositivo.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7fa",
+  "theme_color": "#17324d",
+  "icons": [
+    {
+      "src": "icons/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
