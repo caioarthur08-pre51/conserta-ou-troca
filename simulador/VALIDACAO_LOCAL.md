@@ -2,7 +2,7 @@
 
 Data: 09/11/2026
 
-Estado: pronto localmente, **não publicado**
+Estado: **publicado e operacional**
 
 ## Resultados obtidos
 
@@ -18,6 +18,9 @@ Estado: pronto localmente, **não publicado**
 - QR decodificado no PNG original, no PDF do guia renderizado e no cartão renderizado;
 - destino decodificado nos três testes: `https://caioarthur08-pre51.github.io/conserta-ou-troca/simulador/`;
 - guia A4 e cartão A5 inspecionados visualmente, sem cortes, sobreposições ou glifos ausentes.
+- GitHub Pages ativado pela branch `main` e primeiro deploy concluído com sucesso;
+- endereço público aberto e validado após a implantação;
+- cálculo completo repetido na versão pública com os nove campos e os três critérios qualitativos.
 
 ## Privacidade verificada
 
@@ -26,9 +29,8 @@ Estado: pronto localmente, **não publicado**
 - a política de conteúdo da página bloqueia scripts e conexões externas;
 - a planilha é criada na memória do navegador e baixada localmente.
 
-## Pendências deliberadas
+## Conferências de campo restantes
 
-- publicação no GitHub Pages depende de nova autorização de Caio;
-- `push` desta branch não foi realizado;
-- o QR não deve ser distribuído antes da publicação;
-- após o deploy, repetir o teste em Chrome, Edge e Firefox, em dois celulares e em prova impressa.
+- conferir o QR impresso em pelo menos dois celulares antes da atividade;
+- repetir a abertura na rede que será usada na escola;
+- opcionalmente ampliar a matriz de navegadores com Edge e Firefox.

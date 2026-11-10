@@ -5,10 +5,13 @@ valores reais e compararem o custo anual de reparar ou trocar um dispositivo.
 
 ## Estado de publicação
 
-**Não publicado.** O endereço planejado é
-`https://caioarthur08-pre51.github.io/conserta-ou-troca/simulador/`, mas só deve ser
-ativado após autorização expressa de Caio. O QR preparado para o guia usa esse endereço
-futuro e, portanto, só se torna operacional depois do deploy.
+**Publicado e operacional.** O endereço definitivo é:
+
+`https://caioarthur08-pre51.github.io/conserta-ou-troca/simulador/`
+
+Caio autorizou a publicação em 09/11/2026. O GitHub Pages foi ativado a partir da
+branch `main`, o deploy concluiu com sucesso e o endereço codificado no QR foi validado
+na versão pública.
 
 ## Autoria por domínio
 
@@ -54,10 +57,10 @@ service worker; abrir `index.html` diretamente ainda permite calcular, mas sem c
 node --test tests/core.test.cjs
 ```
 
-## Publicação futura
+## Publicação e validação em campo
 
-1. validar em Chrome, Edge e Firefox e em pelo menos dois celulares;
-2. confirmar que o endereço planejado permanecerá estável;
-3. publicar a pasta `simulador/` no GitHub Pages;
-4. testar o QR na tela e impresso;
-5. somente então distribuir o PDF atualizado.
+1. publicação concluída no GitHub Pages pela branch `main`;
+2. cálculo completo validado diretamente no endereço público;
+3. QR digital validado contra o endereço definitivo;
+4. antes da atividade, conferir o QR impresso em pelo menos dois celulares;
+5. manter o endereço estável e não renomear a pasta `simulador/`.
