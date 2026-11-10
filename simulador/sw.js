@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE = "simulador-conserta-ou-troca-v2";
+const CACHE = "simulador-conserta-ou-troca-v3";
 const ARQUIVOS = [
   "./",
   "./index.html",

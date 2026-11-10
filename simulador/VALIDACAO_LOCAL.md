@@ -6,7 +6,7 @@ Estado: **publicado e operacional**
 
 ## Resultados obtidos
 
-- seis testes automatizados do núcleo aprovados;
+- dez testes automatizados do núcleo aprovados;
 - fórmulas verificadas com conversão de meses para anos;
 - empate verificado para diferença estritamente inferior a R$ 1,00 por ano;
 - entradas negativas, vidas iguais a zero, meses fracionários e custos líquidos negativos rejeitados;
@@ -21,6 +21,10 @@ Estado: **publicado e operacional**
 - GitHub Pages ativado pela branch `main` e primeiro deploy concluído com sucesso;
 - endereço público aberto e validado após a implantação;
 - cálculo completo repetido na versão pública com os nove campos e os três critérios qualitativos.
+- faixas mínimas e máximas dinâmicas verificadas para reparo e troca;
+- combinação negativa digitada em campo inferior redirecionou o foco ao primeiro campo relacionado;
+- botão de cálculo permaneceu bloqueado enquanto a combinação estava incompatível;
+- após a correção pela faixa indicada, o cálculo foi liberado e não produziu custo líquido negativo.
 
 ## Privacidade verificada
 

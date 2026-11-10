@@ -46,6 +46,11 @@
       </noscript>
 
       <form id="formulario-analise" novalidate>
+        <p class="aviso-limites" role="note">
+          <strong>Limites automáticos:</strong> enquanto você digita, a página mostra a
+          faixa permitida de cada valor. Se os números ficarem incompatíveis, o cálculo
+          será bloqueado e a tela indicará quais campos podem ser corrigidos.
+        </p>
         <section class="secao" aria-labelledby="titulo-reparar">
           <div class="cabecalho-secao">
             <span class="numero-etapa" aria-hidden="true">1</span>
@@ -63,14 +68,17 @@
             </p>
           </details>
 
+          <div id="alerta-reparar" class="mensagem aviso-faixa" role="alert" hidden tabindex="-1"></div>
+
           <div class="grade-campos">
             <div class="campo">
               <label for="custo-reparo">Custo do reparo</label>
               <p id="ajuda-custo-reparo" class="ajuda">Peças e mão de obra.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="custo-reparo" name="custo_reparo" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-custo-reparo">
+                <input id="custo-reparo" name="custo_reparo" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-custo-reparo limite-custo-reparo">
               </div>
+              <p id="limite-custo-reparo" class="orientacao-faixa" aria-live="polite">Faixa permitida: R$ 0,00 ou mais.</p>
             </div>
 
             <div class="campo">
@@ -78,8 +86,9 @@
               <p id="ajuda-manutencao" class="ajuda">Gastos previstos depois do reparo. Use zero se não houver.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="manutencao-adicional" name="manutencao_adicional" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-manutencao">
+                <input id="manutencao-adicional" name="manutencao_adicional" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-manutencao limite-manutencao">
               </div>
+              <p id="limite-manutencao" class="orientacao-faixa" aria-live="polite">Faixa permitida: R$ 0,00 ou mais.</p>
             </div>
 
             <div class="campo">
@@ -87,8 +96,9 @@
               <p id="ajuda-residual-reparado" class="ajuda">Quanto ele ainda poderá valer ao fim do período.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="residual-reparado" name="residual_reparado" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-reparado">
+                <input id="residual-reparado" name="residual_reparado" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-reparado limite-residual-reparado">
               </div>
+              <p id="limite-residual-reparado" class="orientacao-faixa" aria-live="polite">Preencha reparo e manutenção para ver o valor máximo.</p>
             </div>
 
             <div class="campo">
@@ -120,14 +130,17 @@
             </p>
           </details>
 
+          <div id="alerta-trocar" class="mensagem aviso-faixa" role="alert" hidden tabindex="-1"></div>
+
           <div class="grade-campos">
             <div class="campo">
               <label for="preco-substituto">Preço do dispositivo substituto</label>
               <p id="ajuda-preco-substituto" class="ajuda">Valor de compra do outro aparelho.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="preco-substituto" name="preco_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-preco-substituto">
+                <input id="preco-substituto" name="preco_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-preco-substituto limite-preco-substituto">
               </div>
+              <p id="limite-preco-substituto" class="orientacao-faixa" aria-live="polite">Faixa permitida: R$ 0,00 ou mais.</p>
             </div>
 
             <div class="campo">
@@ -135,8 +148,9 @@
               <p id="ajuda-acessorios" class="ajuda">Carregador, adaptador, capa ou outros. Use zero se não houver.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="custos-acessorios" name="custos_acessorios" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-acessorios">
+                <input id="custos-acessorios" name="custos_acessorios" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-acessorios limite-acessorios">
               </div>
+              <p id="limite-acessorios" class="orientacao-faixa" aria-live="polite">Faixa permitida: R$ 0,00 ou mais.</p>
             </div>
 
             <div class="campo">
@@ -144,8 +158,9 @@
               <p id="ajuda-venda-atual" class="ajuda">Quanto você espera receber agora. Use zero se não vender.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="valor-venda-atual" name="valor_venda_atual" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-venda-atual">
+                <input id="valor-venda-atual" name="valor_venda_atual" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-venda-atual limite-venda-atual">
               </div>
+              <p id="limite-venda-atual" class="orientacao-faixa" aria-live="polite">Preencha preço, acessórios e residual para ver o valor máximo.</p>
             </div>
 
             <div class="campo">
@@ -153,8 +168,9 @@
               <p id="ajuda-residual-substituto" class="ajuda">Quanto o substituto poderá valer ao fim da vida útil informada.</p>
               <div class="entrada-com-unidade">
                 <span aria-hidden="true">R$</span>
-                <input id="residual-substituto" name="residual_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-substituto">
+                <input id="residual-substituto" name="residual_substituto" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="ajuda-residual-substituto limite-residual-substituto">
               </div>
+              <p id="limite-residual-substituto" class="orientacao-faixa" aria-live="polite">Preencha preço, acessórios e venda para ver o valor máximo.</p>
             </div>
 
             <div class="campo">
@@ -214,7 +230,7 @@
         <div id="mensagem-erro" class="mensagem mensagem-erro" role="alert" hidden tabindex="-1"></div>
 
         <div class="acoes-formulario">
-          <button class="botao botao-primario" type="submit">Calcular minha análise</button>
+          <button id="calcular-analise" class="botao botao-primario" type="submit">Calcular minha análise</button>
           <button class="botao botao-secundario" type="reset">Limpar os dados</button>
         </div>
       </form>

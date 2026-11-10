@@ -8,9 +8,25 @@
   const mensagemErro = document.querySelector("#mensagem-erro");
   const mensagemDecisao = document.querySelector("#mensagem-decisao");
   const botaoDownload = document.querySelector("#baixar-planilha");
+  const botaoCalcular = document.querySelector("#calcular-analise");
   const estadoRede = document.querySelector("#estado-rede");
+  const alertasFaixa = {
+    reparo: document.querySelector("#alerta-reparar"),
+    troca: document.querySelector("#alerta-trocar")
+  };
+  const configuracaoFaixas = Object.freeze({
+    custo_reparo: { input: "#custo-reparo", texto: "#limite-custo-reparo", grupo: "reparo" },
+    manutencao_adicional: { input: "#manutencao-adicional", texto: "#limite-manutencao", grupo: "reparo" },
+    residual_reparado: { input: "#residual-reparado", texto: "#limite-residual-reparado", grupo: "reparo" },
+    preco_substituto: { input: "#preco-substituto", texto: "#limite-preco-substituto", grupo: "troca" },
+    custos_acessorios: { input: "#custos-acessorios", texto: "#limite-acessorios", grupo: "troca" },
+    valor_venda_atual: { input: "#valor-venda-atual", texto: "#limite-venda-atual", grupo: "troca" },
+    residual_substituto: { input: "#residual-substituto", texto: "#limite-residual-substituto", grupo: "troca" }
+  });
   let resultadoAtual = null;
   let criteriosAtuais = null;
+  let temporizadorRedirecionamento = null;
+  let assinaturaRedirecionada = "";
 
   const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -49,6 +65,118 @@
         prioridade_ambiental: String(dados.get("prioridade_ambiental") || "")
       }
     };
+  }
+
+  function lerCustosParciais() {
+    const custos = {};
+    for (const [nome, configuracao] of Object.entries(configuracaoFaixas)) {
+      const campo = document.querySelector(configuracao.input);
+      custos[nome] = campo.value.trim() === "" ? null : Number(campo.value);
+    }
+    return custos;
+  }
+
+  function textoFaixa(faixa) {
+    const minimo = moeda.format(faixa.min || 0);
+    if (Number.isFinite(faixa.max)) {
+      return `Faixa permitida com os demais valores: de ${minimo} a ${moeda.format(faixa.max)}.`;
+    }
+    return `Faixa permitida com os demais valores: ${minimo} ou mais.`;
+  }
+
+  function aplicarFaixa(nome, faixa, grupoCompleto) {
+    const configuracao = configuracaoFaixas[nome];
+    const campo = document.querySelector(configuracao.input);
+    const texto = document.querySelector(configuracao.texto);
+    const valor = campo.value.trim() === "" ? null : Number(campo.value);
+
+    campo.min = String(faixa.min || 0);
+    if (Number.isFinite(faixa.max)) campo.max = String(faixa.max);
+    else campo.removeAttribute("max");
+
+    texto.textContent = textoFaixa(faixa);
+    const abaixo = valor !== null && Number.isFinite(valor) && valor < faixa.min - 1e-9;
+    const acima = valor !== null && Number.isFinite(valor) &&
+      Number.isFinite(faixa.max) && valor > faixa.max + 1e-9;
+    const incompatível = grupoCompleto && (abaixo || acima);
+
+    campo.setCustomValidity(incompatível ? `Valor incompatível. ${texto.textContent}` : "");
+    if (incompatível) campo.setAttribute("aria-invalid", "true");
+    else campo.removeAttribute("aria-invalid");
+    campo.closest(".campo").classList.toggle("campo-invalido", incompatível);
+  }
+
+  function mensagemReparo(estado, custos) {
+    const limites = estado.limites;
+    return [
+      "Os valores do reparo produziriam custo líquido negativo.",
+      `Para compatibilizar, informe custo do reparo de pelo menos ${moeda.format(limites.custo_reparo.min)},`,
+      `manutenção de pelo menos ${moeda.format(limites.manutencao_adicional.min)}`,
+      `ou reduza o valor residual para no máximo ${moeda.format(limites.residual_reparado.max)}.`,
+      `Valores atuais: ${moeda.format(custos.custo_reparo)} + ${moeda.format(custos.manutencao_adicional)} − ${moeda.format(custos.residual_reparado)}.`
+    ].join(" ");
+  }
+
+  function mensagemTroca(estado, custos) {
+    const limites = estado.limites;
+    return [
+      "Os valores da troca produziriam custo líquido negativo.",
+      `Para compatibilizar, informe preço do substituto de pelo menos ${moeda.format(limites.preco_substituto.min)},`,
+      `acessórios de pelo menos ${moeda.format(limites.custos_acessorios.min)},`,
+      `reduza a venda para no máximo ${moeda.format(limites.valor_venda_atual.max)}`,
+      `ou reduza o residual para no máximo ${moeda.format(limites.residual_substituto.max)}.`,
+      `Valores atuais: ${moeda.format(custos.preco_substituto)} + ${moeda.format(custos.custos_acessorios)} − ${moeda.format(custos.valor_venda_atual)} − ${moeda.format(custos.residual_substituto)}.`
+    ].join(" ");
+  }
+
+  function redirecionarParaCorrecao(grupo, assinatura) {
+    if (assinatura === assinaturaRedirecionada) return;
+    assinaturaRedirecionada = assinatura;
+    const seletor = grupo === "reparo" ? "#custo-reparo" : "#preco-substituto";
+    const campo = document.querySelector(seletor);
+    campo.focus({ preventScroll: true });
+    campo.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function atualizarCompatibilidade({ agendarRedirecionamento = false } = {}) {
+    const custos = lerCustosParciais();
+    const compatibilidade = core.obterCompatibilidadeCustos(custos);
+
+    for (const [nome, faixa] of Object.entries(compatibilidade.reparo.limites)) {
+      aplicarFaixa(nome, faixa, compatibilidade.reparo.completo);
+    }
+    for (const [nome, faixa] of Object.entries(compatibilidade.troca.limites)) {
+      aplicarFaixa(nome, faixa, compatibilidade.troca.completo);
+    }
+
+    const grupos = [
+      ["reparo", compatibilidade.reparo, mensagemReparo],
+      ["troca", compatibilidade.troca, mensagemTroca]
+    ];
+    for (const [nome, estado, criarMensagem] of grupos) {
+      const alerta = alertasFaixa[nome];
+      const incompatível = estado.completo && !estado.compativel;
+      alerta.hidden = !incompatível;
+      alerta.textContent = incompatível ? criarMensagem(estado, custos) : "";
+    }
+
+    botaoCalcular.disabled = !compatibilidade.compativel;
+    if (compatibilidade.compativel) botaoCalcular.removeAttribute("aria-describedby");
+    else botaoCalcular.setAttribute("aria-describedby", "alerta-reparar alerta-trocar");
+
+    globalThis.clearTimeout(temporizadorRedirecionamento);
+    if (compatibilidade.compativel) {
+      assinaturaRedirecionada = "";
+    } else if (agendarRedirecionamento) {
+      const grupo = !compatibilidade.reparo.compativel ? "reparo" : "troca";
+      const assinatura = `${grupo}:${JSON.stringify(custos)}`;
+      temporizadorRedirecionamento = globalThis.setTimeout(
+        () => redirecionarParaCorrecao(grupo, assinatura),
+        700
+      );
+    }
+
+    return compatibilidade;
   }
 
   function exibirErro(mensagem) {
@@ -129,9 +257,26 @@
     return `analise-conserta-ou-troca-${agora.getFullYear()}-${dois(agora.getMonth() + 1)}-${dois(agora.getDate())}-${dois(agora.getHours())}${dois(agora.getMinutes())}.csv`;
   }
 
+  formulario.addEventListener("input", (evento) => {
+    resultadoAtual = null;
+    criteriosAtuais = null;
+    resultadoEl.hidden = true;
+    ocultarErro();
+    if (evento.target instanceof HTMLInputElement && configuracaoFaixas[evento.target.name]) {
+      atualizarCompatibilidade({ agendarRedirecionamento: true });
+    }
+  });
+
   formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
     ocultarErro();
+
+    const compatibilidade = atualizarCompatibilidade();
+    if (!compatibilidade.compativel) {
+      const grupo = !compatibilidade.reparo.compativel ? "reparo" : "troca";
+      redirecionarParaCorrecao(grupo, `${grupo}:envio:${Date.now()}`);
+      return;
+    }
 
     if (!formulario.checkValidity()) {
       formulario.reportValidity();
@@ -157,7 +302,11 @@
     criteriosAtuais = null;
     resultadoEl.hidden = true;
     ocultarErro();
-    globalThis.setTimeout(() => document.querySelector("#custo-reparo").focus(), 0);
+    globalThis.clearTimeout(temporizadorRedirecionamento);
+    globalThis.setTimeout(() => {
+      atualizarCompatibilidade();
+      document.querySelector("#custo-reparo").focus();
+    }, 0);
   });
 
   formularioDecisao.addEventListener("input", atualizarDisponibilidadeDownload);
@@ -211,6 +360,7 @@
   globalThis.addEventListener("online", atualizarEstadoRede);
   globalThis.addEventListener("offline", atualizarEstadoRede);
   atualizarEstadoRede();
+  atualizarCompatibilidade();
 
   if ("serviceWorker" in navigator && /^https?:$/.test(globalThis.location.protocol)) {
     globalThis.addEventListener("load", () => {

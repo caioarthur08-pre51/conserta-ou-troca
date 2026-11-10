@@ -22,6 +22,115 @@
     "vida_substituto_meses"
   ]);
 
+  const TOLERANCIA_CALCULO = 1e-9;
+
+  function arredondarCentavos(valor) {
+    return Math.round((valor + Number.EPSILON) * 100) / 100;
+  }
+
+  function numeroPreenchido(valor) {
+    if (valor === null || valor === undefined || String(valor).trim() === "") return null;
+    const numero = typeof valor === "number" ? valor : Number(valor);
+    return Number.isFinite(numero) && numero >= 0 ? numero : null;
+  }
+
+  function congelarLimites(limites) {
+    return Object.freeze(
+      Object.fromEntries(
+        Object.entries(limites).map(([campo, faixa]) => [campo, Object.freeze(faixa)])
+      )
+    );
+  }
+
+  function obterCompatibilidadeCustos(entrada = {}) {
+    const custoReparo = numeroPreenchido(entrada.custo_reparo);
+    const manutencao = numeroPreenchido(entrada.manutencao_adicional);
+    const residualReparado = numeroPreenchido(entrada.residual_reparado);
+    const precoSubstituto = numeroPreenchido(entrada.preco_substituto);
+    const acessorios = numeroPreenchido(entrada.custos_acessorios);
+    const vendaAtual = numeroPreenchido(entrada.valor_venda_atual);
+    const residualSubstituto = numeroPreenchido(entrada.residual_substituto);
+
+    const reparoCompleto = [custoReparo, manutencao, residualReparado]
+      .every((valor) => valor !== null);
+    const trocaCompleta = [precoSubstituto, acessorios, vendaAtual, residualSubstituto]
+      .every((valor) => valor !== null);
+
+    const custoLiquidoReparar = reparoCompleto
+      ? arredondarCentavos(custoReparo + manutencao - residualReparado)
+      : null;
+    const custoLiquidoTrocar = trocaCompleta
+      ? arredondarCentavos(precoSubstituto + acessorios - vendaAtual - residualSubstituto)
+      : null;
+
+    const reparoCompativel = !reparoCompleto || custoLiquidoReparar >= -TOLERANCIA_CALCULO;
+    const trocaCompativel = !trocaCompleta || custoLiquidoTrocar >= -TOLERANCIA_CALCULO;
+
+    const reparo = Object.freeze({
+      completo: reparoCompleto,
+      compativel: reparoCompativel,
+      custo_liquido: custoLiquidoReparar,
+      limites: congelarLimites({
+        custo_reparo: {
+          min: manutencao !== null && residualReparado !== null
+            ? arredondarCentavos(Math.max(0, residualReparado - manutencao))
+            : 0,
+          max: null
+        },
+        manutencao_adicional: {
+          min: custoReparo !== null && residualReparado !== null
+            ? arredondarCentavos(Math.max(0, residualReparado - custoReparo))
+            : 0,
+          max: null
+        },
+        residual_reparado: {
+          min: 0,
+          max: custoReparo !== null && manutencao !== null
+            ? arredondarCentavos(custoReparo + manutencao)
+            : null
+        }
+      })
+    });
+
+    const troca = Object.freeze({
+      completo: trocaCompleta,
+      compativel: trocaCompativel,
+      custo_liquido: custoLiquidoTrocar,
+      limites: congelarLimites({
+        preco_substituto: {
+          min: acessorios !== null && vendaAtual !== null && residualSubstituto !== null
+            ? arredondarCentavos(Math.max(0, vendaAtual + residualSubstituto - acessorios))
+            : 0,
+          max: null
+        },
+        custos_acessorios: {
+          min: precoSubstituto !== null && vendaAtual !== null && residualSubstituto !== null
+            ? arredondarCentavos(Math.max(0, vendaAtual + residualSubstituto - precoSubstituto))
+            : 0,
+          max: null
+        },
+        valor_venda_atual: {
+          min: 0,
+          max: precoSubstituto !== null && acessorios !== null && residualSubstituto !== null
+            ? arredondarCentavos(Math.max(0, precoSubstituto + acessorios - residualSubstituto))
+            : null
+        },
+        residual_substituto: {
+          min: 0,
+          max: precoSubstituto !== null && acessorios !== null && vendaAtual !== null
+            ? arredondarCentavos(Math.max(0, precoSubstituto + acessorios - vendaAtual))
+            : null
+        }
+      })
+    });
+
+    return Object.freeze({
+      compativel: reparoCompativel && trocaCompativel,
+      reparo,
+      troca
+    });
+  }
+
   function exigirNumero(valor, nomeCampo, opcoes) {
     const numero = typeof valor === "number" ? valor : Number(valor);
     if (!Number.isFinite(numero)) {
@@ -56,17 +165,22 @@
       dados[campo] = exigirNumero(entrada[campo], campo, { positivo: true, inteiro: true });
     }
 
-    const custoLiquidoReparar =
-      dados.custo_reparo + dados.manutencao_adicional - dados.residual_reparado;
-    const custoLiquidoTrocar =
+    let custoLiquidoReparar = arredondarCentavos(
+      dados.custo_reparo + dados.manutencao_adicional - dados.residual_reparado
+    );
+    let custoLiquidoTrocar = arredondarCentavos(
       dados.preco_substituto + dados.custos_acessorios -
-      dados.valor_venda_atual - dados.residual_substituto;
+      dados.valor_venda_atual - dados.residual_substituto
+    );
 
-    if (custoLiquidoReparar < 0 || custoLiquidoTrocar < 0) {
+    if (custoLiquidoReparar < -TOLERANCIA_CALCULO || custoLiquidoTrocar < -TOLERANCIA_CALCULO) {
       throw new Error(
         "Com esses valores, um custo líquido ficou negativo. Revise os valores residuais e de venda."
       );
     }
+
+    if (Math.abs(custoLiquidoReparar) < TOLERANCIA_CALCULO) custoLiquidoReparar = 0;
+    if (Math.abs(custoLiquidoTrocar) < TOLERANCIA_CALCULO) custoLiquidoTrocar = 0;
 
     const vidaAdicionalAnos = dados.vida_adicional_meses / 12;
     const vidaSubstitutoAnos = dados.vida_substituto_meses / 12;
@@ -186,6 +300,7 @@
   return Object.freeze({
     calcularAnalise,
     criarCsvAnalise,
+    obterCompatibilidadeCustos,
     textoClassificacao
   });
 });

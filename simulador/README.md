@@ -40,6 +40,15 @@ As vidas são digitadas em meses e convertidas para anos. Diferença inferior a 
 por ano é exibida como custo praticamente equivalente. Critérios qualitativos nunca
 alteram a fórmula.
 
+## Limites dinâmicos
+
+- cada campo monetário mostra o mínimo ou máximo compatível com os demais valores;
+- no reparo, o residual não pode superar reparo + manutenção;
+- na troca, venda + residual não pode superar preço + acessórios;
+- uma combinação incompatível destaca todos os campos que podem ser ajustados, bloqueia
+  o cálculo e redireciona para o primeiro campo relacionado após uma breve pausa;
+- o núcleo mantém uma validação defensiva adicional, mesmo que a interface seja contornada.
+
 ## Execução local
 
 Abra um terminal nesta pasta e execute um servidor HTTP estático. Exemplo:

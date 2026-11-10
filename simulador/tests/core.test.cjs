@@ -68,6 +68,64 @@ test("rejeita valores negativos, vida zero, meses fracionários e custo líquido
   assert.throws(() => core.calcularAnalise(liquidoNegativo), /custo líquido ficou negativo/);
 });
 
+test("calcula faixas dinâmicas para impedir custo líquido negativo no reparo", () => {
+  const compatibilidade = core.obterCompatibilidadeCustos({
+    custo_reparo: 300,
+    manutencao_adicional: 60,
+    residual_reparado: 500
+  });
+
+  assert.equal(compatibilidade.reparo.completo, true);
+  assert.equal(compatibilidade.reparo.compativel, false);
+  assert.equal(compatibilidade.reparo.limites.custo_reparo.min, 440);
+  assert.equal(compatibilidade.reparo.limites.manutencao_adicional.min, 200);
+  assert.equal(compatibilidade.reparo.limites.residual_reparado.max, 360);
+  assert.equal(compatibilidade.compativel, false);
+});
+
+test("calcula faixas dinâmicas para impedir custo líquido negativo na troca", () => {
+  const compatibilidade = core.obterCompatibilidadeCustos({
+    preco_substituto: 900,
+    custos_acessorios: 100,
+    valor_venda_atual: 300,
+    residual_substituto: 800
+  });
+
+  assert.equal(compatibilidade.troca.completo, true);
+  assert.equal(compatibilidade.troca.compativel, false);
+  assert.equal(compatibilidade.troca.limites.preco_substituto.min, 1000);
+  assert.equal(compatibilidade.troca.limites.custos_acessorios.min, 200);
+  assert.equal(compatibilidade.troca.limites.valor_venda_atual.max, 200);
+  assert.equal(compatibilidade.troca.limites.residual_substituto.max, 700);
+});
+
+test("não acusa incompatibilidade antes de o grupo financeiro estar completo", () => {
+  const compatibilidade = core.obterCompatibilidadeCustos({
+    custo_reparo: 300,
+    residual_reparado: 500,
+    preco_substituto: 900,
+    valor_venda_atual: 300
+  });
+
+  assert.equal(compatibilidade.reparo.completo, false);
+  assert.equal(compatibilidade.reparo.compativel, true);
+  assert.equal(compatibilidade.troca.completo, false);
+  assert.equal(compatibilidade.troca.compativel, true);
+  assert.equal(compatibilidade.compativel, true);
+});
+
+test("arredonda limites monetários em centavos sem falso negativo de ponto flutuante", () => {
+  const compatibilidade = core.obterCompatibilidadeCustos({
+    custo_reparo: 0.1,
+    manutencao_adicional: 0.2,
+    residual_reparado: 0.3
+  });
+
+  assert.equal(compatibilidade.reparo.compativel, true);
+  assert.equal(compatibilidade.reparo.custo_liquido, 0);
+  assert.equal(compatibilidade.reparo.limites.residual_reparado.max, 0.3);
+});
+
 test("cria CSV local compatível com separador brasileiro e escapa texto", () => {
   const resultado = core.calcularAnalise(entradaBase());
   const csv = core.criarCsvAnalise({
