@@ -1,11 +1,12 @@
 "use strict";
 
-const CACHE = "simulador-conserta-ou-troca-v3";
+const CACHE = "simulador-conserta-ou-troca-v4";
 const ARQUIVOS = [
   "./",
   "./index.html",
   "./styles.css",
   "./core.js",
+  "./pdf.js",
   "./app.js",
   "./manifest.webmanifest",
   "./icons/app-icon.svg"

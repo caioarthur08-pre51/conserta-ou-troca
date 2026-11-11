@@ -2,12 +2,12 @@
   "use strict";
 
   const core = globalThis.SimuladorCore;
+  const geradorPdf = globalThis.SimuladorPdf;
   const formulario = document.querySelector("#formulario-analise");
-  const formularioDecisao = document.querySelector("#formulario-decisao");
   const resultadoEl = document.querySelector("#resultado");
   const mensagemErro = document.querySelector("#mensagem-erro");
-  const mensagemDecisao = document.querySelector("#mensagem-decisao");
-  const botaoDownload = document.querySelector("#baixar-planilha");
+  const mensagemDownload = document.querySelector("#mensagem-download");
+  const botaoDownload = document.querySelector("#baixar-relatorio");
   const botaoCalcular = document.querySelector("#calcular-analise");
   const estadoRede = document.querySelector("#estado-rede");
   const alertasFaixa = {
@@ -236,25 +236,16 @@
       textoVidaEquilibrio(resultado.vida_equilibrio_reparo_meses);
     montarCriterios(criterios);
 
-    formularioDecisao.reset();
-    mensagemDecisao.hidden = true;
-    botaoDownload.hidden = true;
+    mensagemDownload.hidden = true;
     resultadoEl.hidden = false;
     resultadoEl.focus();
     resultadoEl.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function atualizarDisponibilidadeDownload() {
-    const dados = new FormData(formularioDecisao);
-    const decisao = String(dados.get("decisao_aluno") || "");
-    const justificativa = String(dados.get("justificativa") || "").trim();
-    botaoDownload.hidden = !(decisao && justificativa.length >= 10);
-  }
-
-  function nomeArquivoCsv() {
+  function nomeArquivoPdf() {
     const agora = new Date();
     const dois = (valor) => String(valor).padStart(2, "0");
-    return `analise-conserta-ou-troca-${agora.getFullYear()}-${dois(agora.getMonth() + 1)}-${dois(agora.getDate())}-${dois(agora.getHours())}${dois(agora.getMinutes())}.csv`;
+    return `relatorio-conserta-ou-troca-${agora.getFullYear()}-${dois(agora.getMonth() + 1)}-${dois(agora.getDate())}-${dois(agora.getHours())}${dois(agora.getMinutes())}.pdf`;
   }
 
   formulario.addEventListener("input", (evento) => {
@@ -309,40 +300,28 @@
     }, 0);
   });
 
-  formularioDecisao.addEventListener("input", atualizarDisponibilidadeDownload);
-  formularioDecisao.addEventListener("change", atualizarDisponibilidadeDownload);
-
-  formularioDecisao.addEventListener("submit", (evento) => {
-    evento.preventDefault();
-    mensagemDecisao.hidden = true;
-
-    if (!resultadoAtual || !criteriosAtuais || !formularioDecisao.checkValidity()) {
-      formularioDecisao.reportValidity();
-      mensagemDecisao.textContent = "Escolha uma decisão e escreva uma justificativa com pelo menos 10 caracteres.";
-      mensagemDecisao.hidden = false;
-      return;
-    }
-
+  botaoDownload.addEventListener("click", () => {
+    mensagemDownload.hidden = true;
     try {
-      const dados = new FormData(formularioDecisao);
-      const csv = core.criarCsvAnalise({
+      if (!resultadoAtual || !criteriosAtuais) {
+        throw new Error("Calcule a análise antes de gerar o relatório.");
+      }
+      const bytes = geradorPdf.criarRelatorioPdf({
         resultado: resultadoAtual,
         criterios: criteriosAtuais,
-        decisao: String(dados.get("decisao_aluno")),
-        justificativa: String(dados.get("justificativa")),
         dataHora: new Date().toLocaleString("pt-BR")
       });
-      const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      const url = URL.createObjectURL(new Blob([bytes], { type: "application/pdf" }));
       const link = document.createElement("a");
       link.href = url;
-      link.download = nomeArquivoCsv();
+      link.download = nomeArquivoPdf();
       document.body.append(link);
       link.click();
       link.remove();
-      URL.revokeObjectURL(url);
+      globalThis.setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch (erro) {
-      mensagemDecisao.textContent = erro instanceof Error ? erro.message : "Não foi possível criar a planilha.";
-      mensagemDecisao.hidden = false;
+      mensagemDownload.textContent = erro instanceof Error ? erro.message : "Não foi possível criar o PDF.";
+      mensagemDownload.hidden = false;
     }
   });
 

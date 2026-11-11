@@ -224,82 +224,8 @@
     throw new Error("Classificação desconhecida.");
   }
 
-  function formatarNumeroCsv(valor, casas = 2) {
-    if (valor === null || valor === undefined) return "";
-    if (typeof valor !== "number" || !Number.isFinite(valor)) return String(valor);
-    return valor.toFixed(casas).replace(".", ",");
-  }
-
-  function escaparCsv(valor) {
-    return `"${String(valor ?? "").replaceAll('"', '""')}"`;
-  }
-
-  function criarCsvAnalise({ resultado, criterios, decisao, justificativa, dataHora }) {
-    if (!resultado || !criterios || !decisao || !String(justificativa || "").trim()) {
-      throw new Error("Complete o resultado, a decisão e a justificativa antes de baixar.");
-    }
-
-    const cabecalhos = [
-      "data_hora_local",
-      "custo_reparo",
-      "manutencao_adicional",
-      "residual_reparado",
-      "vida_adicional_meses",
-      "preco_substituto",
-      "custos_acessorios",
-      "valor_venda_atual",
-      "residual_substituto",
-      "vida_substituto_meses",
-      "custo_liquido_reparar",
-      "custo_anual_reparar",
-      "custo_liquido_trocar",
-      "custo_anual_trocar",
-      "diferenca_anual_absoluta",
-      "resultado_financeiro",
-      "vida_equilibrio_reparo_meses",
-      "risco_reparo",
-      "urgencia_uso",
-      "prioridade_ambiental",
-      "decisao_aluno",
-      "justificativa",
-      "aviso"
-    ];
-
-    const e = resultado.entrada;
-    const valores = [
-      dataHora || new Date().toLocaleString("pt-BR"),
-      formatarNumeroCsv(e.custo_reparo),
-      formatarNumeroCsv(e.manutencao_adicional),
-      formatarNumeroCsv(e.residual_reparado),
-      e.vida_adicional_meses,
-      formatarNumeroCsv(e.preco_substituto),
-      formatarNumeroCsv(e.custos_acessorios),
-      formatarNumeroCsv(e.valor_venda_atual),
-      formatarNumeroCsv(e.residual_substituto),
-      e.vida_substituto_meses,
-      formatarNumeroCsv(resultado.custo_liquido_reparar),
-      formatarNumeroCsv(resultado.custo_anual_reparar),
-      formatarNumeroCsv(resultado.custo_liquido_trocar),
-      formatarNumeroCsv(resultado.custo_anual_trocar),
-      formatarNumeroCsv(resultado.diferenca_anual_absoluta),
-      textoClassificacao(resultado.classificacao),
-      resultado.vida_equilibrio_reparo_meses === null
-        ? "Sem ponto de equilíbrio financeiro"
-        : formatarNumeroCsv(resultado.vida_equilibrio_reparo_meses, 1),
-      criterios.risco_reparo,
-      criterios.urgencia_uso,
-      criterios.prioridade_ambiental,
-      decisao,
-      String(justificativa).trim(),
-      "Ferramenta educativa. Não é recomendação comercial."
-    ];
-
-    return `\ufeff${cabecalhos.map(escaparCsv).join(";")}\r\n${valores.map(escaparCsv).join(";")}\r\n`;
-  }
-
   return Object.freeze({
     calcularAnalise,
-    criarCsvAnalise,
     obterCompatibilidadeCustos,
     textoClassificacao
   });

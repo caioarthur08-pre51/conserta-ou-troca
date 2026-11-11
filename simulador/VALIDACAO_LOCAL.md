@@ -1,6 +1,6 @@
 # Validação local do simulador
 
-Data: 09/11/2026
+Data: 10/11/2026
 
 Estado: **publicado e operacional**
 
@@ -10,8 +10,11 @@ Estado: **publicado e operacional**
 - fórmulas verificadas com conversão de meses para anos;
 - empate verificado para diferença estritamente inferior a R$ 1,00 por ano;
 - entradas negativas, vidas iguais a zero, meses fracionários e custos líquidos negativos rejeitados;
-- fluxo completo conferido em navegador: preenchimento, cálculo, critérios qualitativos, decisão e justificativa;
-- arquivo CSV baixado e reaberto com cabeçalhos e valores esperados;
+- fluxo completo conferido em navegador: preenchimento, cálculo, critérios qualitativos e relatório PDF;
+- decisão final e justificativa removidas da interface e do fluxo de download;
+- PDF de duas páginas baixado pelo navegador, reaberto e validado com os valores esperados;
+- gráficos vetoriais de custo anual e custo líquido conferidos visualmente em PNG;
+- acentuação, metadados, extração de texto, dimensões A4 e contagem de páginas verificadas;
 - layout conferido em viewport de 390 por 844 pixels;
 - service worker, manifesto e todos os arquivos locais solicitados com resposta HTTP 200;
 - estratégia online-first verificada no código para atualizar arquivos quando houver rede e usar o cache na contingência;
@@ -31,7 +34,8 @@ Estado: **publicado e operacional**
 - nenhum nome, e-mail, turma ou identificador é solicitado;
 - nenhum `localStorage`, `sessionStorage`, cookie, analytics, API ou banco de dados é usado;
 - a política de conteúdo da página bloqueia scripts e conexões externas;
-- a planilha é criada na memória do navegador e baixada localmente.
+- o PDF é criado na memória do navegador e baixado localmente;
+- o gerador não usa biblioteca externa, API, servidor ou transmissão de dados.
 
 ## Conferências de campo restantes
 

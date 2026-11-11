@@ -463,12 +463,21 @@ a:focus-visible {
   margin-block: 0.5rem;
 }
 
-.decisao-final {
+.download-relatorio {
   margin-block: 1.5rem;
-  padding: 1rem;
-  background: #f8fafb;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  background: #eef5f9;
   border: 2px solid var(--azul-medio);
   border-radius: 0.8rem;
+}
+
+.download-relatorio h3 {
+  margin: 0 0 0.4rem;
+  color: var(--azul-escuro);
+}
+
+.download-relatorio > p:first-of-type {
+  margin: 0 0 1rem;
 }
 
 .ajuda-download {
@@ -526,7 +535,7 @@ footer p {
 
   .cabecalho,
   #formulario-analise,
-  #formulario-decisao,
+  .download-relatorio,
   #nova-analise,
   footer {
     display: none !important;

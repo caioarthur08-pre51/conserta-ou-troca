@@ -1,6 +1,7 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const core = require("../core.js");
+const pdf = require("../pdf.js");
 
 function entradaBase() {
   return {
@@ -126,34 +127,30 @@ test("arredonda limites monetários em centavos sem falso negativo de ponto flut
   assert.equal(compatibilidade.reparo.limites.residual_reparado.max, 0.3);
 });
 
-test("cria CSV local compatível com separador brasileiro e escapa texto", () => {
+test("cria PDF local de duas páginas com gráficos vetoriais", () => {
   const resultado = core.calcularAnalise(entradaBase());
-  const csv = core.criarCsvAnalise({
+  const bytes = pdf.criarRelatorioPdf({
     resultado,
     criterios: {
       risco_reparo: "Médio",
       urgencia_uso: "Alta",
       prioridade_ambiental: "Alta"
     },
-    decisao: "Reparar",
-    justificativa: 'Custa menos, mas depende do "tempo estimado".',
     dataHora: "09/11/2026 12:00:00"
   });
-  assert.ok(csv.startsWith("\ufeff"));
-  assert.match(csv, /"150,00"/);
-  assert.match(csv, /"Custa menos, mas depende do ""tempo estimado""\."/);
-  assert.equal(csv.trim().split("\r\n").length, 2);
+
+  const conteudo = Buffer.from(bytes).toString("latin1");
+  assert.ok(bytes instanceof Uint8Array);
+  assert.ok(bytes.length > 5000);
+  assert.ok(conteudo.startsWith("%PDF-1.4"));
+  assert.match(conteudo, /\/Count 2/);
+  assert.match(conteudo, /Comparação do custo anual/);
+  assert.match(conteudo, /%%EOF\n$/);
 });
 
-test("não permite exportar sem decisão e justificativa", () => {
-  const resultado = core.calcularAnalise(entradaBase());
+test("não cria PDF sem resultado e critérios", () => {
   assert.throws(
-    () => core.criarCsvAnalise({
-      resultado,
-      criterios: { risco_reparo: "Baixo", urgencia_uso: "Baixa", prioridade_ambiental: "Baixa" },
-      decisao: "",
-      justificativa: ""
-    }),
-    /Complete o resultado/
+    () => pdf.criarRelatorioPdf({ resultado: null, criterios: null }),
+    /Calcule a análise/
   );
 });

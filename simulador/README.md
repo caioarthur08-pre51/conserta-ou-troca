@@ -27,7 +27,7 @@ na versão pública.
 - nenhum nome, e-mail, turma, cookie, analytics ou identificador é solicitado;
 - os valores ficam apenas na memória da página;
 - não há servidor, API, banco de dados, `localStorage` ou `sessionStorage`;
-- a planilha é um CSV criado no próprio navegador e baixado diretamente no aparelho.
+- o relatório PDF com gráficos é criado no próprio navegador e baixado diretamente no aparelho.
 
 ## Cálculo
 
@@ -48,6 +48,15 @@ alteram a fórmula.
 - uma combinação incompatível destaca todos os campos que podem ser ajustados, bloqueia
   o cálculo e redireciona para o primeiro campo relacionado após uma breve pausa;
 - o núcleo mantém uma validação defensiva adicional, mesmo que a interface seja contornada.
+
+## Relatório PDF local
+
+- substitui o antigo download em CSV e não exige decisão ou justificativa do estudante;
+- contém duas páginas A4 com gráficos vetoriais de custo anual e custo líquido;
+- registra valores informados, resultado, diferença anual, ponto de equilíbrio, critérios
+  qualitativos, fórmulas e limitações;
+- usa as mesmas cores azul, verde e laranja da interface;
+- é criado integralmente no navegador, sem biblioteca externa, servidor ou envio de dados.
 
 ## Execução local
 

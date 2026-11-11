@@ -18,6 +18,7 @@
     <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <script src="core.js" defer></script>
+    <script src="pdf.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -32,7 +33,7 @@
         </p>
         <div class="aviso-privacidade" role="note">
           <strong>Os valores digitados ficam neste aparelho.</strong>
-          Eles não são enviados nem salvos. Ao terminar, você poderá baixar sua própria planilha.
+          Eles não são enviados nem salvos. Ao terminar, você poderá baixar seu relatório em PDF.
         </div>
         <p id="estado-rede" class="estado-rede" aria-live="polite"></p>
       </div>
@@ -276,34 +277,20 @@
           <ul id="lista-criterios"></ul>
         </div>
 
-        <form id="formulario-decisao" class="decisao-final" novalidate>
-          <fieldset class="grupo-opcoes">
-            <legend>Com base no resultado, qual é a sua decisão?</legend>
-            <div class="opcoes opcoes-decisao">
-              <label><input type="radio" name="decisao_aluno" value="Reparar" required> Reparar</label>
-              <label><input type="radio" name="decisao_aluno" value="Trocar"> Trocar</label>
-              <label><input type="radio" name="decisao_aluno" value="Ainda não decidi"> Ainda não decidi</label>
-            </div>
-          </fieldset>
-
-          <div class="campo">
-            <label for="justificativa">Justifique sua decisão</label>
-            <p id="ajuda-justificativa" class="ajuda">
-              Use pelo menos um resultado financeiro e uma limitação da análise.
-            </p>
-            <textarea id="justificativa" name="justificativa" rows="5" minlength="10" required aria-describedby="ajuda-justificativa"></textarea>
-          </div>
-
-          <div id="mensagem-decisao" class="mensagem mensagem-erro" role="alert" hidden></div>
-
-          <button id="baixar-planilha" class="botao botao-download" type="submit" hidden>
-            Baixar minha planilha (.csv)
+        <div class="download-relatorio" aria-labelledby="titulo-download-relatorio">
+          <h3 id="titulo-download-relatorio">Leve sua análise com você</h3>
+          <p>
+            Gere um relatório com gráficos comparativos, valores informados, resultado
+            financeiro, critérios qualitativos e limitações da análise.
+          </p>
+          <button id="baixar-relatorio" class="botao botao-download" type="button">
+            Baixar relatório em PDF
           </button>
           <p class="ajuda-download">
-            O arquivo abre no Excel, LibreOffice Calc e Google Planilhas. O download
-            acontece somente no seu aparelho.
+            O PDF é criado e baixado somente neste aparelho. Nenhum dado é enviado ou armazenado.
           </p>
-        </form>
+          <div id="mensagem-download" class="mensagem mensagem-erro" role="alert" hidden></div>
+        </div>
 
         <button id="nova-analise" class="botao botao-secundario" type="button">Fazer outra análise</button>
       </section>
