@@ -16,10 +16,10 @@
     <title>Simulador Conserta ou Troca?</title>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="icons/app-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=5">
     <script src="core.js" defer></script>
     <script src="pdf.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="app.js?v=5" defer></script>
   </head>
   <body>
     <a class="pular-conteudo" href="#conteudo">Pular para o formulário</a>
@@ -106,9 +106,10 @@
               <label for="vida-adicional">Vida adicional após o reparo</label>
               <p id="ajuda-vida-adicional" class="ajuda">Estimativa em meses inteiros.</p>
               <div class="entrada-com-unidade entrada-com-unidade-final">
-                <input id="vida-adicional" name="vida_adicional_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-adicional">
+                <input id="vida-adicional" name="vida_adicional_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-adicional limite-vida-adicional">
                 <span aria-hidden="true">meses</span>
               </div>
+              <p id="limite-vida-adicional" class="orientacao-faixa" aria-live="polite">Informe um número inteiro de 1 mês ou mais.</p>
             </div>
           </div>
         </section>
@@ -178,9 +179,10 @@
               <label for="vida-substituto">Vida útil do substituto</label>
               <p id="ajuda-vida-substituto" class="ajuda">Estimativa em meses inteiros.</p>
               <div class="entrada-com-unidade entrada-com-unidade-final">
-                <input id="vida-substituto" name="vida_substituto_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-substituto">
+                <input id="vida-substituto" name="vida_substituto_meses" type="number" inputmode="numeric" min="1" step="1" required aria-describedby="ajuda-vida-substituto limite-vida-substituto">
                 <span aria-hidden="true">meses</span>
               </div>
+              <p id="limite-vida-substituto" class="orientacao-faixa" aria-live="polite">Informe um número inteiro de 1 mês ou mais.</p>
             </div>
           </div>
         </section>
@@ -205,6 +207,7 @@
               <label><input type="radio" name="risco_reparo" value="Médio"> Médio</label>
               <label><input type="radio" name="risco_reparo" value="Alto"> Alto</label>
             </div>
+            <p class="orientacao-validacao" hidden>Escolha uma opção para continuar.</p>
           </fieldset>
 
           <fieldset class="grupo-opcoes">
@@ -215,6 +218,7 @@
               <label><input type="radio" name="urgencia_uso" value="Média"> Média</label>
               <label><input type="radio" name="urgencia_uso" value="Alta"> Alta</label>
             </div>
+            <p class="orientacao-validacao" hidden>Escolha uma opção para continuar.</p>
           </fieldset>
 
           <fieldset class="grupo-opcoes">
@@ -225,6 +229,7 @@
               <label><input type="radio" name="prioridade_ambiental" value="Média"> Média</label>
               <label><input type="radio" name="prioridade_ambiental" value="Alta"> Alta</label>
             </div>
+            <p class="orientacao-validacao" hidden>Escolha uma opção para continuar.</p>
           </fieldset>
         </section>
 

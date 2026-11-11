@@ -1,12 +1,12 @@
 # Validação local do simulador
 
-Data: 10/11/2026
+Data da última auditoria: 11/11/2026
 
 Estado: **publicado e operacional**
 
 ## Resultados obtidos
 
-- dez testes automatizados do núcleo aprovados;
+- onze testes automatizados do núcleo aprovados;
 - fórmulas verificadas com conversão de meses para anos;
 - empate verificado para diferença estritamente inferior a R$ 1,00 por ano;
 - entradas negativas, vidas iguais a zero, meses fracionários e custos líquidos negativos rejeitados;
@@ -28,6 +28,14 @@ Estado: **publicado e operacional**
 - combinação negativa digitada em campo inferior redirecionou o foco ao primeiro campo relacionado;
 - botão de cálculo permaneceu bloqueado enquanto a combinação estava incompatível;
 - após a correção pela faixa indicada, o cálculo foi liberado e não produziu custo líquido negativo.
+- 7.290 combinações determinísticas e 100.000 combinações monetárias aleatórias comparadas entre a validação preventiva e o núcleo de cálculo, sem divergência e sem resultado negativo aceito;
+- valores negativos testados individualmente nos sete campos monetários, todos com borda, rótulo e orientação em vermelho, atributo `aria-invalid` e cálculo bloqueado;
+- vida útil zero e meses fracionários testados nos dois campos de duração, com orientação específica em vermelho;
+- valores monetários com mais de duas casas decimais rejeitados e destacados antes do cálculo;
+- preenchimento em ordem inversa testado para reparo e troca, com redirecionamento, faixas mínimas/máximas e todos os campos relacionados destacados;
+- limites exatos que produzem custo líquido de R$ 0,00 aceitos e calculados sem falso negativo;
+- envio incompleto testado: os nove campos numéricos e os três grupos qualitativos foram destacados em vermelho com instrução de correção;
+- cache do service worker atualizado para `simulador-conserta-ou-troca-v5` e arquivos alterados versionados na página para evitar interface antiga após a publicação.
 
 ## Privacidade verificada
 

@@ -127,6 +127,22 @@ test("arredonda limites monetários em centavos sem falso negativo de ponto flut
   assert.equal(compatibilidade.reparo.limites.residual_reparado.max, 0.3);
 });
 
+test("aceita os limites exatos que produzem custo líquido zero", () => {
+  const entrada = entradaBase();
+  entrada.residual_reparado = entrada.custo_reparo + entrada.manutencao_adicional;
+  entrada.valor_venda_atual = 300;
+  entrada.residual_substituto =
+    entrada.preco_substituto + entrada.custos_acessorios - entrada.valor_venda_atual;
+
+  const compatibilidade = core.obterCompatibilidadeCustos(entrada);
+  const resultado = core.calcularAnalise(entrada);
+
+  assert.equal(compatibilidade.compativel, true);
+  assert.equal(resultado.custo_liquido_reparar, 0);
+  assert.equal(resultado.custo_liquido_trocar, 0);
+  assert.equal(resultado.classificacao, "empate");
+});
+
 test("cria PDF local de duas páginas com gráficos vetoriais", () => {
   const resultado = core.calcularAnalise(entradaBase());
   const bytes = pdf.criarRelatorioPdf({

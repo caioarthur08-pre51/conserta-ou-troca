@@ -238,6 +238,12 @@ legend {
   color: var(--erro);
 }
 
+.campo-invalido label,
+.grupo-invalido legend,
+.orientacao-validacao {
+  color: var(--erro);
+}
+
 .entrada-com-unidade span {
   display: inline-flex;
   align-items: center;
@@ -269,6 +275,17 @@ legend {
   padding: 1rem;
   border: 1px solid var(--borda);
   border-radius: 0.75rem;
+}
+
+.grupo-opcoes.grupo-invalido {
+  border: 2px solid var(--erro);
+  box-shadow: 0 0 0 3px rgb(161 14 37 / 14%);
+}
+
+.orientacao-validacao {
+  margin: 0.75rem 0 0;
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .opcoes {

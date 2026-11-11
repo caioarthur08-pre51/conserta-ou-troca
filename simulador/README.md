@@ -47,6 +47,10 @@ alteram a fórmula.
 - na troca, venda + residual não pode superar preço + acessórios;
 - uma combinação incompatível destaca todos os campos que podem ser ajustados, bloqueia
   o cálculo e redireciona para o primeiro campo relacionado após uma breve pausa;
+- valores negativos, meses iguais a zero ou fracionários e valores monetários com mais
+  de duas casas decimais também recebem orientação e destaque vermelho imediatamente;
+- após uma tentativa incompleta, todos os campos obrigatórios e critérios ainda pendentes
+  ficam destacados até serem corrigidos;
 - o núcleo mantém uma validação defensiva adicional, mesmo que a interface seja contornada.
 
 ## Relatório PDF local

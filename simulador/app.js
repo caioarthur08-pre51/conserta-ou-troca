@@ -23,10 +23,16 @@
     valor_venda_atual: { input: "#valor-venda-atual", texto: "#limite-venda-atual", grupo: "troca" },
     residual_substituto: { input: "#residual-substituto", texto: "#limite-residual-substituto", grupo: "troca" }
   });
+  const configuracaoMeses = Object.freeze([
+    { input: "#vida-adicional", texto: "#limite-vida-adicional" },
+    { input: "#vida-substituto", texto: "#limite-vida-substituto" }
+  ]);
   let resultadoAtual = null;
   let criteriosAtuais = null;
   let temporizadorRedirecionamento = null;
   let assinaturaRedirecionada = "";
+  let camposTocados = new WeakSet();
+  let validacaoForcada = false;
 
   const moeda = new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -84,26 +90,86 @@
     return `Faixa permitida com os demais valores: ${minimo} ou mais.`;
   }
 
-  function aplicarFaixa(nome, faixa, grupoCompleto) {
+  function mensagemNumeroInvalido(campo, textoPermitido, campoDeMeses = false) {
+    if (campo.validity.valueMissing) return "Preencha este campo para continuar.";
+    if (campo.validity.badInput) return "Digite apenas um número válido.";
+    if (campo.validity.rangeUnderflow) {
+      return campoDeMeses
+        ? "Valor inválido. Informe um número inteiro de 1 mês ou mais."
+        : `Valor abaixo do permitido. ${textoPermitido}`;
+    }
+    if (campo.validity.rangeOverflow) return `Valor acima do permitido. ${textoPermitido}`;
+    if (campo.validity.stepMismatch) {
+      return campoDeMeses
+        ? "Valor inválido. Informe meses inteiros, sem casas decimais."
+        : `Valor inválido. Use no máximo duas casas decimais. ${textoPermitido}`;
+    }
+    return textoPermitido;
+  }
+
+  function deveMostrarErroNativo(campo, mostrarVazios) {
+    return !campo.validity.valid && (
+      mostrarVazios ||
+      camposTocados.has(campo) ||
+      campo.value.trim() !== "" ||
+      campo.validity.badInput
+    );
+  }
+
+  function aplicarFaixa(nome, faixa, grupoCompleto, mostrarVazios) {
     const configuracao = configuracaoFaixas[nome];
     const campo = document.querySelector(configuracao.input);
     const texto = document.querySelector(configuracao.texto);
     const valor = campo.value.trim() === "" ? null : Number(campo.value);
+    const textoPermitido = textoFaixa(faixa);
 
     campo.min = String(faixa.min || 0);
     if (Number.isFinite(faixa.max)) campo.max = String(faixa.max);
     else campo.removeAttribute("max");
 
-    texto.textContent = textoFaixa(faixa);
+    campo.setCustomValidity("");
+    const erroNativo = deveMostrarErroNativo(campo, mostrarVazios);
     const abaixo = valor !== null && Number.isFinite(valor) && valor < faixa.min - 1e-9;
     const acima = valor !== null && Number.isFinite(valor) &&
       Number.isFinite(faixa.max) && valor > faixa.max + 1e-9;
-    const incompatível = grupoCompleto && (abaixo || acima);
+    const incompatível = grupoCompleto && !erroNativo && (abaixo || acima);
+    const invalido = erroNativo || incompatível;
 
-    campo.setCustomValidity(incompatível ? `Valor incompatível. ${texto.textContent}` : "");
-    if (incompatível) campo.setAttribute("aria-invalid", "true");
+    texto.textContent = erroNativo
+      ? mensagemNumeroInvalido(campo, textoPermitido)
+      : textoPermitido;
+    campo.setCustomValidity(incompatível ? `Valor incompatível. ${textoPermitido}` : "");
+    if (invalido) campo.setAttribute("aria-invalid", "true");
     else campo.removeAttribute("aria-invalid");
-    campo.closest(".campo").classList.toggle("campo-invalido", incompatível);
+    campo.closest(".campo").classList.toggle("campo-invalido", invalido);
+  }
+
+  function atualizarCamposDeMeses(mostrarVazios) {
+    for (const configuracao of configuracaoMeses) {
+      const campo = document.querySelector(configuracao.input);
+      const texto = document.querySelector(configuracao.texto);
+      const textoPermitido = "Informe um número inteiro de 1 mês ou mais.";
+      campo.setCustomValidity("");
+      const invalido = deveMostrarErroNativo(campo, mostrarVazios);
+      texto.textContent = invalido
+        ? mensagemNumeroInvalido(campo, textoPermitido, true)
+        : textoPermitido;
+      if (invalido) campo.setAttribute("aria-invalid", "true");
+      else campo.removeAttribute("aria-invalid");
+      campo.closest(".campo").classList.toggle("campo-invalido", invalido);
+    }
+  }
+
+  function atualizarCriterios(mostrarVazios) {
+    for (const grupo of formulario.querySelectorAll(".grupo-opcoes")) {
+      const escolhido = grupo.querySelector('input[type="radio"]:checked');
+      const invalido = mostrarVazios && !escolhido;
+      const orientacao = grupo.querySelector(".orientacao-validacao");
+      grupo.classList.toggle("grupo-invalido", invalido);
+      if (invalido) grupo.setAttribute("aria-invalid", "true");
+      else grupo.removeAttribute("aria-invalid");
+      orientacao.hidden = !invalido;
+    }
   }
 
   function mensagemReparo(estado, custos) {
@@ -129,13 +195,16 @@
     ].join(" ");
   }
 
-  function redirecionarParaCorrecao(grupo, assinatura) {
+  function redirecionarParaCampo(campo, assinatura) {
     if (assinatura === assinaturaRedirecionada) return;
     assinaturaRedirecionada = assinatura;
-    const seletor = grupo === "reparo" ? "#custo-reparo" : "#preco-substituto";
-    const campo = document.querySelector(seletor);
     campo.focus({ preventScroll: true });
     campo.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function redirecionarParaCorrecao(grupo, assinatura) {
+    const seletor = grupo === "reparo" ? "#custo-reparo" : "#preco-substituto";
+    redirecionarParaCampo(document.querySelector(seletor), assinatura);
   }
 
   function atualizarCompatibilidade({ agendarRedirecionamento = false } = {}) {
@@ -143,11 +212,13 @@
     const compatibilidade = core.obterCompatibilidadeCustos(custos);
 
     for (const [nome, faixa] of Object.entries(compatibilidade.reparo.limites)) {
-      aplicarFaixa(nome, faixa, compatibilidade.reparo.completo);
+      aplicarFaixa(nome, faixa, compatibilidade.reparo.completo, validacaoForcada);
     }
     for (const [nome, faixa] of Object.entries(compatibilidade.troca.limites)) {
-      aplicarFaixa(nome, faixa, compatibilidade.troca.completo);
+      aplicarFaixa(nome, faixa, compatibilidade.troca.completo, validacaoForcada);
     }
+    atualizarCamposDeMeses(validacaoForcada);
+    atualizarCriterios(validacaoForcada);
 
     const grupos = [
       ["reparo", compatibilidade.reparo, mensagemReparo],
@@ -160,20 +231,30 @@
       alerta.textContent = incompatível ? criarMensagem(estado, custos) : "";
     }
 
-    botaoCalcular.disabled = !compatibilidade.compativel;
+    const primeiroNumeroInvalido = formulario.querySelector(".campo-invalido input[type='number']");
+    const podeCalcular = compatibilidade.compativel && !primeiroNumeroInvalido;
+    botaoCalcular.disabled = !podeCalcular;
     if (compatibilidade.compativel) botaoCalcular.removeAttribute("aria-describedby");
     else botaoCalcular.setAttribute("aria-describedby", "alerta-reparar alerta-trocar");
 
     globalThis.clearTimeout(temporizadorRedirecionamento);
-    if (compatibilidade.compativel) {
+    if (podeCalcular) {
       assinaturaRedirecionada = "";
     } else if (agendarRedirecionamento) {
-      const grupo = !compatibilidade.reparo.compativel ? "reparo" : "troca";
-      const assinatura = `${grupo}:${JSON.stringify(custos)}`;
-      temporizadorRedirecionamento = globalThis.setTimeout(
-        () => redirecionarParaCorrecao(grupo, assinatura),
-        700
-      );
+      if (!compatibilidade.compativel) {
+        const grupo = !compatibilidade.reparo.compativel ? "reparo" : "troca";
+        const assinatura = `${grupo}:${JSON.stringify(custos)}`;
+        temporizadorRedirecionamento = globalThis.setTimeout(
+          () => redirecionarParaCorrecao(grupo, assinatura),
+          700
+        );
+      } else if (primeiroNumeroInvalido) {
+        const assinatura = `${primeiroNumeroInvalido.id}:${primeiroNumeroInvalido.value}`;
+        temporizadorRedirecionamento = globalThis.setTimeout(
+          () => redirecionarParaCampo(primeiroNumeroInvalido, assinatura),
+          700
+        );
+      }
     }
 
     return compatibilidade;
@@ -253,14 +334,16 @@
     criteriosAtuais = null;
     resultadoEl.hidden = true;
     ocultarErro();
-    if (evento.target instanceof HTMLInputElement && configuracaoFaixas[evento.target.name]) {
-      atualizarCompatibilidade({ agendarRedirecionamento: true });
+    if (evento.target instanceof HTMLInputElement) {
+      if (evento.target.type === "number") camposTocados.add(evento.target);
+      atualizarCompatibilidade({ agendarRedirecionamento: evento.target.type === "number" });
     }
   });
 
   formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
     ocultarErro();
+    validacaoForcada = true;
 
     const compatibilidade = atualizarCompatibilidade();
     if (!compatibilidade.compativel) {
@@ -270,6 +353,10 @@
     }
 
     if (!formulario.checkValidity()) {
+      const primeiroInvalido = formulario.querySelector(":invalid");
+      if (primeiroInvalido instanceof HTMLElement) {
+        redirecionarParaCampo(primeiroInvalido, `envio:${primeiroInvalido.id || primeiroInvalido.name}:${Date.now()}`);
+      }
       formulario.reportValidity();
       exibirErro("Revise os campos destacados. Todos os valores e os três critérios são obrigatórios.");
       return;
@@ -293,6 +380,8 @@
     criteriosAtuais = null;
     resultadoEl.hidden = true;
     ocultarErro();
+    camposTocados = new WeakSet();
+    validacaoForcada = false;
     globalThis.clearTimeout(temporizadorRedirecionamento);
     globalThis.setTimeout(() => {
       atualizarCompatibilidade();
